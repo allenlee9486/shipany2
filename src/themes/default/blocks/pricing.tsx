@@ -1,21 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Check, Loader2 } from 'lucide-react';
+import { ArrowUpRight, Loader2 } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 
 import { SmartIcon } from '@/shared/blocks/common';
 import { PaymentModal } from '@/shared/blocks/payment/payment-modal';
 import { Badge } from '@/shared/components/ui/badge';
-import { Button } from '@/shared/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/shared/components/ui/card';
 import {
   Select,
   SelectContent,
@@ -324,102 +316,117 @@ export function Pricing({
     }
   }, [section.items]);
 
+  const items =
+    section.items?.filter(
+      (item) => !item.group || !group || item.group === group
+    ) ?? [];
+  const gridCols =
+    items.length >= 4
+      ? 'lg:grid-cols-4'
+      : items.length === 3
+        ? 'lg:grid-cols-3'
+        : items.length === 2
+          ? 'md:grid-cols-2'
+          : '';
+
   return (
     <section
       id={section.id}
-      className={cn('py-24 md:py-36', section.className, className)}
+      className={cn('py-16 md:py-24', section.className, className)}
     >
-      <div className="mx-auto mb-12 px-4 text-center md:px-8">
-        {section.sr_only_title && (
-          <h1 className="sr-only">{section.sr_only_title}</h1>
-        )}
-        <h2 className="mb-6 text-3xl font-bold text-pretty lg:text-4xl">
-          {section.title}
-        </h2>
-        <p className="text-muted-foreground mx-auto mb-4 max-w-xl lg:max-w-none lg:text-lg">
-          {section.description}
-        </p>
-      </div>
-
       <div className="container">
-        {section.groups && section.groups.length > 0 && (
-          <div className="mx-auto mt-8 mb-16 flex w-full justify-center md:max-w-lg">
-            <Tabs value={group} onValueChange={setGroup} className="">
-              <TabsList>
-                {section.groups.map((item, i) => {
-                  return (
-                    <TabsTrigger key={i} value={item.name || ''}>
+        <div className="mx-auto max-w-3xl text-center">
+          {section.sr_only_title && (
+            <h1 className="sr-only">{section.sr_only_title}</h1>
+          )}
+          <h2 className="break-words text-4xl leading-[0.95] font-display uppercase tracking-tight text-balance sm:text-5xl md:text-6xl">
+            {section.title}
+          </h2>
+          {section.description && (
+            <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-base font-medium text-balance">
+              {section.description}
+            </p>
+          )}
+        </div>
+
+        <div className="border-foreground mt-12 border-t-[3px]">
+          {section.groups && section.groups.length > 1 && (
+            <div className="mt-8 flex w-full justify-center">
+              <Tabs value={group} onValueChange={setGroup} className="">
+                <TabsList>
+                  {section.groups.map((item, i) => {
+                    return (
+                      <TabsTrigger key={i} value={item.name || ''}>
+                        {item.title}
+                        {item.label && (
+                          <Badge className="ml-2">{item.label}</Badge>
+                        )}
+                      </TabsTrigger>
+                    );
+                  })}
+                </TabsList>
+              </Tabs>
+            </div>
+          )}
+
+          <div
+            className={cn(
+              'grid grid-cols-1 gap-5 pt-10 md:gap-6',
+              gridCols
+            )}
+          >
+            {section.items?.map((item: PricingItem, idx) => {
+              if (item.group && group && item.group !== group) {
+                return null;
+              }
+
+              let isCurrentPlan = false;
+              if (
+                currentSubscription &&
+                currentSubscription.productId === item.product_id
+              ) {
+                isCurrentPlan = true;
+              }
+
+              // Get currency state for this item
+              const currencyState = itemCurrencies[item.product_id];
+              const displayedItem = currencyState?.displayedItem || item;
+              const selectedCurrency =
+                currencyState?.selectedCurrency || item.currency;
+              const currencies = getCurrenciesFromItem(item);
+
+              return (
+                <div
+                  key={idx}
+                  className="border-border bg-card relative flex flex-col border p-6 transition-colors hover:bg-muted/50 md:p-8"
+                >
+                  {/* header: name + save badge */}
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="text-sm font-bold tracking-[0.16em] uppercase">
                       {item.title}
-                      {item.label && (
-                        <Badge className="ml-2">{item.label}</Badge>
-                      )}
-                    </TabsTrigger>
-                  );
-                })}
-              </TabsList>
-            </Tabs>
-          </div>
-        )}
+                    </h3>
+                    {item.label && (
+                      <span className="border-accent text-accent shrink-0 border px-2.5 py-1 text-xs font-bold tracking-[0.08em] uppercase">
+                        {item.label}
+                      </span>
+                    )}
+                  </div>
 
-        <div
-          className={`mx-auto mt-0 grid w-full gap-6 md:grid-cols-${
-            section.items?.filter((item) => !item.group || item.group === group)
-              ?.length
-          }`}
-        >
-          {section.items?.map((item: PricingItem, idx) => {
-            if (item.group && item.group !== group) {
-              return null;
-            }
-
-            let isCurrentPlan = false;
-            if (
-              currentSubscription &&
-              currentSubscription.productId === item.product_id
-            ) {
-              isCurrentPlan = true;
-            }
-
-            // Get currency state for this item
-            const currencyState = itemCurrencies[item.product_id];
-            const displayedItem = currencyState?.displayedItem || item;
-            const selectedCurrency =
-              currencyState?.selectedCurrency || item.currency;
-            const currencies = getCurrenciesFromItem(item);
-
-            return (
-              <Card key={idx} className="relative">
-                {item.label && (
-                  <span className="absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full bg-linear-to-br/increasing from-purple-400 to-amber-300 px-3 py-1 text-xs font-medium text-amber-950 ring-1 ring-white/20 ring-offset-1 ring-offset-gray-950/5 ring-inset">
-                    {item.label}
-                  </span>
-                )}
-
-                <CardHeader>
-                  <CardTitle className="font-medium">
-                    <h3 className="text-sm font-medium">{item.title}</h3>
-                  </CardTitle>
-
-                  <div className="my-3 flex items-baseline gap-2">
+                  {/* price */}
+                  <div className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1">
                     {displayedItem.original_price && (
-                      <span className="text-muted-foreground text-sm line-through">
+                      <span className="text-muted-foreground text-lg line-through">
                         {displayedItem.original_price}
                       </span>
                     )}
-
-                    <div className="my-3 block text-2xl font-semibold">
-                      <span className="text-primary">
-                        {displayedItem.price}
-                      </span>{' '}
-                      {displayedItem.unit ? (
-                        <span className="text-muted-foreground text-sm font-normal">
-                          {displayedItem.unit}
-                        </span>
-                      ) : (
-                        ''
-                      )}
-                    </div>
-
+                    <span className="text-5xl leading-none font-display tracking-tight md:text-6xl">
+                      {displayedItem.price}
+                    </span>
+                    {displayedItem.unit && (
+                      <span className="text-muted-foreground text-sm font-bold tracking-wide uppercase">
+                        {displayedItem.unit}
+                      </span>
+                    )}
                     {currencies.length > 1 && (
                       <Select
                         value={selectedCurrency}
@@ -429,7 +436,7 @@ export function Pricing({
                       >
                         <SelectTrigger
                           size="sm"
-                          className="border-muted-foreground/30 bg-background/50 h-6 min-w-[60px] px-2 text-xs"
+                          className="h-6 min-w-[60px] px-2 text-xs"
                         >
                           <SelectValue placeholder="Currency" />
                         </SelectTrigger>
@@ -448,73 +455,88 @@ export function Pricing({
                     )}
                   </div>
 
-                  <CardDescription className="text-sm">
-                    {item.description}
-                  </CardDescription>
-                  {item.tip && (
-                    <span className="text-muted-foreground text-sm">
-                      {item.tip}
-                    </span>
-                  )}
+                  <hr className="border-border/50 mt-6" />
 
-                  {isCurrentPlan ? (
-                    <Button
-                      variant="outline"
-                      className="mt-4 h-9 w-full px-4 py-2"
-                      disabled
-                    >
-                      <span className="hidden text-sm md:block">
-                        {t('current_plan')}
+                  {/* credits */}
+                  {typeof item.credits === 'number' && (
+                    <div className="mt-6 flex items-baseline gap-2">
+                      <span className="text-4xl leading-none font-display tracking-tight">
+                        {item.credits.toLocaleString('en-US')}
                       </span>
-                    </Button>
-                  ) : (
-                    <Button
-                      onClick={() => handlePayment(item)}
-                      disabled={isLoading}
-                      className={cn(
-                        'focus-visible:ring-ring inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50',
-                        'mt-4 h-9 w-full px-4 py-2',
-                        'bg-primary text-primary-foreground hover:bg-primary/90 border-[0.5px] border-white/25 shadow-md shadow-black/20'
-                      )}
-                    >
-                      {isLoading && item.product_id === productId ? (
-                        <>
-                          <Loader2 className="size-4 animate-spin" />
-                          <span className="block">{t('processing')}</span>
-                        </>
-                      ) : (
-                        <>
-                          {item.button?.icon && (
-                            <SmartIcon
-                              name={item.button?.icon as string}
-                              className="size-4"
-                            />
+                      <span className="text-sm font-bold">
+                        {item.credits_label || 'credits'}
+                      </span>
+                    </div>
+                  )}
+
+                  {item.description && (
+                    <p className="text-muted-foreground mt-2 text-sm">
+                      {item.description}
+                    </p>
+                  )}
+
+                  {/* features */}
+                  {item.features && item.features.length > 0 && (
+                    <ul className="mt-5 space-y-2.5">
+                      {item.features.map((feature, index) => (
+                        <li
+                          key={index}
+                          className="flex items-center gap-2.5 text-sm font-semibold"
+                        >
+                          <span
+                            className="bg-accent size-1.5 shrink-0"
+                            aria-hidden
+                          />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {item.tip && (
+                    <p className="text-muted-foreground mt-4 text-sm">
+                      {item.tip}
+                    </p>
+                  )}
+
+                  {/* cta pinned to card bottom */}
+                  <div className="mt-auto pt-8">
+                    {isCurrentPlan ? (
+                      <button
+                        type="button"
+                        disabled
+                        className="border-border text-muted-foreground flex h-12 w-full cursor-not-allowed items-center justify-between border px-5 text-sm font-bold tracking-wide uppercase"
+                      >
+                        <span>{t('current_plan')}</span>
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => handlePayment(item)}
+                        disabled={isLoading}
+                        className="bg-foreground text-background hover:bg-primary hover:text-primary-foreground flex h-12 w-full items-center justify-between px-5 text-sm font-bold tracking-wide uppercase transition-colors disabled:opacity-60"
+                      >
+                        <span className="flex items-center gap-2">
+                          {isLoading && item.product_id === productId ? (
+                            <Loader2 className="size-4 animate-spin" />
+                          ) : (
+                            item.button?.icon && (
+                              <SmartIcon
+                                name={item.button.icon as string}
+                                className="size-4"
+                              />
+                            )
                           )}
-                          <span className="block">{item.button?.title}</span>
-                        </>
-                      )}
-                    </Button>
-                  )}
-                </CardHeader>
-
-                <CardContent className="space-y-4">
-                  <hr className="border-dashed" />
-
-                  {item.features_title && (
-                    <p className="text-sm font-medium">{item.features_title}</p>
-                  )}
-                  <ul className="list-outside space-y-3 text-sm">
-                    {item.features?.map((item, index) => (
-                      <li key={index} className="flex items-center gap-2">
-                        <Check className="size-3" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            );
-          })}
+                          {item.button?.title || 'Get started'}
+                        </span>
+                        <ArrowUpRight className="size-4" />
+                      </button>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
 

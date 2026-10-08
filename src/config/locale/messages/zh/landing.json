@@ -32,6 +32,11 @@
           "title": "常见问题",
           "url": "/#faq",
           "icon": "RiQuestionLine"
+        },
+        {
+          "title": "定价",
+          "url": "/pricing",
+          "icon": "RiCoupon2Line"
         }
       ]
     },

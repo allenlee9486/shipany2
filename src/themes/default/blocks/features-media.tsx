@@ -18,7 +18,7 @@ export function FeaturesMedia({ section }: { section: Section }) {
       <div className="container flex flex-col items-center justify-center space-y-8 px-6 md:space-y-16">
         <motion.div
           className={cn(
-            'grid items-center gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24',
+            'grid items-center gap-8 sm:grid-cols-2 md:gap-12 lg:gap-20',
             isImageRight &&
               'sm:[&>*:first-child]:order-2 sm:[&>*:last-child]:order-1'
           )}
@@ -37,7 +37,8 @@ export function FeaturesMedia({ section }: { section: Section }) {
           }}
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            className="border-border border"
+            initial={{ opacity: 0, scale: 0.97 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{
@@ -48,7 +49,7 @@ export function FeaturesMedia({ section }: { section: Section }) {
           >
             <LazyImage
               src={section.image?.src ?? ''}
-              className="rounded-2xl"
+              className=""
               alt={section.image?.alt ?? ''}
             />
           </motion.div>
@@ -64,22 +65,36 @@ export function FeaturesMedia({ section }: { section: Section }) {
               ease: [0.22, 1, 0.36, 1] as const,
             }}
           >
-            <h2 className="text-xl font-medium md:text-lg lg:text-lg">
+            {section.label && (
+              <p className="text-muted-foreground text-xs font-bold tracking-[0.22em] uppercase">
+                {section.label}
+              </p>
+            )}
+            <h2 className="text-3xl leading-[0.95] font-display uppercase tracking-tight text-balance md:text-4xl">
               {section.title}
             </h2>
-            <p className="text-muted-foreground text-md">
+            <p className="text-muted-foreground text-base font-medium">
               {section.description}
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="border-border mt-8 divide-y divide-border border">
               {section.items?.map((item) => (
-                <div key={item.title}>
-                  <h3 className="mb-2 flex items-center gap-2 text-sm">
-                    <SmartIcon name={item.icon as string} size={16} />
-                    {item.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {item.description}
-                  </p>
+                <div
+                  key={item.title}
+                  className="hover:bg-muted flex items-start gap-3 p-4 transition-colors"
+                >
+                  <SmartIcon
+                    name={item.icon as string}
+                    size={18}
+                    className="text-primary mt-0.5 shrink-0"
+                  />
+                  <div>
+                    <h3 className="text-xs font-bold tracking-[0.12em] uppercase">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground mt-1 text-sm">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

@@ -11,6 +11,7 @@
       "customize",
       "trust",
       "coming-soon",
+      "pricing",
       "faq",
       "cta"
     ],
@@ -18,14 +19,13 @@
       "hero": {
         "id": "hero",
         "title": "创造你自己的 Rumpelstiltskin AI 视频",
-        "highlight_text": "Rumpelstiltskin AI 视频",
         "description": "把爆火的奇幻梗变成你自己的 AI 短视频。为 TikTok、Reels 和 Shorts 打造俏皮的 Rumpelstiltskin 风格场景。",
         "announcement": {
           "badge": "趋势",
           "title": "AI 视频梗图生成器",
           "url": "/#origin"
         },
-        "tip": "一个受爆火 AI Rumpelstiltskin 梗启发的独立创意项目。",
+        "tip": "独立创意项目 — 与原始创作者无关联",
         "buttons": [
           {
             "title": "预览工作台",
@@ -43,7 +43,13 @@
           }
         ],
         "show_avatars": false,
-        "show_award": false
+        "show_award": false,
+        "label": "AI 视频迷因生成器",
+        "video": {
+          "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-1.mp4",
+          "poster": "/imgs/rumpelstiltskin/showcase-1.png",
+          "caption": "爆火的 AI Rumpelstiltskin 模板"
+        }
       },
       "generator": {
         "block": "generator-preview",
@@ -51,19 +57,67 @@
         "label": "AI 视频工作台",
         "title": "制作 Rumpelstiltskin 风格视频",
         "description": "预览工作台正在打造的工作流。接入经过验证的 AI 视频供应商后，正式生成能力即会开放。",
-        "badge": "即将上线",
-        "button_title": "生成视频",
-        "reference_label": "参考 — 爆款原型",
-        "reference_video": {
-          "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-1.mp4",
-          "poster": "/imgs/rumpelstiltskin/showcase-1.png"
+        "badge": "原型预览",
+        "workspace": {
+          "title": "上传你的场景",
+          "description": "每条视频一个干净场景，可选上传角色参考。",
+          "uploads": [
+            {
+              "title": "场景",
+              "hint": "你的背景",
+              "action": "选择图片或视频",
+              "accept": "image/*,video/mp4"
+            },
+            {
+              "title": "角色",
+              "hint": "可选参考",
+              "action": "选择图片",
+              "accept": "image/*"
+            }
+          ],
+          "note": "JPG / PNG / WebP · MP4 · 单个 10 MB 以内",
+          "settings_label": "视频设置",
+          "settings_value": "横版 16:9",
+          "cost_label": "成本",
+          "cost_value": "$5.00 / 条 起",
+          "cost_note": "查看下方套餐",
+          "cost_url": "#pricing",
+          "button_title": "Create your duet"
         },
-        "upload_placeholder": "你的场景 — 图片或视频上传位（即将上线）",
-        "prompt_label": "提示词",
-        "prompt_placeholder": "一个狡黠的小小童话角色踮着脚尖穿过昏暗的乡谷仓，温暖的金色光线，电影感奇幻氛围，复古奇幻电影质感，缓慢推镜，超现实喜剧情绪……",
-        "formats": ["竖版 9:16", "横版 16:9"],
+        "examples": {
+          "tabs": [
+            "示例视频",
+            "我的视频"
+          ],
+          "videos": [
+            {
+              "title": "最初的爆款原型",
+              "description": "一切的开端：AI 生成的童话小角色忘我热舞。",
+              "video": {
+                "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-1.mp4",
+                "poster": "/imgs/rumpelstiltskin/showcase-1.png"
+              }
+            },
+            {
+              "title": "点石成金",
+              "description": "纺车边的变身时刻，看过就忘不掉。",
+              "video": {
+                "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-2.mp4",
+                "poster": "/imgs/rumpelstiltskin/showcase-2.png"
+              }
+            },
+            {
+              "title": "配上 Riff Raff",
+              "description": "9 月底的配乐二创，让一段视频变成了迷因模板。",
+              "video": {
+                "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-3.mp4",
+                "poster": "/imgs/rumpelstiltskin/showcase-3.png"
+              }
+            }
+          ]
+        },
         "note": "原型预览 — 在经过验证的供应商与后端工作流上线前，上传与生成功能均不开启。",
-        "className": "bg-muted"
+        "className": "bg-background"
       },
       "origin": {
         "block": "video-showcase",
@@ -152,7 +206,8 @@
             "description": "观众去找那部「电影」，结果根本没有——从头到尾都是 AI。",
             "icon": "RiQuestionLine"
           }
-        ]
+        ],
+        "label": "错觉拆解"
       },
       "workflow": {
         "block": "features-step",
@@ -225,7 +280,8 @@
             "description": "让迷因撞进另一个宇宙，迷惑值拉满。",
             "icon": "RiFireLine"
           }
-        ]
+        ],
+        "label": "创意方向"
       },
       "prompts": {
         "block": "features-media",
@@ -268,7 +324,8 @@
             "description": "超现实、喜剧、怪诞——点名那种感觉。",
             "icon": "RiSunLine"
           }
-        ]
+        ],
+        "label": "提示词公式"
       },
       "customize": {
         "block": "features",
@@ -307,7 +364,8 @@
             "icon": "RiCameraLine"
           }
         ],
-        "className": "bg-muted"
+        "className": "bg-muted",
+        "label": "创作维度"
       },
       "trust": {
         "block": "features",
@@ -345,7 +403,8 @@
             "description": "原视频究竟用哪个 AI 模型生成，至今没有公开定论。",
             "icon": "RiQuestionLine"
           }
-        ]
+        ],
+        "label": "透明度"
       },
       "coming-soon": {
         "block": "cta",
@@ -365,6 +424,112 @@
             "target": "_self",
             "variant": "outline",
             "icon": "BookOpenText"
+          }
+        ],
+        "tone": "gold",
+        "label": "即将上线",
+        "items": [
+          "基于场景的视频创作",
+          "Rumpelstiltskin 风格工作流",
+          "提示词驱动创意",
+          "短视频实验"
+        ]
+      },
+      "pricing": {
+        "id": "pricing",
+        "title": "选择你的套餐",
+        "description": "选择你想创作多少条视频。一次付费，按自己的节奏创作。",
+        "groups": [
+          {
+            "name": "packs",
+            "title": "按次付费",
+            "is_featured": true
+          }
+        ],
+        "items": [
+          {
+            "title": "入门版",
+            "description": "先试试水。",
+            "label": "",
+            "features_title": "",
+            "features": [
+              "最多 2 个视频",
+              "单价 $7.50 / 条"
+            ],
+            "interval": "one-time",
+            "amount": 14990,
+            "currency": "USD",
+            "price": "$14.99",
+            "unit": "",
+            "is_featured": false,
+            "tip": "90 天内有效",
+            "button": {
+              "title": "获取视频",
+              "url": "/pricing",
+              "icon": ""
+            },
+            "product_id": "pack-starter",
+            "product_name": "AI Rumpelstiltskin 入门版 Pack",
+            "credits": 180,
+            "credits_label": "积分",
+            "valid_days": 90,
+            "group": "packs"
+          },
+          {
+            "title": "创作版",
+            "description": "适合稳定创作。",
+            "label": "省 16.6%",
+            "features_title": "",
+            "features": [
+              "最多 8 个视频",
+              "单价 $6.25 / 条"
+            ],
+            "interval": "one-time",
+            "amount": 49990,
+            "currency": "USD",
+            "price": "$49.99",
+            "unit": "",
+            "is_featured": true,
+            "tip": "90 天内有效",
+            "button": {
+              "title": "获取视频",
+              "url": "/pricing",
+              "icon": ""
+            },
+            "product_id": "pack-creator",
+            "product_name": "AI Rumpelstiltskin 创作版 Pack",
+            "credits": 720,
+            "credits_label": "积分",
+            "valid_days": 90,
+            "group": "packs"
+          },
+          {
+            "title": "专业版",
+            "description": "适合高频创作。",
+            "label": "省 33.3%",
+            "features_title": "",
+            "features": [
+              "最多 20 个视频",
+              "单价 $5.00 / 条"
+            ],
+            "interval": "one-time",
+            "amount": 99990,
+            "currency": "USD",
+            "price": "$99.99",
+            "unit": "",
+            "is_featured": false,
+            "tip": "90 天内有效",
+            "button": {
+              "title": "获取视频",
+              "url": "/pricing",
+              "icon": ""
+            },
+            "product_id": "pack-pro",
+            "product_name": "AI Rumpelstiltskin 专业版 Pack",
+            "credits": 1800,
+            "credits_label": "积分",
+            "valid_days": 90,
+            "group": "packs"
           }
         ]
       },
@@ -397,7 +562,8 @@
             "question": "本站与原始创作者有关联吗？",
             "answer": "没有。这是一个受该迷因启发的独立创意项目，与原始创作者、任何 Rumpelstiltskin 电影制作方或任何 AI 模型供应商均无关联。"
           }
-        ]
+        ],
+        "label": "常见问题"
       },
       "cta": {
         "id": "cta",
@@ -418,7 +584,8 @@
             "icon": "BookOpenText"
           }
         ],
-        "className": "bg-muted"
+        "tone": "dark",
+        "label": "AI Rumpelstiltskin"
       }
     }
   }

@@ -32,6 +32,11 @@
           "title": "FAQ",
           "url": "/#faq",
           "icon": "RiQuestionLine"
+        },
+        {
+          "title": "Pricing",
+          "url": "/pricing",
+          "icon": "RiCoupon2Line"
         }
       ]
     },

@@ -11,21 +11,27 @@
       "customize",
       "trust",
       "coming-soon",
+      "pricing",
       "faq",
       "cta"
     ],
     "sections": {
       "hero": {
         "id": "hero",
+        "label": "AI Video Meme Generator",
         "title": "Create Your Own Rumpelstiltskin AI Video",
-        "highlight_text": "Rumpelstiltskin AI Video",
         "description": "Turn the viral fantasy meme idea into your own short AI video. Build playful Rumpelstiltskin-inspired scenes for TikTok, Reels and Shorts.",
         "announcement": {
           "badge": "Trend",
-          "title": "AI Video Meme Generator",
+          "title": "The meme everyone is asking about",
           "url": "/#origin"
         },
-        "tip": "An independent creative project inspired by the viral AI Rumpelstiltskin meme.",
+        "tip": "An independent creative project — not affiliated with the original creators",
+        "video": {
+          "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-1.mp4",
+          "poster": "/imgs/rumpelstiltskin/showcase-1.png",
+          "caption": "The viral AI Rumpelstiltskin format"
+        },
         "buttons": [
           {
             "title": "Preview Workspace",
@@ -51,19 +57,67 @@
         "label": "AI Video Workspace",
         "title": "Make a Rumpelstiltskin-Inspired Video",
         "description": "Preview the workflow the workspace is being built around. Production generation unlocks once a verified AI video provider is integrated.",
-        "badge": "Coming Soon",
-        "button_title": "Generate Video",
-        "reference_label": "Reference — the viral format",
-        "reference_video": {
-          "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-1.mp4",
-          "poster": "/imgs/rumpelstiltskin/showcase-1.png"
+        "badge": "Prototype",
+        "workspace": {
+          "title": "Upload your scene",
+          "description": "One clean scene per video. Add an optional character reference.",
+          "uploads": [
+            {
+              "title": "Scene",
+              "hint": "Your background",
+              "action": "Choose image or video",
+              "accept": "image/*,video/mp4"
+            },
+            {
+              "title": "Character",
+              "hint": "Optional reference",
+              "action": "Choose image",
+              "accept": "image/*"
+            }
+          ],
+          "note": "JPG / PNG / WebP · MP4 · 10 MB each",
+          "settings_label": "Video settings",
+          "settings_value": "Landscape 16:9",
+          "cost_label": "Cost",
+          "cost_value": "From $5.00 / video",
+          "cost_note": "See packs below",
+          "cost_url": "#pricing",
+          "button_title": "Create your duet"
         },
-        "upload_placeholder": "Your scene — image or video dropzone (coming soon)",
-        "prompt_label": "Prompt",
-        "prompt_placeholder": "A tiny mischievous fairy-tale character tiptoeing through a dim rustic barn, warm golden light, cinematic fantasy atmosphere, vintage fantasy-film texture, slow camera push-in, surreal comedic mood…",
-        "formats": ["Vertical 9:16", "Landscape 16:9"],
-        "note": "Prototype preview — uploads and generation are disabled until a verified provider and backend workflow go live.",
-        "className": "bg-muted"
+        "examples": {
+          "tabs": [
+            "Examples",
+            "My videos"
+          ],
+          "videos": [
+            {
+              "title": "The Original Viral Format",
+              "description": "The AI-generated clip that started it all: a small fairy-tale character dancing like nobody's watching.",
+              "video": {
+                "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-1.mp4",
+                "poster": "/imgs/rumpelstiltskin/showcase-1.png"
+              }
+            },
+            {
+              "title": "Straw Into Gold",
+              "description": "The spinning-wheel transformation moment viewers couldn't shake off.",
+              "video": {
+                "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-2.mp4",
+                "poster": "/imgs/rumpelstiltskin/showcase-2.png"
+              }
+            },
+            {
+              "title": "Set To Riff Raff",
+              "description": "The soundtrack pairing in late September that turned a clip into a meme format.",
+              "video": {
+                "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-3.mp4",
+                "poster": "/imgs/rumpelstiltskin/showcase-3.png"
+              }
+            }
+          ]
+        },
+        "note": "Prototype preview — uploads and generation stay disabled until a verified provider and backend workflow go live.",
+        "className": "bg-background"
       },
       "origin": {
         "block": "video-showcase",
@@ -119,6 +173,7 @@
       "why-real": {
         "block": "features",
         "id": "why-it-looks-real",
+        "label": "The Illusion",
         "title": "Why Everyone Thought It Was a Real Movie",
         "description": "The clip was styled like footage from a forgotten 1980s fantasy film — and the illusion worked. Here is what sold it, and what gave the AI away.",
         "items": [
@@ -192,6 +247,7 @@
       "ideas": {
         "block": "features",
         "id": "ideas",
+        "label": "Creative Directions",
         "title": "Rumpelstiltskin Video Ideas",
         "description": "Ways creators are already remixing the format — concepts the workspace is being designed to build.",
         "items": [
@@ -230,8 +286,9 @@
       "prompts": {
         "block": "features-media",
         "id": "prompts",
+        "label": "Prompt Formula",
         "title": "Rumpelstiltskin AI Prompt Ideas",
-        "description": "The formula: Character + Movement + Environment + Visual Style + Camera + Mood. Example: a tiny mischievous fairy-tale character tiptoeing through a dim rustic barn, warm golden light, vintage fantasy-film texture, slow camera push-in, surreal comedic mood.",
+        "description": "Character + Movement + Environment + Visual Style + Camera + Mood. One example: a tiny mischievous fairy-tale character tiptoeing through a dim rustic barn, warm golden light, vintage fantasy-film texture, slow camera push-in, surreal comedic mood.",
         "image": {
           "src": "/imgs/rumpelstiltskin/what-is.png",
           "alt": "Prompt formula for a Rumpelstiltskin-style AI video"
@@ -273,6 +330,7 @@
       "customize": {
         "block": "features",
         "id": "customize",
+        "label": "Creative Controls",
         "title": "What You Can Customize",
         "description": "Creative dimensions the workspace is being designed around — product concepts, not verified provider parameters yet.",
         "items": [
@@ -312,6 +370,7 @@
       "trust": {
         "block": "features",
         "id": "trust",
+        "label": "Transparency",
         "title": "AI Rumpelstiltskin: What's Actually Known",
         "description": "This website is an independent creative project inspired by the viral AI Rumpelstiltskin meme. It is not affiliated with the original creators, Rumpelstiltskin film productions, or any AI model provider.",
         "items": [
@@ -350,8 +409,16 @@
       "coming-soon": {
         "block": "cta",
         "id": "coming-soon",
+        "tone": "gold",
+        "label": "Coming Soon",
         "title": "Create Your Own Rumpelstiltskin Video",
         "description": "Scene-based creation, Rumpelstiltskin-inspired workflows and prompt-driven concepts — coming once a verified AI video provider and backend workflow are integrated.",
+        "items": [
+          "Scene-based video creation",
+          "Rumpelstiltskin-inspired workflows",
+          "Prompt-driven concepts",
+          "Short-form experiments"
+        ],
         "buttons": [
           {
             "title": "Preview the Workspace",
@@ -368,8 +435,107 @@
           }
         ]
       },
+      "pricing": {
+        "id": "pricing",
+        "title": "Choose Your Pack",
+        "description": "Choose how many videos you want to create. Pay once and create at your own pace.",
+        "groups": [
+          {
+            "name": "packs",
+            "title": "Pay as you go",
+            "is_featured": true
+          }
+        ],
+        "items": [
+          {
+            "title": "Starter",
+            "description": "For trying it out.",
+            "label": "",
+            "features_title": "",
+            "features": [
+              "Up to 2 videos",
+              "$7.50 per video"
+            ],
+            "interval": "one-time",
+            "amount": 14990,
+            "currency": "USD",
+            "price": "$14.99",
+            "unit": "",
+            "is_featured": false,
+            "tip": "Valid for 90 days",
+            "button": {
+              "title": "Get videos",
+              "url": "/pricing",
+              "icon": ""
+            },
+            "product_id": "pack-starter",
+            "product_name": "AI Rumpelstiltskin Starter Pack",
+            "credits": 180,
+            "credits_label": "credits",
+            "valid_days": 90,
+            "group": "packs"
+          },
+          {
+            "title": "Creator",
+            "description": "For regular creation.",
+            "label": "Save 16.6%",
+            "features_title": "",
+            "features": [
+              "Up to 8 videos",
+              "$6.25 per video"
+            ],
+            "interval": "one-time",
+            "amount": 49990,
+            "currency": "USD",
+            "price": "$49.99",
+            "unit": "",
+            "is_featured": true,
+            "tip": "Valid for 90 days",
+            "button": {
+              "title": "Get videos",
+              "url": "/pricing",
+              "icon": ""
+            },
+            "product_id": "pack-creator",
+            "product_name": "AI Rumpelstiltskin Creator Pack",
+            "credits": 720,
+            "credits_label": "credits",
+            "valid_days": 90,
+            "group": "packs"
+          },
+          {
+            "title": "Pro",
+            "description": "For frequent creation.",
+            "label": "Save 33.3%",
+            "features_title": "",
+            "features": [
+              "Up to 20 videos",
+              "$5.00 per video"
+            ],
+            "interval": "one-time",
+            "amount": 99990,
+            "currency": "USD",
+            "price": "$99.99",
+            "unit": "",
+            "is_featured": false,
+            "tip": "Valid for 90 days",
+            "button": {
+              "title": "Get videos",
+              "url": "/pricing",
+              "icon": ""
+            },
+            "product_id": "pack-pro",
+            "product_name": "AI Rumpelstiltskin Pro Pack",
+            "credits": 1800,
+            "credits_label": "credits",
+            "valid_days": 90,
+            "group": "packs"
+          }
+        ]
+      },
       "faq": {
         "id": "faq",
+        "label": "FAQ",
         "title": "Good to Know",
         "description": "Still curious? Reach us at support@airumpelstiltskin.pro.",
         "items": [
@@ -401,6 +567,8 @@
       },
       "cta": {
         "id": "cta",
+        "tone": "dark",
+        "label": "AI Rumpelstiltskin",
         "title": "Make Your Own Fantasy AI Video",
         "description": "Turn the viral Rumpelstiltskin meme idea into your own creative video concept.",
         "buttons": [
@@ -417,8 +585,7 @@
             "variant": "outline",
             "icon": "BookOpenText"
           }
-        ],
-        "className": "bg-muted"
+        ]
       }
     }
   }
