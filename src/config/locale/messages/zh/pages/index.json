@@ -2,100 +2,84 @@
   "page": {
     "show_sections": [
       "hero",
-      "logos",
+      "showcases",
       "introduce",
-      "benefits",
       "usage",
       "features",
-      "stats",
-      "testimonials",
       "faq",
       "cta"
     ],
     "sections": {
       "hero": {
         "id": "hero",
-        "title": "一小时快速上线你的 AI 创业项目",
-        "highlight_text": "一小时",
-        "description": "ShipAny 是用于构建 AI SaaS 创业项目的 NextJS 项目模板。<br/>集成常用功能，快速上线你的产品。",
-        "announcement": {
-          "badge": "全新",
-          "title": "🎉 ShipAny 模板二已发布",
-          "url": "/pricing"
-        },
-        "tip": "🎁 前 1000 名用户特价优惠",
+        "title": "创造你的 AI Rumpelstiltskin",
+        "highlight_text": "AI Rumpelstiltskin",
+        "description": "上传一张照片，看小矮人踩着节拍踮脚进场。无需剪辑，无需提示词。",
         "buttons": [
           {
-            "title": "立即开始",
+            "title": "立即生成",
             "icon": "Zap",
-            "url": "/pricing",
+            "url": "/ai-video-generator",
             "target": "_self",
             "variant": "default"
           },
           {
-            "title": "阅读文档",
-            "icon": "BookOpenText",
-            "url": "/docs",
-            "target": "_blank",
+            "title": "看看案例",
+            "icon": "Box",
+            "url": "/showcases",
+            "target": "_self",
             "variant": "outline"
           }
         ],
-        "show_avatars": true,
-        "avatars_tip": "999+ 用户在使用 ShipAny 上站",
-        "show_award": false,
-        "image": {
-          "src": "/imgs/features/admin.png",
-          "alt": "hero",
-          "width": 1200,
-          "height": 800
-        },
-        "image_invert": {
-          "src": "/imgs/features/admin-dark.png",
-          "alt": "hero",
-          "width": 1200,
-          "height": 800
-        },
-        "background_image": {
-          "src": "/imgs/bg/tree.jpg",
-          "alt": "hero"
-        }
+        "tip": "一张清晰的正面照片效果最好，剩下的交给小矮人。",
+        "show_avatars": false,
+        "show_award": false
       },
-      "logos": {
-        "title": "ShipAny 使用以下技术栈构建",
+      "showcases": {
+        "id": "showcases",
+        "title": "看看小矮人能整什么活",
+        "description": "奶奶、猫、同事、前任。每人一张照片，Rumpelstiltskin 就踩着点走进你的时间线。",
         "items": [
           {
-            "title": "Next.js",
+            "title": "奶奶与小矮人",
+            "description": "两代人，一只小矮人。家族群聊至今没缓过来。",
             "image": {
-              "src": "/imgs/logos/nextjs.svg",
-              "alt": "Next.js"
+              "src": "/imgs/rumpelstiltskin/showcase-1.png",
+              "alt": "奶奶与小矮人热舞的 AI Rumpelstiltskin 视频"
+            },
+            "button": {
+              "title": "做一个同款",
+              "url": "/ai-video-generator",
+              "target": "_self",
+              "icon": "Sparkles"
             }
           },
           {
-            "title": "React",
+            "title": "猫 x 小矮人",
+            "description": "宠物也能上纺车。正面猫片效果很好。",
             "image": {
-              "src": "/imgs/logos/react.svg",
-              "alt": "React"
+              "src": "/imgs/rumpelstiltskin/showcase-2.png",
+              "alt": "猫与小矮人热舞的 AI Rumpelstiltskin 视频"
+            },
+            "button": {
+              "title": "做一个同款",
+              "url": "/ai-video-generator",
+              "target": "_self",
+              "icon": "Sparkles"
             }
           },
           {
-            "title": "TailwindCSS",
+            "title": "办公室踮脚舞",
+            "description": "老板毫无防备。HR 看到了，但他们很喜欢。",
             "image": {
-              "src": "/imgs/logos/tailwindcss.svg",
-              "alt": "TailwindCSS"
-            }
-          },
-          {
-            "title": "Shadcn/UI",
-            "image": {
-              "src": "/imgs/logos/shadcn.svg",
-              "alt": "Shadcn/UI"
-            }
-          },
-          {
-            "title": "Vercel",
-            "image": {
-              "src": "/imgs/logos/vercel.svg",
-              "alt": "Vercel"
+              "src": "/imgs/rumpelstiltskin/showcase-3.png",
+              "alt": "同事跳踮脚舞的 AI Rumpelstiltskin 视频"
+            },
+            "button": {
+              "title": "做一个同款",
+              "url": "/ai-video-generator",
+              "target": "_self",
+              "icon": "Sparkles"
             }
           }
         ]
@@ -103,310 +87,163 @@
       "introduce": {
         "block": "features-list",
         "id": "introduce",
-        "title": "ShipAny 是什么？",
-        "label": "产品简介",
-        "description": "ShipAny 是专为 AI SaaS 创业项目打造的 NextJS 脚手架，包括丰富模板、组件及文档。",
+        "title": "AI Rumpelstiltskin 是什么？",
+        "label": "梗的来历",
+        "description": "一段小矮人跳舞的 AI 视频点燃了全网。AI Rumpelstiltskin 让每个人都能上车：上传照片，得到同款热舞梗图视频。不写提示词，不碰剪辑。",
         "image": {
-          "src": "/imgs/features/landing-page.png",
-          "alt": "introduce"
+          "src": "/imgs/rumpelstiltskin/what-is.png",
+          "alt": "稻草进金子出 - AI Rumpelstiltskin 一张照片变热舞视频"
         },
+        "buttons": [
+          {
+            "title": "了解梗背后的故事",
+            "icon": "BookOpenText",
+            "url": "/blog",
+            "target": "_self",
+            "variant": "outline"
+          }
+        ],
         "items": [
           {
-            "title": "开箱即用的模板",
-            "description": "从数十款生产级 AI SaaS 模板中选择，快速开启你的项目。",
-            "icon": "RiNextjsFill",
-            "image": {
-              "src": "/imgs/features/1.png",
-              "alt": "introduce"
-            }
+            "title": "一张照片进",
+            "description": "上传一张清晰照片，需求就这么多。",
+            "icon": "RiImageAddLine"
           },
           {
-            "title": "基础设施搭建",
-            "description": "内置最佳实践，即刻拥有可扩展的基础设施。",
-            "icon": "RiDatabase2Line",
-            "image": {
-              "src": "/imgs/features/2.png",
-              "alt": "introduce"
-            }
+            "title": "一支热舞出",
+            "description": "小矮人踮脚登场，直接下载转发。",
+            "icon": "RiVideoLine"
           },
           {
-            "title": "极速部署",
-            "description": "AI SaaS 产品快速上线，助力小时级交付。",
-            "icon": "RiCloudyFill",
-            "image": {
-              "src": "/imgs/features/3.png",
-              "alt": "introduce"
-            }
+            "title": "零提示词零剪辑",
+            "description": "时间线和参数都不用管，纺车由工具来转。",
+            "icon": "RiMagicLine"
           },
           {
-            "title": "AI 集成",
-            "description": "通过内置的 AI SDK，轻松为你的项目集成 AI 能力。",
-            "icon": "RiRobot2Line",
-            "image": {
-              "src": "/imgs/features/4.png",
-              "alt": "introduce"
-            }
+            "title": "竖版横版都有",
+            "description": "竖版给 Shorts 和 Reels，横版给其余场合。",
+            "icon": "RiGlobalLine"
           }
         ],
         "className": "bg-muted"
-      },
-      "benefits": {
-        "block": "features-accordion",
-        "id": "benefits",
-        "title": "为何选择 ShipAny",
-        "label": "产品优势",
-        "description": "你获得一切 AI 创业所需——从开箱即用的模板到专业技术支持。",
-        "items": [
-          {
-            "title": "全栈解决方案",
-            "description": "基于 Next.js，集成认证、支付、AI，一站式开箱即用。",
-            "icon": "RiNextjsFill",
-            "image": {
-              "src": "/imgs/features/user-billing.png",
-              "alt": "benefits"
-            }
-          },
-          {
-            "title": "丰富模板库",
-            "description": "多样的 AI SaaS 模板，点击即用，涵盖聊天、图像生成等多场景。",
-            "icon": "RiClapperboardAiLine",
-            "image": {
-              "src": "/imgs/features/admin-settings.png",
-              "alt": "benefits"
-            }
-          },
-          {
-            "title": "专属技术指导",
-            "description": "享受专属技术支持与开发者社区，为你的成功保驾护航。",
-            "icon": "RiCodeFill",
-            "image": {
-              "src": "/imgs/features/landing-page.png",
-              "alt": "benefits"
-            }
-          }
-        ]
       },
       "usage": {
         "block": "features-step",
         "id": "usage",
-        "title": "三步使用 ShipAny 极速上线",
-        "description": "只需三步，快速开启你的 AI SaaS 创业之路：",
-        "image": {
-          "src": "/imgs/features/1.png",
-          "alt": "usage"
-        },
-        "image_position": "left",
-        "text_align": "center",
+        "title": "一张照片，三步出片",
+        "label": "怎么玩",
+        "description": "没有提示词，没有时间线，重活小矮人全包。",
         "items": [
           {
-            "title": "获取 ShipAny",
-            "description": "一次性购买 ShipAny，查收邮件获取代码与文档。",
-            "image": {
-              "src": "/imgs/features/5.png",
-              "alt": "usage"
-            }
+            "title": "上传照片",
+            "description": "一个清晰正面主体，人、宠物、角色都行。",
+            "icon": "RiUpload2Line"
           },
           {
-            "title": "启动你的项目",
-            "description": "阅读说明文档，克隆 ShipAny 代码，开始开发你的 AI SaaS 项目。",
-            "image": {
-              "src": "/imgs/features/6.png",
-              "alt": "usage"
-            }
+            "title": "选好画幅",
+            "description": "竖版给 Shorts 和 Reels，横版给其余场合。",
+            "icon": "RiCropLine"
           },
           {
-            "title": "个性化定制",
-            "description": "根据需求修改模板内容和数据，配置专属 AI 能力。",
-            "image": {
-              "src": "/imgs/features/7.png",
-              "alt": "usage"
-            }
-          },
-          {
-            "title": "部署上线",
-            "description": "简单几步将你的项目推向生产环境，立刻为客户提供服务。",
-            "image": {
-              "src": "/imgs/features/8.png",
-              "alt": "usage"
-            }
-          }
-        ],
-        "className": "bg-muted"
-      },
-      "features": {
-        "id": "features",
-        "title": "ShipAny 核心功能",
-        "description": "一切你需要的工具，助力 AI SaaS 项目高效上线。",
-        "items": [
-          {
-            "title": "Next.js 项目模板",
-            "description": "生产就绪、支持 SEO 与多语言的 Next.js 脚手架。",
-            "icon": "RiNextjsFill"
-          },
-          {
-            "title": "身份认证与支付",
-            "description": "集成谷歌 OAuth、一键登录，以及 Stripe 支付。",
-            "icon": "RiKey2Fill"
-          },
-          {
-            "title": "数据基础设施",
-            "description": "内置 Supabase，稳定可靠的数据存储。",
-            "icon": "RiDatabase2Line"
-          },
-          {
-            "title": "一键部署",
-            "description": "自动化部署到 Vercel 或 Cloudflare，极速上线。",
-            "icon": "RiCloudy2Fill"
-          },
-          {
-            "title": "商业分析",
-            "description": "集成 Google Analytics、Search Console，助力业务增长。",
-            "icon": "RiBarChart2Line"
-          },
-          {
-            "title": "AI 原生基础设施",
-            "description": "预置 AI 集成、积分系统和 API 售卖能力。",
-            "icon": "RiRobot2Line"
+            "title": "生成你的 Rumpelstiltskin",
+            "description": "按下按钮，点石成金，下载发圈。",
+            "icon": "RiMagicLine"
           }
         ]
       },
-      "stats": {
-        "id": "stats",
-        "title": "用户喜爱 ShipAny",
-        "description": "因其易用且上线飞快。",
+      "features": {
+        "id": "features",
+        "title": "为什么 AI Rumpelstiltskin 上头",
+        "description": "为梗经济而生。要的都有，多余的全砍。",
         "items": [
           {
-            "title": "999+",
-            "description": "位用户"
+            "title": "梗图原生输出",
+            "description": "从生成那一刻就按 Shorts、Reels、TikTok 的画幅来。",
+            "icon": "RiVideoLine"
           },
           {
-            "title": "200+",
-            "description": "组件块"
+            "title": "零门槛",
+            "description": "会上传照片，就会转纺车。",
+            "icon": "RiMagicLine"
           },
           {
-            "title": "50+",
-            "description": "专业模板"
-          }
-        ],
-        "className": "bg-muted"
-      },
-      "testimonials": {
-        "id": "testimonials",
-        "title": "用户对 ShipAny 的评价",
-        "description": "听听开发者与创始人用 ShipAny 快速上线 AI 创业项目的故事。",
-        "items": [
-          {
-            "name": "David Chen",
-            "role": "AIWallpaper.shop 创始人",
-            "quote": "ShipAny 为我们节省了数月开发时间。2 天上线 AI 壁纸业务，一周内就收到了第一笔付费订单！",
-            "image": {
-              "src": "/imgs/avatars/1.png",
-              "alt": "david"
-            }
+            "title": "出片飞快",
+            "description": "从上传到小矮人开跳，只要几分钟，不是几小时的剪辑。",
+            "icon": "RiFlashlightLine"
           },
           {
-            "name": "Rachel Kim",
-            "role": "HeyBeauty.ai CTO",
-            "quote": "内置 AI 基础设施颠覆了开发体验，无需担心架构，只需专注核心功能，极快落地。",
-            "image": {
-              "src": "/imgs/avatars/2.png",
-              "alt": "rachel"
-            }
+            "title": "人人都是小矮人",
+            "description": "人、宠物、角色都行，一张照片一个主体。",
+            "icon": "RiUserSmileLine"
           },
           {
-            "name": "Marcus Thompson",
-            "role": "独立开发者",
-            "quote": "作为独立开发者，ShipAny 满足了全部需求——认证、支付、AI 集成、美观界面，一个周末上线 SaaS！",
-            "image": {
-              "src": "/imgs/avatars/3.png",
-              "alt": "marcus"
-            }
+            "title": "积分制，不订阅",
+            "description": "用多少转多少。买一次积分包，没有月费陷阱。",
+            "icon": "RiCoinLine"
           },
           {
-            "name": "Sofia Garcia",
-            "role": "Melodisco CEO",
-            "quote": "模板高度可定制且生产级。我们几小时内搭建出了 AI 音乐平台，上市周期大大缩短！",
-            "image": {
-              "src": "/imgs/avatars/4.png",
-              "alt": "sofia"
-            }
-          },
-          {
-            "name": "James Wilson",
-            "role": "GPTs.works 技术负责人",
-            "quote": "ShipAny 基础设施极其稳定。我们从 0 到 1 万用户，无需关心后端维护，是最棒的 AI 创业投资。",
-            "image": {
-              "src": "/imgs/avatars/5.png",
-              "alt": "james"
-            }
-          },
-          {
-            "name": "Anna Zhang",
-            "role": "创业者",
-            "quote": "从想法到上线，仅用 3 天！ShipAny 模板和部署工具让我们极快验证 AI 商业创意。",
-            "image": {
-              "src": "/imgs/avatars/6.png",
-              "alt": "anna"
-            }
+            "title": "下载即发",
+            "description": "拿到文件，丢进时间线，坐等评论炸锅。",
+            "icon": "RiDownloadLine"
           }
         ]
       },
       "faq": {
         "id": "faq",
-        "title": "关于 ShipAny 的常见问题",
-        "description": "还有其他问题？欢迎加入 Discord 或发邮件联系我们。",
+        "title": "先知道这些",
+        "description": "其他你想问的都在这里。还没解决？发邮件到 support@airumpelstiltskin.pro。",
         "items": [
           {
-            "question": "ShipAny 是什么？怎么帮到我？",
-            "answer": "ShipAny 是专为 AI SaaS 创业设计的 NextJS 全套脚手架，内含开箱即用的模板、基础设施搭建和部署工具，让你数小时内上线 AI 产品。"
+            "question": "AI Rumpelstiltskin 到底是什么？",
+            "answer": "一个把单张照片变成小矮人热舞视频的生成器，灵感来自全网爆火的那支病毒视频。上传照片，生成，下载，三步搞定。"
           },
           {
-            "question": "使用 ShipAny 需要很高的技术水平吗？",
-            "answer": "有基础编程知识即可上手。ShipAny 面向开发者友好，详细文档和模板让初学者也能轻松起步，不需深厚 AI 或云计算背景。"
+            "question": "需要写提示词吗？",
+            "answer": "不需要。这就是产品的全部意义——零提示词、零剪辑。你出照片，小矮人出舞蹈。"
           },
           {
-            "question": "ShipAny 支持哪些类型的 AI SaaS 项目？",
-            "answer": "ShipAny 支持内容生成、数据分析、AI 聊天机器人、图片/内容生成器等多种主流 AI 应用场景。"
+            "question": "什么样的照片效果最好？",
+            "answer": "单一清晰主体、正面朝向、光线充足。人多杂乱和运动模糊严重的照片会把纺车搞晕。"
           },
           {
-            "question": "用 ShipAny 一般多久能上线？",
-            "answer": "借助 ShipAny，可在数小时内拿到产品原型并上线生产环境，预配置的一键部署大幅缩短开发周期。"
+            "question": "可以用宠物或虚拟角色吗？",
+            "answer": "可以。人、宠物、原创角色都能上台，每张照片一个主体就行。"
           },
           {
-            "question": "ShipAny 的基础设施包括哪些内容？",
-            "answer": "包含认证、数据库、API 集成、支付、云端部署等全栈解决方案，全部遵循业界最佳实践预配置。"
+            "question": "生成的视频归谁？",
+            "answer": "归你。发时间线、发群聊、发哪都行。只需确保你上传的照片拥有相应权利。"
           },
           {
-            "question": "模板是否支持定制自己的品牌？",
-            "answer": "当然支持！所有模板均可自定义设计、功能和品牌，既保持基础架构稳定，又能满足个性扩展需求。"
+            "question": "怎么收费？",
+            "answer": "积分制，不是订阅制。在价格页买一个积分包，随用随扣，没有月费陷阱。"
           }
         ]
       },
       "cta": {
         "id": "cta",
-        "title": "发布你的第一个 AI SaaS 项目",
-        "description": "从这里出发，用 ShipAny 极速交付。",
+        "title": "下一个出片的就是你",
+        "description": "一张照片，一点金子，时间线已经就位。",
         "buttons": [
           {
-            "title": "获取 ShipAny",
-            "url": "https://shipany.ai",
-            "target": "_blank",
+            "title": "立即生成",
+            "url": "/ai-video-generator",
+            "target": "_self",
             "icon": "Zap"
           },
           {
-            "title": "阅读文档",
-            "url": "/docs",
-            "target": "_blank",
+            "title": "看看价格",
+            "url": "/pricing",
+            "target": "_self",
             "variant": "outline",
-            "icon": "BookOpenText"
+            "icon": "DollarSign"
           }
         ],
         "className": "bg-muted"
       },
       "subscribe": {
         "id": "subscribe",
-        "title": "订阅我们的邮件通知",
-        "description": "获取 ShipAny 最新资讯与产品动态。",
+        "title": "第一时间拿到新玩法",
+        "description": "新舞步、新画幅、零垃圾邮件，直接进邮箱。",
         "submit": {
           "input": {
             "placeholder": "输入邮箱"
