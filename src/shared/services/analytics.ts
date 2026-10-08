@@ -11,14 +11,17 @@ import { Configs, getAllConfigs } from '@/shared/models/config';
 /**
  * get analytics manager with configs
  */
+// site-wide default so the tag ships even without env vars configured
+const DEFAULT_GOOGLE_ANALYTICS_ID = 'G-5ZKX8DF990';
+
 export function getAnalyticsManagerWithConfigs(configs: Configs) {
   const analytics = new AnalyticsManager();
 
   // google analytics
-  if (configs.google_analytics_id) {
-    analytics.addProvider(
-      new GoogleAnalyticsProvider({ gaId: configs.google_analytics_id })
-    );
+  const gaId = configs.google_analytics_id || DEFAULT_GOOGLE_ANALYTICS_ID;
+  if (gaId) {
+    analytics.addProvider(new GoogleAnalyticsProvider({ gaId }));
+    
   }
 
   // clarity
