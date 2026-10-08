@@ -11,15 +11,17 @@ import { Configs, getAllConfigs } from '@/shared/models/config';
 /**
  * get analytics manager with configs
  */
-// site-wide default so the tag ships even without env vars configured
-const DEFAULT_GOOGLE_ANALYTICS_ID = 'G-5ZKX8DF990';
+// the default Google tag (G-5ZKX8DF990) is hardcoded in src/app/layout.tsx
+// per GA's manual-install instructions; only add the dynamic provider for a
+// different id so the tag never loads twice
+const LAYOUT_GOOGLE_ANALYTICS_ID = 'G-5ZKX8DF990';
 
 export function getAnalyticsManagerWithConfigs(configs: Configs) {
   const analytics = new AnalyticsManager();
 
   // google analytics
-  const gaId = configs.google_analytics_id || DEFAULT_GOOGLE_ANALYTICS_ID;
-  if (gaId) {
+  const gaId = configs.google_analytics_id;
+  if (gaId && gaId !== LAYOUT_GOOGLE_ANALYTICS_ID) {
     analytics.addProvider(new GoogleAnalyticsProvider({ gaId }));
     
   }

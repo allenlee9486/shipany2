@@ -121,6 +121,22 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Google tag (gtag.js) — manual install per GA instructions */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-5ZKX8DF990"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-5ZKX8DF990');
+            `,
+          }}
+        />
         <link rel="icon" href={envConfigs.app_favicon} />
         <link rel="alternate icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
