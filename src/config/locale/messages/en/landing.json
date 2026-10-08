@@ -15,23 +15,23 @@
       "items": [
         {
           "title": "Generator",
-          "url": "/ai-video-generator",
+          "url": "/#generator",
           "icon": "Sparkles"
         },
         {
-          "title": "Showcase",
-          "url": "/showcases",
+          "title": "The Meme",
+          "url": "/#origin",
           "icon": "Box"
         },
         {
-          "title": "Story",
-          "url": "/blog",
+          "title": "How It Works",
+          "url": "/#workflow",
           "icon": "BookOpenText"
         },
         {
-          "title": "Pricing",
-          "url": "/pricing",
-          "icon": "DollarSign"
+          "title": "FAQ",
+          "url": "/#faq",
+          "icon": "RiQuestionLine"
         }
       ]
     },
@@ -61,7 +61,7 @@
     "id": "footer",
     "brand": {
       "title": "AI Rumpelstiltskin",
-      "description": "AI Rumpelstiltskin turns one photo into a meme-ready dancing video of the little guy. No editing. No prompts. Just gold.",
+      "description": "AI Rumpelstiltskin is an independent creative project inspired by a viral AI video meme. It is not affiliated with the original creators, Rumpelstiltskin film productions, or any AI model provider.",
       "logo": {
         "src": "/logo.png",
         "alt": "AI Rumpelstiltskin",
@@ -77,17 +77,17 @@
           "children": [
             {
               "title": "Generator",
-              "url": "/ai-video-generator",
+              "url": "/#generator",
               "target": "_self"
             },
             {
-              "title": "Showcase",
-              "url": "/showcases",
+              "title": "How It Works",
+              "url": "/#workflow",
               "target": "_self"
             },
             {
-              "title": "Pricing",
-              "url": "/pricing",
+              "title": "FAQ",
+              "url": "/#faq",
               "target": "_self"
             }
           ]
@@ -96,13 +96,18 @@
           "title": "Resources",
           "children": [
             {
-              "title": "Story",
+              "title": "The Meme",
+              "url": "/#origin",
+              "target": "_self"
+            },
+            {
+              "title": "Blog",
               "url": "/blog",
               "target": "_self"
             },
             {
-              "title": "Chat",
-              "url": "/chat",
+              "title": "Updates",
+              "url": "/updates",
               "target": "_self"
             }
           ]
@@ -118,6 +123,11 @@
             {
               "title": "Terms of Service",
               "url": "/terms-of-service",
+              "target": "_self"
+            },
+            {
+              "title": "Acceptable Use",
+              "url": "/acceptable-use",
               "target": "_self"
             }
           ]
@@ -149,6 +159,10 @@
         {
           "title": "Terms of Service",
           "url": "/terms-of-service"
+        },
+        {
+          "title": "Acceptable Use",
+          "url": "/acceptable-use"
         }
       ]
     },

@@ -2,257 +2,422 @@
   "page": {
     "show_sections": [
       "hero",
-      "showcases",
-      "introduce",
-      "usage",
-      "features",
+      "generator",
+      "origin",
+      "why-real",
+      "workflow",
+      "ideas",
+      "prompts",
+      "customize",
+      "trust",
+      "coming-soon",
       "faq",
       "cta"
     ],
     "sections": {
       "hero": {
         "id": "hero",
-        "title": "Create Your AI Rumpelstiltskin",
-        "highlight_text": "AI Rumpelstiltskin",
-        "description": "Upload one photo and watch the little guy tip-toe in. No editing. No prompt needed.",
+        "title": "Create Your Own Rumpelstiltskin AI Video",
+        "highlight_text": "Rumpelstiltskin AI Video",
+        "description": "Turn the viral fantasy meme idea into your own short AI video. Build playful Rumpelstiltskin-inspired scenes for TikTok, Reels and Shorts.",
+        "announcement": {
+          "badge": "Trend",
+          "title": "AI Video Meme Generator",
+          "url": "/#origin"
+        },
+        "tip": "An independent creative project inspired by the viral AI Rumpelstiltskin meme.",
         "buttons": [
           {
-            "title": "Create Yours",
+            "title": "Preview Workspace",
             "icon": "Zap",
-            "url": "/ai-video-generator",
+            "url": "/#generator",
             "target": "_self",
             "variant": "default"
           },
           {
-            "title": "See the Meme",
-            "icon": "Box",
-            "url": "/showcases",
+            "title": "See How It Works",
+            "icon": "BookOpenText",
+            "url": "/#workflow",
             "target": "_self",
             "variant": "outline"
           }
         ],
-        "tip": "One clear, front-facing photo works best. The little guy does the rest.",
         "show_avatars": false,
         "show_award": false
       },
-      "showcases": {
-        "id": "showcases",
-        "title": "See What the Little Guy Can Do",
-        "description": "Grandmas, cats, coworkers, your ex. One photo each, and Rumpelstiltskin tips his way into your timeline.",
-        "items": [
-          {
-            "title": "Grandma Meets the Gnome",
-            "description": "Two generations. One tiny dancer. The family group chat never recovered.",
-            "image": {
-              "src": "/imgs/rumpelstiltskin/showcase-1.png",
-              "alt": "AI Rumpelstiltskin video of a grandma with the dancing gnome"
-            },
-            "button": {
-              "title": "Make One Like This",
-              "url": "/ai-video-generator",
-              "target": "_self",
-              "icon": "Sparkles"
-            }
-          },
-          {
-            "title": "Cat x The Little Guy",
-            "description": "Pets get a turn at the spinning wheel too. Front-facing cat photos work great.",
-            "image": {
-              "src": "/imgs/rumpelstiltskin/showcase-2.png",
-              "alt": "AI Rumpelstiltskin video of a cat with the dancing gnome"
-            },
-            "button": {
-              "title": "Make One Like This",
-              "url": "/ai-video-generator",
-              "target": "_self",
-              "icon": "Sparkles"
-            }
-          },
-          {
-            "title": "The Office Tip-Toe",
-            "description": "Your boss never saw it coming. HR did. They loved it.",
-            "image": {
-              "src": "/imgs/rumpelstiltskin/showcase-3.png",
-              "alt": "AI Rumpelstiltskin video of a coworker doing the tip-toe dance"
-            },
-            "button": {
-              "title": "Make One Like This",
-              "url": "/ai-video-generator",
-              "target": "_self",
-              "icon": "Sparkles"
-            }
-          }
-        ]
-      },
-      "introduce": {
-        "block": "features-list",
-        "id": "introduce",
-        "title": "What Is AI Rumpelstiltskin?",
-        "label": "The Meme",
-        "description": "A clip of a little guy dancing set the whole internet on fire. AI Rumpelstiltskin is the generator that lets anyone join in: upload a photo, get the same meme-ready gold. No prompt writing. No editing.",
-        "image": {
-          "src": "/imgs/rumpelstiltskin/what-is.png",
-          "alt": "straw in, gold out - AI Rumpelstiltskin turns one photo into a dancing video"
+      "generator": {
+        "block": "generator-preview",
+        "id": "generator",
+        "label": "AI Video Workspace",
+        "title": "Make a Rumpelstiltskin-Inspired Video",
+        "description": "Preview the workflow the workspace is being built around. Production generation unlocks once a verified AI video provider is integrated.",
+        "badge": "Coming Soon",
+        "button_title": "Generate Video",
+        "reference_label": "Reference — the viral format",
+        "reference_video": {
+          "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-1.mp4",
+          "poster": "/imgs/rumpelstiltskin/showcase-1.png"
         },
-        "buttons": [
+        "upload_placeholder": "Your scene — image or video dropzone (coming soon)",
+        "prompt_label": "Prompt",
+        "prompt_placeholder": "A tiny mischievous fairy-tale character tiptoeing through a dim rustic barn, warm golden light, cinematic fantasy atmosphere, vintage fantasy-film texture, slow camera push-in, surreal comedic mood…",
+        "formats": ["Vertical 9:16", "Landscape 16:9"],
+        "note": "Prototype preview — uploads and generation are disabled until a verified provider and backend workflow go live.",
+        "className": "bg-muted"
+      },
+      "origin": {
+        "block": "video-showcase",
+        "id": "origin",
+        "label": "Where it came from",
+        "title": "The AI Rumpelstiltskin Meme",
+        "description": "In late August 2026, an AI-generated clip of a small fairy-tale character dancing in a barn-like room hit Instagram. By late September it was set to Riff Raff's \"Tip Toe Wing In My Jawwwdinz\" — and the little guy took over TikTok, X and Reels.",
+        "videos": [
           {
-            "title": "The Story Behind the Trend",
-            "icon": "BookOpenText",
-            "url": "/blog",
-            "target": "_self",
-            "variant": "outline"
+            "title": "The Original Viral Format",
+            "description": "The AI-generated clip that started it all: a small fairy-tale character dancing like nobody's watching.",
+            "video": {
+              "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-1.mp4",
+              "poster": "/imgs/rumpelstiltskin/showcase-1.png"
+            }
+          },
+          {
+            "title": "Straw Into Gold",
+            "description": "The spinning-wheel transformation moment viewers couldn't shake off.",
+            "video": {
+              "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-2.mp4",
+              "poster": "/imgs/rumpelstiltskin/showcase-2.png"
+            }
+          },
+          {
+            "title": "Set To Riff Raff",
+            "description": "The soundtrack pairing in late September that turned a clip into a meme format.",
+            "video": {
+              "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-3.mp4",
+              "poster": "/imgs/rumpelstiltskin/showcase-3.png"
+            }
           }
         ],
         "items": [
           {
-            "title": "One Photo In",
-            "description": "Upload a single clear photo. That is the whole brief.",
-            "icon": "RiImageAddLine"
+            "title": "Aug 27, 2026",
+            "description": "Original AI clip posted"
           },
           {
-            "title": "The Dance Out",
-            "description": "The little guy tip-toes in, ready to download and repost.",
-            "icon": "RiVideoLine"
+            "title": "840+ shares",
+            "description": "Reported in about its first month"
           },
           {
-            "title": "No Prompts, No Editing",
-            "description": "Skip the timeline and the token juggling. The tool does the spinning.",
+            "title": "850K+ views",
+            "description": "Early TikTok meme version in about one week"
+          },
+          {
+            "title": "Oct 6, 2026",
+            "description": "Know Your Meme publishes its coverage"
+          }
+        ]
+      },
+      "why-real": {
+        "block": "features",
+        "id": "why-it-looks-real",
+        "title": "Why Everyone Thought It Was a Real Movie",
+        "description": "The clip was styled like footage from a forgotten 1980s fantasy film — and the illusion worked. Here is what sold it, and what gave the AI away.",
+        "items": [
+          {
+            "title": "Retro Film Look",
+            "description": "Grain, warm light and an old-school fantasy palette straight out of a VHS-era production.",
+            "icon": "RiMovie2Line"
+          },
+          {
+            "title": "An Unforgettable Character",
+            "description": "The odd little design is instantly recognizable — and instantly meme-able.",
+            "icon": "RiBrushLine"
+          },
+          {
+            "title": "A Barn That Feels Practical",
+            "description": "Straw, wood beams and cozy firelight read as a real set, not a render.",
+            "icon": "RiHome2Line"
+          },
+          {
+            "title": "The Transformation",
+            "description": "The character turns into a prince on camera — the moment everyone clipped.",
             "icon": "RiMagicLine"
           },
           {
-            "title": "Any Feed, Any Format",
-            "description": "Vertical for Shorts and Reels. Landscape for everything else.",
-            "icon": "RiGlobalLine"
+            "title": "Movement That Feels Off",
+            "description": "The strange, uncanny dance is what quietly reveals the AI origin.",
+            "icon": "RiWalkLine"
+          },
+          {
+            "title": "No 1987 Movie Exists",
+            "description": "People went hunting for the film. There was none — it was AI all along.",
+            "icon": "RiQuestionLine"
+          }
+        ]
+      },
+      "workflow": {
+        "block": "features-step",
+        "id": "workflow",
+        "label": "How it works",
+        "title": "How the Rumpelstiltskin AI Video Concept Works",
+        "description": "The creative path from idea to short fantasy video. Step 05 describes the intended workflow — production generation opens with a verified provider.",
+        "items": [
+          {
+            "title": "Choose a Scene",
+            "description": "Pick an environment or upload your own background.",
+            "icon": "RiImage2Line"
+          },
+          {
+            "title": "Describe the Character",
+            "description": "A tiny fairy-tale trickster, or a character of your own.",
+            "icon": "RiUserSmileLine"
+          },
+          {
+            "title": "Describe the Movement",
+            "description": "The tiptoe, the strut, the spin — the stranger the better.",
+            "icon": "RiWalkLine"
+          },
+          {
+            "title": "Define the Visual Style",
+            "description": "Vintage fantasy-film texture, warm golden light, uncanny mood.",
+            "icon": "RiPaletteLine"
+          },
+          {
+            "title": "Generate and Review",
+            "description": "The intended final step once a verified AI video provider is live.",
+            "icon": "RiPlayCircleLine"
           }
         ],
         "className": "bg-muted"
       },
-      "usage": {
-        "block": "features-step",
-        "id": "usage",
-        "title": "One Photo. Three Steps.",
-        "label": "How it works",
-        "description": "No prompts. No timeline. The little guy handles the heavy lifting.",
+      "ideas": {
+        "block": "features",
+        "id": "ideas",
+        "title": "Rumpelstiltskin Video Ideas",
+        "description": "Ways creators are already remixing the format — concepts the workspace is being designed to build.",
         "items": [
           {
-            "title": "Upload Your Photo",
-            "description": "One clear, front-facing subject. Person, pet, or character.",
-            "icon": "RiUpload2Line"
+            "title": "Dream Scene",
+            "description": "Drop the little guy into an impossible, dreamlike environment.",
+            "icon": "RiMoonClearLine"
           },
           {
-            "title": "Pick Your Format",
-            "description": "Vertical for Shorts and Reels. Landscape for everything else.",
-            "icon": "RiCropLine"
+            "title": "Modern World",
+            "description": "A fantasy character tip-toeing through an ordinary street or office.",
+            "icon": "RiGlobalLine"
           },
           {
-            "title": "Create Your Rumpelstiltskin",
-            "description": "Hit the button and spin straw into gold. Download and post.",
+            "title": "Comedy Reaction",
+            "description": "Use the strange dance as a reaction to everyday situations.",
+            "icon": "RiEmotionLaughLine"
+          },
+          {
+            "title": "Fantasy Parody",
+            "description": "Shoot a brand-new fairy tale in the same retro-fantasy style.",
             "icon": "RiMagicLine"
+          },
+          {
+            "title": "Character Remix",
+            "description": "Swap in another subject as the dancer — a creative concept the format invites.",
+            "icon": "RiShuffleLine"
+          },
+          {
+            "title": "Surreal Crossover",
+            "description": "Collide the meme with another universe for maximum confusion.",
+            "icon": "RiFireLine"
           }
         ]
       },
-      "features": {
-        "id": "features",
-        "title": "Why AI Rumpelstiltskin Hits",
-        "description": "Built for the meme economy. Everything you need, nothing you don't.",
+      "prompts": {
+        "block": "features-media",
+        "id": "prompts",
+        "title": "Rumpelstiltskin AI Prompt Ideas",
+        "description": "The formula: Character + Movement + Environment + Visual Style + Camera + Mood. Example: a tiny mischievous fairy-tale character tiptoeing through a dim rustic barn, warm golden light, vintage fantasy-film texture, slow camera push-in, surreal comedic mood.",
+        "image": {
+          "src": "/imgs/rumpelstiltskin/what-is.png",
+          "alt": "Prompt formula for a Rumpelstiltskin-style AI video"
+        },
+        "image_position": "right",
         "items": [
           {
-            "title": "Meme-Native Output",
-            "description": "Clips sized and styled for Shorts, Reels, and TikTok from the start.",
-            "icon": "RiVideoLine"
-          },
-          {
-            "title": "No Skills Required",
-            "description": "If you can upload a photo, you can run the spinning wheel.",
-            "icon": "RiMagicLine"
-          },
-          {
-            "title": "Fast Turns",
-            "description": "From upload to dancing gnome in minutes, not editing sessions.",
-            "icon": "RiFlashlightLine"
-          },
-          {
-            "title": "Anyone Can Be the Gnome",
-            "description": "People, pets, characters. One subject per photo works best.",
+            "title": "Character",
+            "description": "Who is dancing? Keep it small, strange and specific.",
             "icon": "RiUserSmileLine"
           },
           {
-            "title": "Credits, Not Subscriptions",
-            "description": "Pay for what you spin. Grab a pack, spend it as you go.",
-            "icon": "RiCoinLine"
+            "title": "Movement",
+            "description": "Tiptoe, strut, spin — describe the exact motion.",
+            "icon": "RiWalkLine"
           },
           {
-            "title": "Post-Ready Downloads",
-            "description": "Grab the file, drop it in your feed, watch the comments roll.",
-            "icon": "RiDownloadLine"
+            "title": "Environment",
+            "description": "Barn, bedroom, street, dreamscape — set the stage.",
+            "icon": "RiLandscapeLine"
+          },
+          {
+            "title": "Visual Style",
+            "description": "Vintage fantasy-film grain and warm golden light.",
+            "icon": "RiPaletteLine"
+          },
+          {
+            "title": "Camera",
+            "description": "Slow push-in, handheld follow, static wide shot.",
+            "icon": "RiCameraLine"
+          },
+          {
+            "title": "Mood",
+            "description": "Surreal, comedic, uncanny — name the feeling.",
+            "icon": "RiSunLine"
+          }
+        ]
+      },
+      "customize": {
+        "block": "features",
+        "id": "customize",
+        "title": "What You Can Customize",
+        "description": "Creative dimensions the workspace is being designed around — product concepts, not verified provider parameters yet.",
+        "items": [
+          {
+            "title": "Scene",
+            "description": "Choose or upload the environment the dance happens in.",
+            "icon": "RiLandscapeLine"
+          },
+          {
+            "title": "Character",
+            "description": "Define who (or what) is doing the tiptoeing.",
+            "icon": "RiUserSmileLine"
+          },
+          {
+            "title": "Movement",
+            "description": "Direct the action, from shuffle to full transformation.",
+            "icon": "RiWalkLine"
+          },
+          {
+            "title": "Prompt",
+            "description": "Steer the creative direction in plain words.",
+            "icon": "RiQuillPenLine"
+          },
+          {
+            "title": "Atmosphere",
+            "description": "Lighting, mood and overall visual tone.",
+            "icon": "RiSunLine"
+          },
+          {
+            "title": "Composition",
+            "description": "Framing and arrangement of the final shot.",
+            "icon": "RiCameraLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "trust": {
+        "block": "features",
+        "id": "trust",
+        "title": "AI Rumpelstiltskin: What's Actually Known",
+        "description": "This website is an independent creative project inspired by the viral AI Rumpelstiltskin meme. It is not affiliated with the original creators, Rumpelstiltskin film productions, or any AI model provider.",
+        "items": [
+          {
+            "title": "The Clip Is AI-Generated",
+            "description": "Confirmed by multiple outlets covering the trend.",
+            "icon": "RiCheckboxCircleLine"
+          },
+          {
+            "title": "Not From the 1987 Movie",
+            "description": "It is not a scene from any real Rumpelstiltskin film.",
+            "icon": "RiCloseCircleLine"
+          },
+          {
+            "title": "Born Late August 2026",
+            "description": "The original clip appeared on Instagram on Aug 27, 2026.",
+            "icon": "RiCalendarLine"
+          },
+          {
+            "title": "Memeified Late September",
+            "description": "The Riff Raff pairing spread it across TikTok, X and Reels.",
+            "icon": "RiFireLine"
+          },
+          {
+            "title": "Edits Joined the Trend",
+            "description": "Character-replacement versions became part of the format.",
+            "icon": "RiShuffleLine"
+          },
+          {
+            "title": "The Model Is Unverified",
+            "description": "Which AI model made the original is still publicly unknown.",
+            "icon": "RiQuestionLine"
+          }
+        ]
+      },
+      "coming-soon": {
+        "block": "cta",
+        "id": "coming-soon",
+        "title": "Create Your Own Rumpelstiltskin Video",
+        "description": "Scene-based creation, Rumpelstiltskin-inspired workflows and prompt-driven concepts — coming once a verified AI video provider and backend workflow are integrated.",
+        "buttons": [
+          {
+            "title": "Preview the Workspace",
+            "url": "/#generator",
+            "target": "_self",
+            "icon": "Zap"
+          },
+          {
+            "title": "Read the Story",
+            "url": "/blog",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "BookOpenText"
           }
         ]
       },
       "faq": {
         "id": "faq",
         "title": "Good to Know",
-        "description": "Everything else you were about to ask. Still stuck? Email support@airumpelstiltskin.pro.",
+        "description": "Still curious? Reach us at support@airumpelstiltskin.pro.",
         "items": [
           {
-            "question": "What exactly is AI Rumpelstiltskin?",
-            "answer": "It is a generator that turns one photo into a Rumpelstiltskin-style dancing video, inspired by the viral clip that took over the internet. Upload a photo, generate, download."
+            "question": "Is the viral Rumpelstiltskin video real?",
+            "answer": "The viral clip is AI-generated rather than footage from the 1987 Rumpelstiltskin movie. Multiple outlets confirmed its AI origin after viewers went looking for the nonexistent film."
           },
           {
-            "question": "Do I need to write a prompt?",
-            "answer": "No. That is the whole point - zero prompts, zero editing. You bring the photo, the little guy brings the dance."
+            "question": "What is AI Rumpelstiltskin?",
+            "answer": "AI Rumpelstiltskin refers to the viral AI-generated dancing Rumpelstiltskin-style video and the meme format that spread in late September and early October 2026."
           },
           {
-            "question": "What photos work best?",
-            "answer": "One clear subject, front-facing, decent lighting. Crowded shots and heavy motion blur confuse the spin."
+            "question": "Is AI Rumpelstiltskin an official AI model?",
+            "answer": "No. AI Rumpelstiltskin is a viral AI video and search term, not a verified official AI model, product or API."
           },
           {
-            "question": "Can I use pets or characters?",
-            "answer": "Yes. People, pets, and original characters all get a turn at the mic. Just keep it to one subject per photo."
+            "question": "Can I make my own Rumpelstiltskin AI video here?",
+            "answer": "Not yet. The workspace above is a preview of the planned workflow. Production generation opens once a verified AI video provider is integrated — no fake generations on this site."
           },
           {
-            "question": "Who owns the clips I make?",
-            "answer": "You do. Post them on your feeds, in your group chats, wherever. Just make sure you have the rights to the photo you upload."
+            "question": "Was the viral video from the 1987 Rumpelstiltskin movie?",
+            "answer": "No. The dancing clip is not a scene from the 1987 movie, or from any other film."
           },
           {
-            "question": "How much does it cost?",
-            "answer": "Credits, not subscriptions. Grab a pack on the pricing page and spend it as you spin. No monthly trap."
+            "question": "Is this site affiliated with the original creators?",
+            "answer": "No. This is an independent creative project inspired by the meme, with no affiliation to the original creators, any Rumpelstiltskin film production, or any AI model provider."
           }
         ]
       },
       "cta": {
         "id": "cta",
-        "title": "Your Rumpelstiltskin Is Next",
-        "description": "One photo. A little gold. The feed is waiting.",
+        "title": "Make Your Own Fantasy AI Video",
+        "description": "Turn the viral Rumpelstiltskin meme idea into your own creative video concept.",
         "buttons": [
           {
-            "title": "Create Yours Now",
-            "url": "/ai-video-generator",
+            "title": "Join the Waitlist",
+            "url": "mailto:support@airumpelstiltskin.pro?subject=AI%20Rumpelstiltskin%20Waitlist",
             "target": "_self",
             "icon": "Zap"
           },
           {
-            "title": "See Pricing",
-            "url": "/pricing",
+            "title": "Learn More",
+            "url": "/blog",
             "target": "_self",
             "variant": "outline",
-            "icon": "DollarSign"
+            "icon": "BookOpenText"
           }
         ],
-        "className": "bg-muted"
-      },
-      "subscribe": {
-        "id": "subscribe",
-        "title": "Get the new formats first",
-        "description": "New dances, new formats, zero spam. Straight to your inbox.",
-        "submit": {
-          "input": {
-            "placeholder": "Enter your email"
-          },
-          "button": {
-            "title": "Subscribe"
-          },
-          "action": "/api/subscribe"
-        },
         "className": "bg-muted"
       }
     }

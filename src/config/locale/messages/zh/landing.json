@@ -15,23 +15,23 @@
       "items": [
         {
           "title": "生成器",
-          "url": "/ai-video-generator",
+          "url": "/#generator",
           "icon": "Sparkles"
         },
         {
-          "title": "案例",
-          "url": "/showcases",
+          "title": "梗的来历",
+          "url": "/#origin",
           "icon": "Box"
         },
         {
-          "title": "故事",
-          "url": "/blog",
+          "title": "怎么玩",
+          "url": "/#workflow",
           "icon": "BookOpenText"
         },
         {
-          "title": "价格",
-          "url": "/pricing",
-          "icon": "DollarSign"
+          "title": "常见问题",
+          "url": "/#faq",
+          "icon": "RiQuestionLine"
         }
       ]
     },
@@ -61,7 +61,7 @@
     "id": "footer",
     "brand": {
       "title": "AI Rumpelstiltskin",
-      "description": "AI Rumpelstiltskin 只需一张照片，就能生成小矮人热舞的梗图视频。无需剪辑，无需提示词，点石成金。",
+      "description": "AI Rumpelstiltskin 是一个受爆火 AI 视频迷因启发的独立创意项目，与原始创作者、Rumpelstiltskin 电影制作方或任何 AI 模型供应商均无关联。",
       "logo": {
         "src": "/logo.png",
         "alt": "AI Rumpelstiltskin",
@@ -77,17 +77,17 @@
           "children": [
             {
               "title": "生成器",
-              "url": "/ai-video-generator",
+              "url": "/#generator",
               "target": "_self"
             },
             {
-              "title": "案例",
-              "url": "/showcases",
+              "title": "怎么玩",
+              "url": "/#workflow",
               "target": "_self"
             },
             {
-              "title": "价格",
-              "url": "/pricing",
+              "title": "常见问题",
+              "url": "/#faq",
               "target": "_self"
             }
           ]
@@ -96,13 +96,18 @@
           "title": "资源",
           "children": [
             {
-              "title": "故事",
+              "title": "梗的来历",
+              "url": "/#origin",
+              "target": "_self"
+            },
+            {
+              "title": "博客",
               "url": "/blog",
               "target": "_self"
             },
             {
-              "title": "聊天",
-              "url": "/chat",
+              "title": "更新日志",
+              "url": "/updates",
               "target": "_self"
             }
           ]
@@ -118,6 +123,11 @@
             {
               "title": "服务条款",
               "url": "/terms-of-service",
+              "target": "_self"
+            },
+            {
+              "title": "可接受使用政策",
+              "url": "/acceptable-use",
               "target": "_self"
             }
           ]
@@ -149,6 +159,10 @@
         {
           "title": "服务条款",
           "url": "/terms-of-service"
+        },
+        {
+          "title": "可接受使用政策",
+          "url": "/acceptable-use"
         }
       ]
     },

@@ -2,257 +2,422 @@
   "page": {
     "show_sections": [
       "hero",
-      "showcases",
-      "introduce",
-      "usage",
-      "features",
+      "generator",
+      "origin",
+      "why-real",
+      "workflow",
+      "ideas",
+      "prompts",
+      "customize",
+      "trust",
+      "coming-soon",
       "faq",
       "cta"
     ],
     "sections": {
       "hero": {
         "id": "hero",
-        "title": "创造你的 AI Rumpelstiltskin",
-        "highlight_text": "AI Rumpelstiltskin",
-        "description": "上传一张照片，看小矮人踩着节拍踮脚进场。无需剪辑，无需提示词。",
+        "title": "创造你自己的 Rumpelstiltskin AI 视频",
+        "highlight_text": "Rumpelstiltskin AI 视频",
+        "description": "把爆火的奇幻梗变成你自己的 AI 短视频。为 TikTok、Reels 和 Shorts 打造俏皮的 Rumpelstiltskin 风格场景。",
+        "announcement": {
+          "badge": "趋势",
+          "title": "AI 视频梗图生成器",
+          "url": "/#origin"
+        },
+        "tip": "一个受爆火 AI Rumpelstiltskin 梗启发的独立创意项目。",
         "buttons": [
           {
-            "title": "立即生成",
+            "title": "预览工作台",
             "icon": "Zap",
-            "url": "/ai-video-generator",
+            "url": "/#generator",
             "target": "_self",
             "variant": "default"
           },
           {
-            "title": "看看案例",
-            "icon": "Box",
-            "url": "/showcases",
+            "title": "看看怎么玩",
+            "icon": "BookOpenText",
+            "url": "/#workflow",
             "target": "_self",
             "variant": "outline"
           }
         ],
-        "tip": "一张清晰的正面照片效果最好，剩下的交给小矮人。",
         "show_avatars": false,
         "show_award": false
       },
-      "showcases": {
-        "id": "showcases",
-        "title": "看看小矮人能整什么活",
-        "description": "奶奶、猫、同事、前任。每人一张照片，Rumpelstiltskin 就踩着点走进你的时间线。",
-        "items": [
-          {
-            "title": "奶奶与小矮人",
-            "description": "两代人，一只小矮人。家族群聊至今没缓过来。",
-            "image": {
-              "src": "/imgs/rumpelstiltskin/showcase-1.png",
-              "alt": "奶奶与小矮人热舞的 AI Rumpelstiltskin 视频"
-            },
-            "button": {
-              "title": "做一个同款",
-              "url": "/ai-video-generator",
-              "target": "_self",
-              "icon": "Sparkles"
-            }
-          },
-          {
-            "title": "猫 x 小矮人",
-            "description": "宠物也能上纺车。正面猫片效果很好。",
-            "image": {
-              "src": "/imgs/rumpelstiltskin/showcase-2.png",
-              "alt": "猫与小矮人热舞的 AI Rumpelstiltskin 视频"
-            },
-            "button": {
-              "title": "做一个同款",
-              "url": "/ai-video-generator",
-              "target": "_self",
-              "icon": "Sparkles"
-            }
-          },
-          {
-            "title": "办公室踮脚舞",
-            "description": "老板毫无防备。HR 看到了，但他们很喜欢。",
-            "image": {
-              "src": "/imgs/rumpelstiltskin/showcase-3.png",
-              "alt": "同事跳踮脚舞的 AI Rumpelstiltskin 视频"
-            },
-            "button": {
-              "title": "做一个同款",
-              "url": "/ai-video-generator",
-              "target": "_self",
-              "icon": "Sparkles"
-            }
-          }
-        ]
-      },
-      "introduce": {
-        "block": "features-list",
-        "id": "introduce",
-        "title": "AI Rumpelstiltskin 是什么？",
-        "label": "梗的来历",
-        "description": "一段小矮人跳舞的 AI 视频点燃了全网。AI Rumpelstiltskin 让每个人都能上车：上传照片，得到同款热舞梗图视频。不写提示词，不碰剪辑。",
-        "image": {
-          "src": "/imgs/rumpelstiltskin/what-is.png",
-          "alt": "稻草进金子出 - AI Rumpelstiltskin 一张照片变热舞视频"
+      "generator": {
+        "block": "generator-preview",
+        "id": "generator",
+        "label": "AI 视频工作台",
+        "title": "制作 Rumpelstiltskin 风格视频",
+        "description": "预览工作台正在打造的工作流。接入经过验证的 AI 视频供应商后，正式生成能力即会开放。",
+        "badge": "即将上线",
+        "button_title": "生成视频",
+        "reference_label": "参考 — 爆款原型",
+        "reference_video": {
+          "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-1.mp4",
+          "poster": "/imgs/rumpelstiltskin/showcase-1.png"
         },
-        "buttons": [
+        "upload_placeholder": "你的场景 — 图片或视频上传位（即将上线）",
+        "prompt_label": "提示词",
+        "prompt_placeholder": "一个狡黠的小小童话角色踮着脚尖穿过昏暗的乡谷仓，温暖的金色光线，电影感奇幻氛围，复古奇幻电影质感，缓慢推镜，超现实喜剧情绪……",
+        "formats": ["竖版 9:16", "横版 16:9"],
+        "note": "原型预览 — 在经过验证的供应商与后端工作流上线前，上传与生成功能均不开启。",
+        "className": "bg-muted"
+      },
+      "origin": {
+        "block": "video-showcase",
+        "id": "origin",
+        "label": "梗从哪来",
+        "title": "AI Rumpelstiltskin 迷因",
+        "description": "2026 年 8 月底，一段 AI 生成的童话小矮人在谷仓里热舞的视频出现在 Instagram。9 月底被配上 Riff Raff 的《Tip Toe Wing In My Jawwwdinz》后，小矮人一举占领了 TikTok、X 和 Reels。",
+        "videos": [
           {
-            "title": "了解梗背后的故事",
-            "icon": "BookOpenText",
-            "url": "/blog",
-            "target": "_self",
-            "variant": "outline"
+            "title": "最初的爆款原型",
+            "description": "一切的开端：AI 生成的童话小角色忘我热舞。",
+            "video": {
+              "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-1.mp4",
+              "poster": "/imgs/rumpelstiltskin/showcase-1.png"
+            }
+          },
+          {
+            "title": "点石成金",
+            "description": "纺车边的变身时刻，看过就忘不掉。",
+            "video": {
+              "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-2.mp4",
+              "poster": "/imgs/rumpelstiltskin/showcase-2.png"
+            }
+          },
+          {
+            "title": "配上 Riff Raff",
+            "description": "9 月底的配乐二创，让一段视频变成了迷因模板。",
+            "video": {
+              "src": "https://pub-6ab1450befe34972b47f82c99ea0b190.r2.dev/ai%20rumpelstiltskin-3.mp4",
+              "poster": "/imgs/rumpelstiltskin/showcase-3.png"
+            }
           }
         ],
         "items": [
           {
-            "title": "一张照片进",
-            "description": "上传一张清晰照片，需求就这么多。",
-            "icon": "RiImageAddLine"
+            "title": "2026.08.27",
+            "description": "原始 AI 视频发布"
           },
           {
-            "title": "一支热舞出",
-            "description": "小矮人踮脚登场，直接下载转发。",
-            "icon": "RiVideoLine"
+            "title": "840+ 转发",
+            "description": "首月即获得的成绩"
           },
           {
-            "title": "零提示词零剪辑",
-            "description": "时间线和参数都不用管，纺车由工具来转。",
+            "title": "85万+ 播放",
+            "description": "早期 TikTok 迷因版约一周内的数据"
+          },
+          {
+            "title": "2026.10.06",
+            "description": "Know Your Meme 发布专题收录"
+          }
+        ]
+      },
+      "why-real": {
+        "block": "features",
+        "id": "why-it-looks-real",
+        "title": "为什么所有人都以为它是真电影",
+        "description": "这支视频被刻意做成了「被遗忘的 80 年代奇幻电影」的样子——而且骗过了所有人。看看哪些细节撑起了错觉，又是哪里露出了 AI 的马脚。",
+        "items": [
+          {
+            "title": "复古电影质感",
+            "description": "颗粒、暖光和老派奇幻色调，像极了 VHS 时代的制作。",
+            "icon": "RiMovie2Line"
+          },
+          {
+            "title": "过目不忘的角色",
+            "description": "古怪的小个子设计辨识度极高，天生适合做梗。",
+            "icon": "RiBrushLine"
+          },
+          {
+            "title": "像实景的谷仓",
+            "description": "稻草、木梁与暖火光，怎么看都像真实片场而非渲染。",
+            "icon": "RiHome2Line"
+          },
+          {
+            "title": "名场面变身",
+            "description": "角色在镜头前变成王子——所有人都在这一刻按下剪辑。",
             "icon": "RiMagicLine"
           },
           {
-            "title": "竖版横版都有",
-            "description": "竖版给 Shorts 和 Reels，横版给其余场合。",
-            "icon": "RiGlobalLine"
+            "title": "动作透着不对劲",
+            "description": "诡异又魔性的舞步，恰恰是 AI 出身的破绽。",
+            "icon": "RiWalkLine"
+          },
+          {
+            "title": "1987 电影并不存在",
+            "description": "观众去找那部「电影」，结果根本没有——从头到尾都是 AI。",
+            "icon": "RiQuestionLine"
+          }
+        ]
+      },
+      "workflow": {
+        "block": "features-step",
+        "id": "workflow",
+        "label": "怎么玩",
+        "title": "Rumpelstiltskin AI 视频的创作原理",
+        "description": "从想法到奇幻短视频的创作路径。第 5 步描述的是预期工作流——正式生成将随经验证的供应商一同开放。",
+        "items": [
+          {
+            "title": "选择场景",
+            "description": "挑选一个环境，或上传你自己的背景。",
+            "icon": "RiImage2Line"
+          },
+          {
+            "title": "描述角色",
+            "description": "小小的童话捣蛋鬼，或者你自创的角色。",
+            "icon": "RiUserSmileLine"
+          },
+          {
+            "title": "描述动作",
+            "description": "踮脚、摆臂、旋转——越怪越带劲。",
+            "icon": "RiWalkLine"
+          },
+          {
+            "title": "定调视觉风格",
+            "description": "复古奇幻电影质感、金色暖光、怪诞情绪。",
+            "icon": "RiPaletteLine"
+          },
+          {
+            "title": "生成与审阅",
+            "description": "待经验证的 AI 视频供应商上线后的预期最终步骤。",
+            "icon": "RiPlayCircleLine"
           }
         ],
         "className": "bg-muted"
       },
-      "usage": {
-        "block": "features-step",
-        "id": "usage",
-        "title": "一张照片，三步出片",
-        "label": "怎么玩",
-        "description": "没有提示词，没有时间线，重活小矮人全包。",
+      "ideas": {
+        "block": "features",
+        "id": "ideas",
+        "title": "Rumpelstiltskin 视频创意",
+        "description": "创作者们已经在玩的二创方向——也是工作台正在设计支持的场景。",
         "items": [
           {
-            "title": "上传照片",
-            "description": "一个清晰正面主体，人、宠物、角色都行。",
-            "icon": "RiUpload2Line"
+            "title": "梦境场景",
+            "description": "把小矮人丢进一个不可能存在的梦幻环境。",
+            "icon": "RiMoonClearLine"
           },
           {
-            "title": "选好画幅",
-            "description": "竖版给 Shorts 和 Reels，横版给其余场合。",
-            "icon": "RiCropLine"
+            "title": "现代世界",
+            "description": "奇幻角色踮脚穿过平凡街道或办公室。",
+            "icon": "RiGlobalLine"
           },
           {
-            "title": "生成你的 Rumpelstiltskin",
-            "description": "按下按钮，点石成金，下载发圈。",
+            "title": "喜剧反应",
+            "description": "用这段魔性舞蹈回应日常琐事。",
+            "icon": "RiEmotionLaughLine"
+          },
+          {
+            "title": "奇幻戏仿",
+            "description": "用同款复古奇幻风格拍一个全新童话。",
             "icon": "RiMagicLine"
+          },
+          {
+            "title": "角色混搭",
+            "description": "换一个主体来跳——这个模板天然欢迎二创。",
+            "icon": "RiShuffleLine"
+          },
+          {
+            "title": "次元对撞",
+            "description": "让迷因撞进另一个宇宙，迷惑值拉满。",
+            "icon": "RiFireLine"
           }
         ]
       },
-      "features": {
-        "id": "features",
-        "title": "为什么 AI Rumpelstiltskin 上头",
-        "description": "为梗经济而生。要的都有，多余的全砍。",
+      "prompts": {
+        "block": "features-media",
+        "id": "prompts",
+        "title": "Rumpelstiltskin AI 提示词灵感",
+        "description": "提示词公式：角色 + 动作 + 环境 + 视觉风格 + 镜头 + 情绪。示例：一个狡黠的小小童话角色踮着脚尖穿过昏暗的乡间谷仓，温暖的金色光线，复古奇幻电影质感，缓慢推镜，超现实喜剧氛围。",
+        "image": {
+          "src": "/imgs/rumpelstiltskin/what-is.png",
+          "alt": "Rumpelstiltskin 风格 AI 视频的提示词公式"
+        },
+        "image_position": "right",
         "items": [
           {
-            "title": "梗图原生输出",
-            "description": "从生成那一刻就按 Shorts、Reels、TikTok 的画幅来。",
-            "icon": "RiVideoLine"
-          },
-          {
-            "title": "零门槛",
-            "description": "会上传照片，就会转纺车。",
-            "icon": "RiMagicLine"
-          },
-          {
-            "title": "出片飞快",
-            "description": "从上传到小矮人开跳，只要几分钟，不是几小时的剪辑。",
-            "icon": "RiFlashlightLine"
-          },
-          {
-            "title": "人人都是小矮人",
-            "description": "人、宠物、角色都行，一张照片一个主体。",
+            "title": "角色",
+            "description": "谁在跳舞？小而怪、且具体。",
             "icon": "RiUserSmileLine"
           },
           {
-            "title": "积分制，不订阅",
-            "description": "用多少转多少。买一次积分包，没有月费陷阱。",
-            "icon": "RiCoinLine"
+            "title": "动作",
+            "description": "踮脚、摆臂、旋转——写清具体动作。",
+            "icon": "RiWalkLine"
           },
           {
-            "title": "下载即发",
-            "description": "拿到文件，丢进时间线，坐等评论炸锅。",
-            "icon": "RiDownloadLine"
+            "title": "环境",
+            "description": "谷仓、卧室、街头、梦境——把舞台搭好。",
+            "icon": "RiLandscapeLine"
+          },
+          {
+            "title": "视觉风格",
+            "description": "复古奇幻电影颗粒感与金色暖光。",
+            "icon": "RiPaletteLine"
+          },
+          {
+            "title": "镜头",
+            "description": "缓慢推镜、手持跟拍、固定全景。",
+            "icon": "RiCameraLine"
+          },
+          {
+            "title": "情绪",
+            "description": "超现实、喜剧、怪诞——点名那种感觉。",
+            "icon": "RiSunLine"
+          }
+        ]
+      },
+      "customize": {
+        "block": "features",
+        "id": "customize",
+        "title": "你可以定制什么",
+        "description": "工作台正在围绕这些创作维度设计——目前是产品概念，尚不是已验证的供应商参数。",
+        "items": [
+          {
+            "title": "场景",
+            "description": "选择或上传舞蹈发生的环境。",
+            "icon": "RiLandscapeLine"
+          },
+          {
+            "title": "角色",
+            "description": "定义谁（或什么）来跳这支踮脚舞。",
+            "icon": "RiUserSmileLine"
+          },
+          {
+            "title": "动作",
+            "description": "从碎步到整套变身，由你来导演。",
+            "icon": "RiWalkLine"
+          },
+          {
+            "title": "提示词",
+            "description": "用大白话掌控创意方向。",
+            "icon": "RiQuillPenLine"
+          },
+          {
+            "title": "氛围",
+            "description": "光线、情绪与整体视觉基调。",
+            "icon": "RiSunLine"
+          },
+          {
+            "title": "构图",
+            "description": "最终画面的取景与布局。",
+            "icon": "RiCameraLine"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "trust": {
+        "block": "features",
+        "id": "trust",
+        "title": "AI Rumpelstiltskin：已知与未知",
+        "description": "本网站是一个受爆火 AI Rumpelstiltskin 迷因启发的独立创意项目，与原始创作者、任何 Rumpelstiltskin 电影制作方或任何 AI 模型供应商均无关联。",
+        "items": [
+          {
+            "title": "视频确为 AI 生成",
+            "description": "多家报道该趋势的媒体均已确认。",
+            "icon": "RiCheckboxCircleLine"
+          },
+          {
+            "title": "并非出自 1987 电影",
+            "description": "它不是任何一部真实 Rumpelstiltskin 电影中的镜头。",
+            "icon": "RiCloseCircleLine"
+          },
+          {
+            "title": "诞生于 2026 年 8 月底",
+            "description": "原始视频于 8 月 27 日出现在 Instagram。",
+            "icon": "RiCalendarLine"
+          },
+          {
+            "title": "9 月底迷因化",
+            "description": "Riff Raff 配乐让它在 TikTok、X 和 Reels 全面扩散。",
+            "icon": "RiFireLine"
+          },
+          {
+            "title": "二创加入热潮",
+            "description": "角色替换版本也成为模板的一部分。",
+            "icon": "RiShuffleLine"
+          },
+          {
+            "title": "原始模型未经验证",
+            "description": "原视频究竟用哪个 AI 模型生成，至今没有公开定论。",
+            "icon": "RiQuestionLine"
+          }
+        ]
+      },
+      "coming-soon": {
+        "block": "cta",
+        "id": "coming-soon",
+        "title": "创造你自己的 Rumpelstiltskin 视频",
+        "description": "基于场景的创作、Rumpelstiltskin 风格工作流、提示词驱动的创意——将在经验证的 AI 视频供应商与后端工作流接入后上线。",
+        "buttons": [
+          {
+            "title": "预览工作台",
+            "url": "/#generator",
+            "target": "_self",
+            "icon": "Zap"
+          },
+          {
+            "title": "读读背后的故事",
+            "url": "/blog",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "BookOpenText"
           }
         ]
       },
       "faq": {
         "id": "faq",
         "title": "先知道这些",
-        "description": "其他你想问的都在这里。还没解决？发邮件到 support@airumpelstiltskin.pro。",
+        "description": "还有疑问？发邮件到 support@airumpelstiltskin.pro。",
         "items": [
           {
-            "question": "AI Rumpelstiltskin 到底是什么？",
-            "answer": "一个把单张照片变成小矮人热舞视频的生成器，灵感来自全网爆火的那支病毒视频。上传照片，生成，下载，三步搞定。"
+            "question": "爆火的 Rumpelstiltskin 视频是真的吗？",
+            "answer": "这支病毒视频是 AI 生成的，并不是 1987 年《Rumpelstiltskin》电影的片段。在观众四处寻找那部并不存在的电影后，多家媒体确认了它的 AI 出身。"
           },
           {
-            "question": "需要写提示词吗？",
-            "answer": "不需要。这就是产品的全部意义——零提示词、零剪辑。你出照片，小矮人出舞蹈。"
+            "question": "AI Rumpelstiltskin 是什么？",
+            "answer": "AI Rumpelstiltskin 指的是 2026 年 9 月底到 10 月初爆火的 AI 生成 Rumpelstiltskin 风格热舞视频，以及由它衍生的迷因模板。"
           },
           {
-            "question": "什么样的照片效果最好？",
-            "answer": "单一清晰主体、正面朝向、光线充足。人多杂乱和运动模糊严重的照片会把纺车搞晕。"
+            "question": "AI Rumpelstiltskin 是官方 AI 模型吗？",
+            "answer": "不是。AI Rumpelstiltskin 是一个病毒 AI 视频和搜索词，不是经过验证的官方 AI 模型、产品或 API。"
           },
           {
-            "question": "可以用宠物或虚拟角色吗？",
-            "answer": "可以。人、宠物、原创角色都能上台，每张照片一个主体就行。"
+            "question": "现在能在这个网站生成我自己的视频吗？",
+            "answer": "还不能。上方的工作台只是预期工作流的预览。正式生成能力将随经验证的 AI 视频供应商接入而开放——本站不做虚假生成。"
           },
           {
-            "question": "生成的视频归谁？",
-            "answer": "归你。发时间线、发群聊、发哪都行。只需确保你上传的照片拥有相应权利。"
+            "question": "病毒视频出自 1987 年的电影吗？",
+            "answer": "不是。这支热舞视频不是 1987 年电影的片段，也不出自任何其他电影。"
           },
           {
-            "question": "怎么收费？",
-            "answer": "积分制，不是订阅制。在价格页买一个积分包，随用随扣，没有月费陷阱。"
+            "question": "本站与原始创作者有关联吗？",
+            "answer": "没有。这是一个受该迷因启发的独立创意项目，与原始创作者、任何 Rumpelstiltskin 电影制作方或任何 AI 模型供应商均无关联。"
           }
         ]
       },
       "cta": {
         "id": "cta",
-        "title": "下一个出片的就是你",
-        "description": "一张照片，一点金子，时间线已经就位。",
+        "title": "制作你自己的奇幻 AI 视频",
+        "description": "把爆火的 Rumpelstiltskin 迷因变成你自己的创意视频概念。",
         "buttons": [
           {
-            "title": "立即生成",
-            "url": "/ai-video-generator",
+            "title": "加入等候名单",
+            "url": "mailto:support@airumpelstiltskin.pro?subject=AI%20Rumpelstiltskin%20Waitlist",
             "target": "_self",
             "icon": "Zap"
           },
           {
-            "title": "看看价格",
-            "url": "/pricing",
+            "title": "了解更多",
+            "url": "/blog",
             "target": "_self",
             "variant": "outline",
-            "icon": "DollarSign"
+            "icon": "BookOpenText"
           }
         ],
-        "className": "bg-muted"
-      },
-      "subscribe": {
-        "id": "subscribe",
-        "title": "第一时间拿到新玩法",
-        "description": "新舞步、新画幅、零垃圾邮件，直接进邮箱。",
-        "submit": {
-          "input": {
-            "placeholder": "输入邮箱"
-          },
-          "button": {
-            "title": "订阅"
-          },
-          "action": "/api/subscribe"
-        },
         "className": "bg-muted"
       }
     }
