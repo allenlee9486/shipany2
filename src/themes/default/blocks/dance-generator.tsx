@@ -767,7 +767,7 @@ export function DanceGenerator({
                     src={resultVideoUrl}
                     controls
                     playsInline
-                    className="aspect-video w-full rounded-xl border border-[#8a744a]/40 bg-black object-cover"
+                    className="max-h-[75vh] w-full rounded-xl border border-[#8a744a]/40 bg-black object-contain"
                   />
                   <button
                     type="button"
