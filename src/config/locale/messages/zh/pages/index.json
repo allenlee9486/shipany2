@@ -106,7 +106,9 @@
           "file_too_large": "照片不能超过 10 MB",
           "footnote": "已包含原版舞蹈音频。生成失败会自动退还积分。",
           "template_video": "https://image.airumpelstiltskin.online/example-4.mp4",
-          "duration": "9"
+          "duration": "9",
+          "generating_estimate": "预计需要 5–15 分钟",
+          "generating_hint": "请保持本页面开启、中途不要刷新，完成后视频会自动出现在这里。"
         },
         "examples": {
           "title": "欣赏舞蹈",

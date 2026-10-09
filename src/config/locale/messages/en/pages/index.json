@@ -106,7 +106,9 @@
           "file_too_large": "Photo must be 10 MB or smaller",
           "footnote": "Original dance audio included. Failed generations return credits to your account.",
           "template_video": "https://image.airumpelstiltskin.online/example-4.mp4",
-          "duration": "9"
+          "duration": "9",
+          "generating_estimate": "Usually takes 5–15 minutes",
+          "generating_hint": "Please keep this page open and skip refreshing — your video will appear here automatically."
         },
         "examples": {
           "title": "See the Dance",

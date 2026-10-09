@@ -718,6 +718,16 @@ export function DanceGenerator({
                   <p className="text-center font-mono text-[11px] text-[#a89e8c]">
                     {taskStatusLabel}
                   </p>
+                  {w.generating_estimate && (
+                    <p className="pt-1 text-center text-xs font-bold text-[#f0b429]">
+                      {w.generating_estimate}
+                    </p>
+                  )}
+                  {w.generating_hint && (
+                    <p className="text-center font-mono text-[10px] leading-relaxed text-[#6b6252]">
+                      {w.generating_hint}
+                    </p>
+                  )}
                 </div>
               )}
 
@@ -779,6 +789,16 @@ export function DanceGenerator({
                   <p className="font-mono text-xs text-[#a89e8c]">
                     {taskStatusLabel}
                   </p>
+                  {w.generating_estimate && (
+                    <p className="text-sm font-bold text-[#f0b429]">
+                      {w.generating_estimate}
+                    </p>
+                  )}
+                  {w.generating_hint && (
+                    <p className="max-w-xs text-center font-mono text-[11px] leading-relaxed text-[#6b6252]">
+                      {w.generating_hint}
+                    </p>
+                  )}
                 </div>
               ) : (
                 <div className="relative overflow-hidden rounded-xl border border-[#3a2f1b]">
