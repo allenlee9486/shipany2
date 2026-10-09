@@ -54,6 +54,15 @@ export async function findAITaskById(id: string) {
   return result;
 }
 
+// find by provider task id (e.g. fal request_id), used by provider webhooks
+export async function findAITaskByTaskId(taskId: string) {
+  const [result] = await db()
+    .select()
+    .from(aiTask)
+    .where(eq(aiTask.taskId, taskId));
+  return result;
+}
+
 export async function updateAITaskById(id: string, updateAITask: UpdateAITask) {
   const result = await db().transaction(async (tx: any) => {
     // task failed, Revoke credit consumption record
