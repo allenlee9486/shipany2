@@ -28,7 +28,8 @@ const KLING_MODEL =
 const DEFAULT_TEMPLATE_VIDEO =
   'https://image.airumpelstiltskin.online/ai%20rumpelstiltskin-1.mp4';
 const POLL_INTERVAL = 10000;
-const GENERATION_TIMEOUT = 720000; // 12 minutes
+// 9-second generations with a reference video can take a while; allow 25 min
+const GENERATION_TIMEOUT = 1500000;
 const SCENE_MAX_LENGTH = 300;
 const MAX_PHOTO_MB = 10;
 
