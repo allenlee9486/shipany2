@@ -116,7 +116,7 @@
           "upload_failed": "上传失败，请重试",
           "file_too_large": "照片不能超过 10 MB",
           "footnote": "已包含原版舞蹈音频。生成失败会自动退还积分。",
-          "template_video": "https://www.airumpelstiltskin.online/videos/dance-template-2.mp4"
+          "template_video": "https://image.airumpelstiltskin.online/example-4.mp4"
         },
         "examples": {
           "title": "欣赏舞蹈",

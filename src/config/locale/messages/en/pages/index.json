@@ -116,7 +116,7 @@
           "upload_failed": "Upload failed, please try again",
           "file_too_large": "Photo must be 10 MB or smaller",
           "footnote": "Original dance audio included. Failed generations return credits to your account.",
-          "template_video": "https://www.airumpelstiltskin.online/videos/dance-template-2.mp4"
+          "template_video": "https://image.airumpelstiltskin.online/example-4.mp4"
         },
         "examples": {
           "title": "See the Dance",
