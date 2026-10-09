@@ -14,21 +14,23 @@ export function FeaturesStep({
   return (
     <section
       id={section.id}
-      className={cn('py-16 md:py-24', section.className, className)}
+      className={cn('py-20 md:py-28', section.className, className)}
     >
       <div className="container">
         <ScrollAnimation>
-          <div className="max-w-3xl text-balance">
+          <div className="text-balance mx-auto max-w-3xl text-center">
             {section.label && (
-              <p className="text-muted-foreground text-xs font-bold tracking-[0.22em] uppercase">
+              <p className="font-mono text-xs font-bold tracking-[0.35em] text-teal-400 uppercase">
                 {section.label}
               </p>
             )}
-            <h2 className="mt-3 break-words text-3xl leading-[0.95] font-display uppercase tracking-tight text-balance sm:text-4xl md:text-5xl">
-              {section.title}
-            </h2>
+            {section.title && (
+              <h2 className="font-display text-[#f2ead9] mt-4 break-words text-4xl leading-[0.95] font-normal tracking-tight uppercase text-balance sm:text-5xl md:text-6xl">
+                {section.title}
+              </h2>
+            )}
             {section.description && (
-              <p className="text-muted-foreground mt-4 max-w-2xl text-base font-medium">
+              <p className="text-[#a89e8c] mx-auto mt-5 max-w-2xl text-base">
                 {section.description}
               </p>
             )}
@@ -36,20 +38,18 @@ export function FeaturesStep({
         </ScrollAnimation>
 
         <ScrollAnimation delay={0.2}>
-          <div className="border-border mt-12 grid grid-cols-1 divide-y divide-border border md:grid-cols-3 md:divide-x lg:grid-cols-5">
+          <div className="mt-14 grid grid-cols-1 gap-x-10 gap-y-12 md:mt-20 md:grid-cols-3">
             {section.items?.map((item, idx) => (
-              <div className="hover:bg-muted space-y-10 p-6 transition-colors md:p-7" key={idx}>
-                <span className="text-primary block text-4xl font-display">
+              <div className="border-t border-[#8a744a]/50 pt-8" key={idx}>
+                <span className="font-mono text-base text-[#e8a33d]">
                   {String(idx + 1).padStart(2, '0')}
                 </span>
-                <div className="space-y-2.5">
-                  <h3 className="text-sm font-bold tracking-[0.12em] uppercase">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
+                <h3 className="font-display text-[#f2ead9] mt-5 text-xl tracking-wide uppercase md:text-2xl">
+                  {item.title}
+                </h3>
+                <p className="text-[#a89e8c] mt-3 text-[15px] leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>

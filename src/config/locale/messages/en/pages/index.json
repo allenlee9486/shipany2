@@ -213,36 +213,22 @@
         "block": "features-step",
         "id": "workflow",
         "label": "How it works",
-        "title": "How the Rumpelstiltskin AI Video Concept Works",
-        "description": "The creative path from idea to short fantasy video. Step 05 describes the intended workflow — production generation opens with a verified provider.",
+        "title": "Set Up Your Rumpelstiltskin Dance",
         "items": [
           {
-            "title": "Choose a Scene",
-            "description": "Pick an environment or upload your own background.",
-            "icon": "RiImage2Line"
+            "title": "Choose Your Photos",
+            "description": "Start with a clear photo for the little man. Add a second photo for the princess if you like."
           },
           {
-            "title": "Describe the Character",
-            "description": "A tiny fairy-tale trickster, or a character of your own.",
-            "icon": "RiUserSmileLine"
+            "title": "Set the Scene",
+            "description": "A velvet tuxedo or gold sequins? A straw-filled barn or an office at 9am? Make the story yours."
           },
           {
-            "title": "Describe the Movement",
-            "description": "The tiptoe, the strut, the spin — the stranger the better.",
-            "icon": "RiWalkLine"
-          },
-          {
-            "title": "Define the Visual Style",
-            "description": "Vintage fantasy-film texture, warm golden light, uncanny mood.",
-            "icon": "RiPaletteLine"
-          },
-          {
-            "title": "Generate and Review",
-            "description": "The intended final step once a verified AI video provider is live.",
-            "icon": "RiPlayCircleLine"
+            "title": "Select Your Video Format",
+            "description": "Choose a portrait, square or landscape frame to suit your favorite feed."
           }
         ],
-        "className": "bg-muted"
+        "className": "bg-[#171208]"
       },
       "ideas": {
         "block": "features",

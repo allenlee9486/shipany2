@@ -213,36 +213,22 @@
         "block": "features-step",
         "id": "workflow",
         "label": "怎么玩",
-        "title": "Rumpelstiltskin AI 视频的创作原理",
-        "description": "从想法到奇幻短视频的创作路径。第 5 步描述的是预期工作流——正式生成将随经验证的供应商一同开放。",
+        "title": "开启你的 Rumpelstiltskin 之舞",
         "items": [
           {
-            "title": "选择场景",
-            "description": "挑选一个环境，或上传你自己的背景。",
-            "icon": "RiImage2Line"
+            "title": "选择照片",
+            "description": "先给小矮人准备一张清晰的照片。愿意的话，再给公主也添一张。"
           },
           {
-            "title": "描述角色",
-            "description": "小小的童话捣蛋鬼，或者你自创的角色。",
-            "icon": "RiUserSmileLine"
+            "title": "设定场景",
+            "description": "天鹅绒礼服还是金色亮片？稻草谷仓还是早上 9 点的办公室？故事由你做主。"
           },
           {
-            "title": "描述动作",
-            "description": "踮脚、摆臂、旋转——越怪越带劲。",
-            "icon": "RiWalkLine"
-          },
-          {
-            "title": "定调视觉风格",
-            "description": "复古奇幻电影质感、金色暖光、怪诞情绪。",
-            "icon": "RiPaletteLine"
-          },
-          {
-            "title": "生成与审阅",
-            "description": "待经验证的 AI 视频供应商上线后的预期最终步骤。",
-            "icon": "RiPlayCircleLine"
+            "title": "选择视频格式",
+            "description": "竖屏、方形或横屏画幅，适配你常用的平台。"
           }
         ],
-        "className": "bg-muted"
+        "className": "bg-[#171208]"
       },
       "ideas": {
         "block": "features",
