@@ -9,101 +9,115 @@
       "pricing": {
         "id": "pricing",
         "sr_only_title": "AI Rumpelstiltskin Pricing",
-        "title": "Choose Your Pack",
-        "description": "Choose how many videos you want to create. Pay once and create at your own pace.",
+        "title": "Choose How You Dance",
+        "description": "One-time credit packs or a monthly plan. Get more credits whenever you want more.",
         "groups": [
           {
             "name": "packs",
-            "title": "Pay as you go",
+            "title": "Choose your plan",
             "is_featured": true
           }
         ],
         "items": [
           {
-            "title": "Starter",
-            "description": "For trying it out.",
+            "title": "One Little Dance",
+            "description": "For the moment that deserves its own dance.",
+            "eyebrow": "Start Here",
             "label": "",
             "features_title": "",
             "features": [
-              "Up to 2 videos",
-              "$7.50 per video"
+              "100 credits",
+              "1 video · up to 9s each",
+              "Landscape video · 16:9",
+              "Unused credits never expire",
+              "One payment. No subscription."
             ],
             "interval": "one-time",
-            "amount": 1499,
+            "amount": 999,
             "currency": "USD",
-            "price": "$14.99",
-            "unit": "",
-            "is_featured": false,
-            "tip": "Valid for 90 days",
+            "price": "$9.99",
+            "unit": "one time",
+            "is_featured": true,
+            "tip": "",
             "button": {
-              "title": "Get videos",
+              "title": "Get 100 credits",
               "url": "/pricing",
               "icon": ""
             },
             "product_id": "pack-starter",
-            "product_name": "AI Rumpelstiltskin Starter Pack",
-            "credits": 180,
+            "product_name": "AI Rumpelstiltskin One Little Dance",
+            "credits": 100,
             "credits_label": "credits",
-            "valid_days": 90,
+            "valid_days": 0,
             "group": "packs"
           },
           {
-            "title": "Creator",
-            "description": "For regular creation.",
-            "label": "Save 16.6%",
+            "title": "Make It a Trilogy",
+            "description": "Three stories. Three chances to steal the scene.",
+            "eyebrow": "Video Pack",
+            "label": "Save 17%",
             "features_title": "",
             "features": [
-              "Up to 8 videos",
-              "$6.25 per video"
+              "300 credits",
+              "5 videos · up to 9s each",
+              "Landscape video · 16:9",
+              "Unused credits never expire",
+              "One payment. No subscription."
             ],
             "interval": "one-time",
-            "amount": 4999,
+            "amount": 2499,
             "currency": "USD",
-            "price": "$49.99",
-            "unit": "",
-            "is_featured": true,
-            "tip": "Valid for 90 days",
-            "button": {
-              "title": "Get videos",
-              "url": "/pricing",
-              "icon": ""
-            },
-            "product_id": "pack-creator",
-            "product_name": "AI Rumpelstiltskin Creator Pack",
-            "credits": 720,
-            "credits_label": "credits",
-            "valid_days": 90,
-            "group": "packs"
-          },
-          {
-            "title": "Pro",
-            "description": "For frequent creation.",
-            "label": "Save 33.3%",
-            "features_title": "",
-            "features": [
-              "Up to 20 videos",
-              "$5.00 per video"
-            ],
-            "interval": "one-time",
-            "amount": 9999,
-            "currency": "USD",
-            "price": "$99.99",
-            "unit": "",
+            "price": "$24.99",
+            "unit": "one time",
             "is_featured": false,
-            "tip": "Valid for 90 days",
+            "tip": "",
             "button": {
-              "title": "Get videos",
+              "title": "Get 300 credits",
               "url": "/pricing",
               "icon": ""
             },
-            "product_id": "pack-pro",
-            "product_name": "AI Rumpelstiltskin Pro Pack",
-            "credits": 1800,
+            "product_id": "pack-trilogy",
+            "product_name": "AI Rumpelstiltskin Trilogy Pack",
+            "credits": 300,
             "credits_label": "credits",
-            "valid_days": 90,
+            "valid_days": 0,
+            "group": "packs"
+          },
+          {
+            "title": "Keep the Story Going",
+            "description": "A fresh supply of mischief, every month.",
+            "eyebrow": "Monthly Subscription",
+            "label": "Save 33%",
+            "features_title": "",
+            "features": [
+              "600 credits every month",
+              "10 videos · up to 9s each",
+              "Landscape video · 16:9",
+              "Unused credits never expire",
+              "Cancel renewal anytime"
+            ],
+            "interval": "month",
+            "amount": 3999,
+            "currency": "USD",
+            "price": "$39.99",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "",
+            "button": {
+              "title": "Start monthly plan",
+              "url": "/pricing",
+              "icon": ""
+            },
+            "product_id": "pack-monthly",
+            "product_name": "AI Rumpelstiltskin Monthly Plan",
+            "plan_name": "monthly",
+            "credits": 600,
+            "credits_label": "credits",
+            "valid_days": 0,
             "group": "packs"
           }
-        ]
+        ],
+        "className": "bg-[#171208]"
       }
     }
   },

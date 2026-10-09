@@ -9,101 +9,115 @@
       "pricing": {
         "id": "pricing",
         "sr_only_title": "AI Rumpelstiltskin 定价",
-        "title": "选择你的套餐",
-        "description": "选择你想创作多少条视频。一次付费，按自己的节奏创作。",
+        "title": "选一种起舞方式",
+        "description": "单次积分包或包月订阅，想要更多随时补积分。",
         "groups": [
           {
             "name": "packs",
-            "title": "按次付费",
+            "title": "选择你的方案",
             "is_featured": true
           }
         ],
         "items": [
           {
-            "title": "入门版",
-            "description": "先试试水。",
+            "title": "一支小舞",
+            "description": "为了那个值得独舞起舞的瞬间。",
+            "eyebrow": "从这里开始",
             "label": "",
             "features_title": "",
             "features": [
-              "最多 2 个视频",
-              "单价 $7.50 / 条"
+              "100 积分",
+              "1 个视频 · 每条最长 9 秒",
+              "横屏视频 · 16:9",
+              "未用积分永不过期",
+              "单次付费，无订阅"
             ],
             "interval": "one-time",
-            "amount": 1499,
+            "amount": 999,
             "currency": "USD",
-            "price": "$14.99",
-            "unit": "",
-            "is_featured": false,
-            "tip": "90 天内有效",
+            "price": "$9.99",
+            "unit": "单次付清",
+            "is_featured": true,
+            "tip": "",
             "button": {
-              "title": "获取视频",
+              "title": "获得 100 积分",
               "url": "/pricing",
               "icon": ""
             },
             "product_id": "pack-starter",
-            "product_name": "AI Rumpelstiltskin 入门版 Pack",
-            "credits": 180,
+            "product_name": "AI Rumpelstiltskin One Little Dance",
+            "credits": 100,
             "credits_label": "积分",
-            "valid_days": 90,
+            "valid_days": 0,
             "group": "packs"
           },
           {
-            "title": "创作版",
-            "description": "适合稳定创作。",
-            "label": "省 16.6%",
+            "title": "舞成三部曲",
+            "description": "三个故事，三次抢镜机会。",
+            "eyebrow": "视频包",
+            "label": "省 17%",
             "features_title": "",
             "features": [
-              "最多 8 个视频",
-              "单价 $6.25 / 条"
+              "300 积分",
+              "5 个视频 · 每条最长 9 秒",
+              "横屏视频 · 16:9",
+              "未用积分永不过期",
+              "单次付费，无订阅"
             ],
             "interval": "one-time",
-            "amount": 4999,
+            "amount": 2499,
             "currency": "USD",
-            "price": "$49.99",
-            "unit": "",
-            "is_featured": true,
-            "tip": "90 天内有效",
-            "button": {
-              "title": "获取视频",
-              "url": "/pricing",
-              "icon": ""
-            },
-            "product_id": "pack-creator",
-            "product_name": "AI Rumpelstiltskin 创作版 Pack",
-            "credits": 720,
-            "credits_label": "积分",
-            "valid_days": 90,
-            "group": "packs"
-          },
-          {
-            "title": "专业版",
-            "description": "适合高频创作。",
-            "label": "省 33.3%",
-            "features_title": "",
-            "features": [
-              "最多 20 个视频",
-              "单价 $5.00 / 条"
-            ],
-            "interval": "one-time",
-            "amount": 9999,
-            "currency": "USD",
-            "price": "$99.99",
-            "unit": "",
+            "price": "$24.99",
+            "unit": "单次付清",
             "is_featured": false,
-            "tip": "90 天内有效",
+            "tip": "",
             "button": {
-              "title": "获取视频",
+              "title": "获得 300 积分",
               "url": "/pricing",
               "icon": ""
             },
-            "product_id": "pack-pro",
-            "product_name": "AI Rumpelstiltskin 专业版 Pack",
-            "credits": 1800,
+            "product_id": "pack-trilogy",
+            "product_name": "AI Rumpelstiltskin Trilogy Pack",
+            "credits": 300,
             "credits_label": "积分",
-            "valid_days": 90,
+            "valid_days": 0,
+            "group": "packs"
+          },
+          {
+            "title": "让故事继续",
+            "description": "每月准时送来一份新的恶作剧。",
+            "eyebrow": "月度订阅",
+            "label": "省 33%",
+            "features_title": "",
+            "features": [
+              "每月 600 积分",
+              "10 个视频 · 每条最长 9 秒",
+              "横屏视频 · 16:9",
+              "未用积分永不过期",
+              "随时取消续订"
+            ],
+            "interval": "month",
+            "amount": 3999,
+            "currency": "USD",
+            "price": "$39.99",
+            "unit": "/ 月",
+            "is_featured": false,
+            "tip": "",
+            "button": {
+              "title": "开始包月计划",
+              "url": "/pricing",
+              "icon": ""
+            },
+            "product_id": "pack-monthly",
+            "product_name": "AI Rumpelstiltskin Monthly Plan",
+            "plan_name": "monthly",
+            "credits": 600,
+            "credits_label": "积分",
+            "valid_days": 0,
             "group": "packs"
           }
-        ]
+        ],
+        "className": "bg-[#171208]"
       }
     }
   },

@@ -21,6 +21,7 @@ export interface PricingItem {
   title?: string;
   description?: string;
   label?: string;
+  eyebrow?: string; // small mono text above the title
 
   currency: string; // default currency
   amount: number; // default price amount

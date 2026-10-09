@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ArrowUpRight, Loader2 } from 'lucide-react';
+import { ArrowUpRight, Check, Loader2 } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 
@@ -66,6 +66,13 @@ function getInitialCurrency(
 
   // Otherwise return default currency
   return defaultCurrency;
+}
+
+// price per 100 credits in dollars, e.g. $8.33 per 100 credits
+function getPricePer100Credits(item: PricingItem): string | null {
+  if (!item.credits || item.credits <= 0) return null;
+  const per100 = Math.round((item.amount / item.credits) * 100) / 100;
+  return `$${per100.toFixed(2)} per 100 credits`;
 }
 
 export function Pricing({
@@ -300,7 +307,8 @@ export function Pricing({
 
       window.location.href = checkoutUrl;
     } catch (e: any) {
-      console.log('checkout failed: ', e);
+      console.log('checkout failed: ', e.message);
+
       toast.error('checkout failed: ' + e.message);
 
       setIsLoading(false);
@@ -339,17 +347,17 @@ export function Pricing({
           {section.sr_only_title && (
             <h1 className="sr-only">{section.sr_only_title}</h1>
           )}
-          <h2 className="break-words text-4xl leading-[0.95] font-display uppercase tracking-tight text-balance sm:text-5xl md:text-6xl">
+          <h2 className="font-display text-[#f2ead9] break-words text-4xl leading-[0.95] uppercase tracking-tight text-balance sm:text-5xl md:text-6xl">
             {section.title}
           </h2>
           {section.description && (
-            <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-base font-medium text-balance">
+            <p className="text-[#a89e8c] mx-auto mt-4 max-w-2xl text-base font-medium text-balance">
               {section.description}
             </p>
           )}
         </div>
 
-        <div className="border-foreground mt-12 border-t-[3px]">
+        <div className="mt-12">
           {section.groups && section.groups.length > 1 && (
             <div className="mt-8 flex w-full justify-center">
               <Tabs value={group} onValueChange={setGroup} className="">
@@ -394,36 +402,60 @@ export function Pricing({
               const selectedCurrency =
                 currencyState?.selectedCurrency || item.currency;
               const currencies = getCurrenciesFromItem(item);
+              const per100 = getPricePer100Credits(displayedItem);
 
               return (
                 <div
                   key={idx}
-                  className="border-border bg-card relative flex flex-col border p-6 transition-colors hover:bg-muted/50 md:p-8"
+                  className={cn(
+                    'bg-[#211910] relative flex flex-col rounded-2xl border p-6 transition-colors md:p-8',
+                    item.is_featured
+                      ? 'border-[#f0b429]/80'
+                      : 'border-[#3a2f1b] hover:border-[#8a744a]/60'
+                  )}
                 >
-                  {/* header: name + save badge */}
+                  {/* eyebrow + save badge */}
                   <div className="flex items-start justify-between gap-3">
-                    <h3 className="text-sm font-bold tracking-[0.16em] uppercase">
-                      {item.title}
-                    </h3>
+                    {item.eyebrow && (
+                      <p className="font-mono text-xs font-medium tracking-[0.22em] text-[#f0b429] uppercase">
+                        {item.eyebrow}
+                      </p>
+                    )}
                     {item.label && (
-                      <span className="border-accent text-accent shrink-0 border px-2.5 py-1 text-xs font-bold tracking-[0.08em] uppercase">
+                      <span
+                        className={cn(
+                          'shrink-0 rounded-full border px-2.5 py-1 font-mono text-xs tracking-[0.08em] uppercase',
+                          'border-[#f0b429]/40 bg-[#f0b429]/10 text-[#f0b429]',
+                          !item.eyebrow && 'ml-auto'
+                        )}
+                      >
                         {item.label}
                       </span>
                     )}
                   </div>
 
+                  {/* title + tagline */}
+                  <h3 className="font-display text-[#f2ead9] mt-4 text-2xl uppercase tracking-tight md:text-3xl">
+                    {item.title}
+                  </h3>
+                  {item.description && (
+                    <p className="text-[#a89e8c] mt-2 text-sm">
+                      {item.description}
+                    </p>
+                  )}
+
                   {/* price */}
-                  <div className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <div className="mt-8 flex flex-wrap items-baseline gap-x-2 gap-y-1">
                     {displayedItem.original_price && (
-                      <span className="text-muted-foreground text-lg line-through">
+                      <span className="text-[#a89e8c] text-lg line-through">
                         {displayedItem.original_price}
                       </span>
                     )}
-                    <span className="text-5xl leading-none font-display tracking-tight md:text-6xl">
+                    <span className="font-display text-[#f2ead9] text-5xl leading-none tracking-tight md:text-6xl">
                       {displayedItem.price}
                     </span>
                     {displayedItem.unit && (
-                      <span className="text-muted-foreground text-sm font-bold tracking-wide uppercase">
+                      <span className="font-mono text-[#a89e8c] text-sm">
                         {displayedItem.unit}
                       </span>
                     )}
@@ -455,36 +487,24 @@ export function Pricing({
                     )}
                   </div>
 
-                  <hr className="border-border/50 mt-6" />
-
-                  {/* credits */}
-                  {typeof item.credits === 'number' && (
-                    <div className="mt-6 flex items-baseline gap-2">
-                      <span className="text-4xl leading-none font-display tracking-tight">
-                        {item.credits.toLocaleString('en-US')}
-                      </span>
-                      <span className="text-sm font-bold">
-                        {item.credits_label || 'credits'}
-                      </span>
-                    </div>
-                  )}
-
-                  {item.description && (
-                    <p className="text-muted-foreground mt-2 text-sm">
-                      {item.description}
+                  {per100 && (
+                    <p className="font-mono text-[#a89e8c] mt-2 text-xs">
+                      {per100}
                     </p>
                   )}
 
+                  <hr className="mt-6 border-[#3a2f1b]" />
+
                   {/* features */}
                   {item.features && item.features.length > 0 && (
-                    <ul className="mt-5 space-y-2.5">
+                    <ul className="mt-6 space-y-3">
                       {item.features.map((feature, index) => (
                         <li
                           key={index}
-                          className="flex items-center gap-2.5 text-sm font-semibold"
+                          className="text-[#d8cdb8] flex items-center gap-2.5 text-sm"
                         >
-                          <span
-                            className="bg-accent size-1.5 shrink-0"
+                          <Check
+                            className="size-4 shrink-0 text-[#f0b429]"
                             aria-hidden
                           />
                           {feature}
@@ -494,9 +514,7 @@ export function Pricing({
                   )}
 
                   {item.tip && (
-                    <p className="text-muted-foreground mt-4 text-sm">
-                      {item.tip}
-                    </p>
+                    <p className="text-[#a89e8c] mt-4 text-sm">{item.tip}</p>
                   )}
 
                   {/* cta pinned to card bottom */}
@@ -505,7 +523,7 @@ export function Pricing({
                       <button
                         type="button"
                         disabled
-                        className="border-border text-muted-foreground flex h-12 w-full cursor-not-allowed items-center justify-between border px-5 text-sm font-bold tracking-wide uppercase"
+                        className="flex h-12 w-full cursor-not-allowed items-center justify-between rounded-full border border-[#3a2f1b] px-5 text-sm font-bold tracking-wide text-[#a89e8c] uppercase"
                       >
                         <span>{t('current_plan')}</span>
                       </button>
@@ -514,7 +532,12 @@ export function Pricing({
                         type="button"
                         onClick={() => handlePayment(item)}
                         disabled={isLoading}
-                        className="bg-foreground text-background hover:bg-primary hover:text-primary-foreground flex h-12 w-full items-center justify-between px-5 text-sm font-bold tracking-wide uppercase transition-colors disabled:opacity-60"
+                        className={cn(
+                          'flex h-12 w-full items-center justify-between rounded-full px-5 text-sm font-bold tracking-wide transition-colors disabled:opacity-60',
+                          item.is_featured
+                            ? 'bg-[#f0b429] text-[#1c150a] hover:bg-[#ffc94d]'
+                            : 'border border-[#8a744a]/60 text-[#f2ead9] hover:border-[#f0b429] hover:text-[#f0b429]'
+                        )}
                       >
                         <span className="flex items-center gap-2">
                           {isLoading && item.product_id === productId ? (
