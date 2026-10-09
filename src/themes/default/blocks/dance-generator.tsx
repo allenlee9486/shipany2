@@ -335,10 +335,11 @@ export function DanceGenerator({
     const sceneText = scene.trim();
     const replacement =
       uploadedPhotoUrls.length > 1
-        ? 'the two dancing characters with @Element1 and @Element2'
-        : 'the dancing character with @Element1';
+        ? 'the main dancing character with @Element1 and the second character with @Element2'
+        : 'the main dancing character with @Element1';
     const prompt = [
-      `Replace ${replacement}, keeping the same dance moves, camera work and timing.`,
+      `Replace ${replacement}.`,
+      'Keep the same shots, framing, camera movement, dance moves and timing as the reference video.',
       sceneText,
     ]
       .filter(Boolean)
@@ -363,7 +364,9 @@ export function DanceGenerator({
           options: {
             image_input: uploadedPhotoUrls,
             video_input: [templateVideo],
-            aspect_ratio: aspectRatio,
+            // 'auto' follows the reference video exactly so the original shots
+            // are preserved; portrait/square ask the model to re-frame the scene
+            aspect_ratio: aspectRatio === '16:9' ? 'auto' : aspectRatio,
             duration,
             keep_audio: true,
           },
@@ -695,6 +698,11 @@ export function DanceGenerator({
                   </option>
                 ))}
               </select>
+              {w.format_hint && (
+                <p className="mt-2 font-mono text-[11px] leading-relaxed text-[#6b6252]">
+                  {w.format_hint}
+                </p>
+              )}
             </div>
 
             {/* cta + credits */}
