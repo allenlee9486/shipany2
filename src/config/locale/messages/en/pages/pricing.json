@@ -29,7 +29,7 @@
               "$7.50 per video"
             ],
             "interval": "one-time",
-            "amount": 14990,
+            "amount": 1499,
             "currency": "USD",
             "price": "$14.99",
             "unit": "",
@@ -57,7 +57,7 @@
               "$6.25 per video"
             ],
             "interval": "one-time",
-            "amount": 49990,
+            "amount": 4999,
             "currency": "USD",
             "price": "$49.99",
             "unit": "",
@@ -85,7 +85,7 @@
               "$5.00 per video"
             ],
             "interval": "one-time",
-            "amount": 99990,
+            "amount": 9999,
             "currency": "USD",
             "price": "$99.99",
             "unit": "",
