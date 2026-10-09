@@ -165,6 +165,36 @@ export class FalProvider implements AIProvider {
     });
 
     if (!resultResp.ok) {
+      if (resultResp.status >= 400 && resultResp.status < 500) {
+        // fal keeps the queue status COMPLETED even when the request failed
+        // validation (e.g. video_too_small) and reports the error here instead.
+        // Surface it as a failed task so the caller can refund credits.
+        let errorMessage = `request failed with status: ${resultResp.status}`;
+        let errorResult: any = null;
+        try {
+          errorResult = await resultResp.json();
+          const detail = errorResult?.detail;
+          if (Array.isArray(detail) && detail[0]?.msg) {
+            errorMessage = String(detail[0].msg);
+          } else if (typeof detail === 'string') {
+            errorMessage = detail;
+          }
+        } catch {
+          // keep the default message
+        }
+
+        return {
+          taskId,
+          taskStatus: AITaskStatus.FAILED,
+          taskInfo: {
+            status: 'FAILED',
+            errorCode: '',
+            errorMessage,
+          },
+          taskResult: errorResult || { status: resultResp.status },
+        };
+      }
+
       throw new Error(`request failed with status: ${resultResp.status}`);
     }
 
@@ -338,6 +368,15 @@ export class FalProvider implements AIProvider {
     if (options.image_input && Array.isArray(options.image_input)) {
       if (['fal-ai/kling-video/o1/video-to-video/edit'].includes(model)) {
         input.input_images = options.image_input;
+      } else if (
+        model === 'fal-ai/kling-video/o3/standard/video-to-video/reference'
+      ) {
+        // each uploaded photo becomes a reusable character element that the
+        // prompt can reference as @Element1, @Element2, ...
+        input.elements = options.image_input.map((url: string) => ({
+          frontal_image_url: url,
+          reference_image_urls: [url],
+        }));
       } else {
         input.image_url = options.image_input[0];
       }

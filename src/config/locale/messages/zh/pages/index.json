@@ -49,42 +49,84 @@
         }
       },
       "generator": {
-        "block": "generator-preview",
+        "block": "dance-generator",
         "id": "generator",
         "label": "AI 视频工作台",
         "title": "制作 Rumpelstiltskin 风格视频",
-        "description": "预览工作台正在打造的工作流。接入经过验证的 AI 视频供应商后，正式生成能力即会开放。",
-        "badge": "原型预览",
+        "description": "上传照片、描述场景，即可得到一支 9 秒的原创舞蹈短视频。",
+        "className": "bg-[#171208]",
         "workspace": {
-          "title": "上传你的场景",
-          "description": "每条视频一个干净场景，可选上传角色参考。",
-          "uploads": [
+          "title": "定制你的舞蹈",
+          "subtitle": "9 秒视频 · 100 积分 · 含原版舞蹈音频",
+          "photos_label": "1. 选择照片",
+          "photos_hint": "JPG、PNG、WebP · 最大 10 MB",
+          "photos": [
             {
-              "title": "场景",
-              "hint": "你的背景",
-              "action": "选择图片或视频",
-              "accept": "image/*,video/mp4"
+              "title": "小矮人",
+              "hint": "主角 · 必填"
             },
             {
-              "title": "角色",
-              "hint": "可选参考",
-              "action": "选择图片",
-              "accept": "image/*"
+              "title": "公主",
+              "hint": "可选"
             }
           ],
-          "note": "JPG / PNG / WebP · MP4 · 单个 10 MB 以内",
-          "settings_label": "视频设置",
-          "settings_value": "横版 16:9",
-          "cost_label": "成本",
-          "cost_value": "$5.00 / 条 起",
-          "cost_note": "查看下方套餐",
-          "cost_url": "#pricing",
-          "button_title": "Create your duet"
+          "change_photo": "更换",
+          "photos_note": "每张照片请使用清晰的正脸。照片仅用于生成你的视频。",
+          "scene_label": "2. 描述你的场景",
+          "scene_optional": "（可选）",
+          "scene_placeholder": "金色亮片礼服、霓虹夜店，最后对镜头比一个「嘘」……",
+          "format_label": "3. 视频画幅",
+          "format_options": [
+            {
+              "value": "16:9",
+              "label": "横屏 · 16:9"
+            },
+            {
+              "value": "9:16",
+              "label": "竖屏 · 9:16"
+            },
+            {
+              "value": "1:1",
+              "label": "方形 · 1:1"
+            }
+          ],
+          "duration_label": "4. 视频时长",
+          "duration_options": [
+            {
+              "value": "9",
+              "label": "9 秒 · 100 积分"
+            },
+            {
+              "value": "5",
+              "label": "5 秒 · 100 积分"
+            }
+          ],
+          "credits_cost": 100,
+          "credits_label": "积分",
+          "sign_in": "登录后开始生成",
+          "generate": "生成视频 · 100 积分",
+          "buy": "获取 100 积分 · $9.99",
+          "generating": "正在生成你的视频…",
+          "loading": "加载中…",
+          "status_pending": "模型排队中…",
+          "progress": "进度",
+          "cost_label": "消耗",
+          "remaining_label": "剩余",
+          "need_photo": "请至少上传主角照片",
+          "insufficient": "积分不足，请先充值",
+          "upload_failed": "上传失败，请重试",
+          "file_too_large": "照片不能超过 10 MB",
+          "footnote": "已包含原版舞蹈音频。生成失败会自动退还积分。",
+          "template_video": "https://www.airumpelstiltskin.online/videos/dance-template.mp4"
         },
         "examples": {
-          "tabs": [
-            "示例视频",
-            "我的视频"
+          "title": "欣赏舞蹈",
+          "badge": "示例视频",
+          "your_video_badge": "你的视频",
+          "steps": [
+            "选择你故事里的面孔。",
+            "设定场景与收尾动作。",
+            "选好画幅与视频时长。"
           ],
           "videos": [
             {
@@ -112,9 +154,7 @@
               }
             }
           ]
-        },
-        "note": "原型预览 — 在经过验证的供应商与后端工作流上线前，上传与生成功能均不开启。",
-        "className": "bg-background"
+        }
       },
       "origin": {
         "block": "video-showcase",

@@ -49,42 +49,84 @@
         "show_award": false
       },
       "generator": {
-        "block": "generator-preview",
+        "block": "dance-generator",
         "id": "generator",
         "label": "AI Video Workspace",
         "title": "Make a Rumpelstiltskin-Inspired Video",
-        "description": "Preview the workflow the workspace is being built around. Production generation unlocks once a verified AI video provider is integrated.",
-        "badge": "Prototype",
+        "description": "Upload your photos, describe the scene, and get a 9-second dance video in the original viral style.",
+        "className": "bg-[#171208]",
         "workspace": {
-          "title": "Upload your scene",
-          "description": "One clean scene per video. Add an optional character reference.",
-          "uploads": [
+          "title": "Customize Your Dance",
+          "subtitle": "9-second video · 100 credits · Original dance audio",
+          "photos_label": "1. Choose your photos",
+          "photos_hint": "JPG, PNG, WebP · up to 10 MB",
+          "photos": [
             {
-              "title": "Scene",
-              "hint": "Your background",
-              "action": "Choose image or video",
-              "accept": "image/*,video/mp4"
+              "title": "The little man",
+              "hint": "Main character"
             },
             {
-              "title": "Character",
-              "hint": "Optional reference",
-              "action": "Choose image",
-              "accept": "image/*"
+              "title": "The princess",
+              "hint": "Optional"
             }
           ],
-          "note": "JPG / PNG / WebP · MP4 · 10 MB each",
-          "settings_label": "Video settings",
-          "settings_value": "Landscape 16:9",
+          "change_photo": "Change",
+          "photos_note": "Use one clear face per photo. Your photos are only used to create your video.",
+          "scene_label": "2. Describe your scene",
+          "scene_optional": "(optional)",
+          "scene_placeholder": "Gold sequin tuxedo, a neon nightclub, and a shush to the camera...",
+          "format_label": "3. Video format",
+          "format_options": [
+            {
+              "value": "16:9",
+              "label": "Landscape · 16:9"
+            },
+            {
+              "value": "9:16",
+              "label": "Portrait · 9:16"
+            },
+            {
+              "value": "1:1",
+              "label": "Square · 1:1"
+            }
+          ],
+          "duration_label": "4. Video length",
+          "duration_options": [
+            {
+              "value": "9",
+              "label": "9 seconds · 100 credits"
+            },
+            {
+              "value": "5",
+              "label": "5 seconds · 100 credits"
+            }
+          ],
+          "credits_cost": 100,
+          "credits_label": "credits",
+          "sign_in": "Sign in to generate",
+          "generate": "Generate video · 100 credits",
+          "buy": "Get 100 credits · $9.99",
+          "generating": "Generating your video...",
+          "loading": "Loading...",
+          "status_pending": "Waiting for the model to start...",
+          "progress": "Progress",
           "cost_label": "Cost",
-          "cost_value": "From $5.00 / video",
-          "cost_note": "See packs below",
-          "cost_url": "#pricing",
-          "button_title": "Create your duet"
+          "remaining_label": "Remaining",
+          "need_photo": "Add at least the main character photo",
+          "insufficient": "Insufficient credits. Please top up to keep creating.",
+          "upload_failed": "Upload failed, please try again",
+          "file_too_large": "Photo must be 10 MB or smaller",
+          "footnote": "Original dance audio included. Failed generations return credits to your account.",
+          "template_video": "https://www.airumpelstiltskin.online/videos/dance-template.mp4"
         },
         "examples": {
-          "tabs": [
-            "Examples",
-            "My videos"
+          "title": "See the Dance",
+          "badge": "Example video",
+          "your_video_badge": "Your video",
+          "steps": [
+            "Choose the faces for your story.",
+            "Set the scene and finishing move.",
+            "Pick the format and video length."
           ],
           "videos": [
             {
@@ -112,9 +154,7 @@
               }
             }
           ]
-        },
-        "note": "Prototype preview — uploads and generation stay disabled until a verified provider and backend workflow go live.",
-        "className": "bg-background"
+        }
       },
       "origin": {
         "block": "video-showcase",

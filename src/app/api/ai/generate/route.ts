@@ -62,6 +62,12 @@ export async function POST(request: Request) {
       } else {
         throw new Error('invalid scene');
       }
+
+      // The flagship dance pipeline (reference video + character photos) is
+      // priced per finished video, matching the credit packs on pricing page.
+      if (model.includes('kling-video/o3')) {
+        costCredits = 100;
+      }
     } else if (mediaType === AIMediaType.MUSIC) {
       // generate music
       costCredits = 10;
