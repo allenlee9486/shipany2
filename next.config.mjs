@@ -29,7 +29,15 @@ const nextConfig = {
     ],
   },
   async redirects() {
-    return [];
+    return [
+      // hide the generic template demo pages (not part of this product)
+      { source: '/ai-video-generator', destination: '/', permanent: true },
+      { source: '/ai-image-generator', destination: '/', permanent: true },
+      { source: '/ai-music-generator', destination: '/', permanent: true },
+      { source: '/zh/ai-video-generator', destination: '/zh', permanent: true },
+      { source: '/zh/ai-image-generator', destination: '/zh', permanent: true },
+      { source: '/zh/ai-music-generator', destination: '/zh', permanent: true },
+    ];
   },
   async headers() {
     return [
