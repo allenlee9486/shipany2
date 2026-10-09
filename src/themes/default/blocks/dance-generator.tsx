@@ -339,6 +339,7 @@ export function DanceGenerator({
         : 'the main dancing character with @Element1';
     const prompt = [
       `Replace ${replacement}.`,
+      'Keep their faces and hair consistent with the uploaded photos.',
       'Keep the same shots, framing, camera movement, dance moves and timing as the reference video.',
       sceneText,
     ]
