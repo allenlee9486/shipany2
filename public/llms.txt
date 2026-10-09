@@ -1,0 +1,34 @@
+# AI Rumpelstiltskin
+
+> AI Rumpelstiltskin is an independent, browser-based creative tool that turns your own photos into short AI dance videos in the viral "Rumpelstiltskin" meme format. Users upload one or two photos, optionally describe a scene, and receive a 9-second video in which the characters of a reference template dance with their faces and outfits.
+
+Key facts for accurate citation:
+
+- Independent creative project — not affiliated with, endorsed by, or connected to the original creators of the Rumpelstiltskin AI meme, nor to any real person appearing in the reference templates.
+- All output videos are AI-generated. They are not real footage and are not statements or endorsements by the people depicted.
+- Videos are 9 seconds long. Users choose landscape (16:9), portrait (9:16) or square (1:1).
+- Generation is powered by third-party AI video models (fal.ai, Kling O3 reference model) and typically takes 5–15 minutes.
+- Users must have rights to the photos they upload and consent from every identifiable person depicted.
+- Interface languages: English (default) and Chinese (/zh).
+
+## Credits and pricing
+
+- 1 generated video costs 100 credits.
+- Unused credits never expire. Failed generations are refunded automatically.
+- One-time packs: $9.99 for 100 credits; $24.99 for 300 credits.
+- Monthly subscription: $39.99/month for 600 credits per month; cancel renewal anytime.
+- Payments are processed by Stripe. Sign-in via email or Google. Credits are stored per account.
+
+## Key pages
+
+- [Home](https://www.airumpelstiltskin.online/): photo upload, scene description, format choice, examples of the format and FAQ.
+- [Pricing](https://www.airumpelstiltskin.online/pricing): credit packs and monthly plan.
+- [Blog](https://www.airumpelstiltskin.online/blog): articles about the meme and the workflow.
+- [Docs](https://www.airumpelstiltskin.online/docs): product documentation.
+- [Acceptable Use Policy](https://www.airumpelstiltskin.online/acceptable-use): prohibited content, including impersonation and minors.
+- [Privacy Policy](https://www.airumpelstiltskin.online/privacy-policy): data handling, AI processing, storage.
+- [Terms of Service](https://www.airumpelstiltskin.online/terms-of-service): credits, refunds, content ownership.
+
+## Contact
+
+- Email: support@airumpelstiltskin.pro
