@@ -95,12 +95,12 @@ export function DanceGenerator({
   const photoSlots: PhotoSlot[] = w.photos ?? [];
   const formatOptions: { value: string; label: string }[] =
     w.format_options ?? [];
-  const durationOptions: { value: string; label: string }[] =
-    w.duration_options ?? [];
   const steps: string[] = ex.steps ?? [];
   const exampleVideos: ExampleVideo[] = ex.videos ?? [];
   const costCredits = Number(w.credits_cost) || 100;
   const templateVideo = w.template_video || DEFAULT_TEMPLATE_VIDEO;
+  // fixed output length; the model accepts 3-15 seconds
+  const duration = String(w.duration || '9');
 
   const {
     user,
@@ -115,7 +115,6 @@ export function DanceGenerator({
   const [aspectRatio, setAspectRatio] = useState(
     formatOptions[0]?.value ?? '16:9'
   );
-  const [duration, setDuration] = useState(durationOptions[0]?.value ?? '9');
 
   const [exampleIndex, setExampleIndex] = useState(0);
   const [resultVideoUrl, setResultVideoUrl] = useState<string | null>(null);
@@ -679,40 +678,22 @@ export function DanceGenerator({
               />
             </div>
 
-            {/* 3 + 4: format & duration */}
-            <div className="mt-7 grid grid-cols-2 gap-4">
-              <div>
-                <span className="text-sm font-bold text-[#f2ead9]">
-                  {w.format_label}
-                </span>
-                <select
-                  value={aspectRatio}
-                  onChange={(e) => setAspectRatio(e.target.value)}
-                  className="mt-3 h-12 w-full rounded-xl border border-[#3a2f1b]! bg-[#1a1409]! px-3 text-sm text-[#f2ead9] outline-none focus:border-[#f0b429]/60!"
-                >
-                  {formatOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <span className="text-sm font-bold text-[#f2ead9]">
-                  {w.duration_label}
-                </span>
-                <select
-                  value={duration}
-                  onChange={(e) => setDuration(e.target.value)}
-                  className="mt-3 h-12 w-full rounded-xl border border-[#3a2f1b]! bg-[#1a1409]! px-3 text-sm text-[#f2ead9] outline-none focus:border-[#f0b429]/60!"
-                >
-                  {durationOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
+            {/* 3: format */}
+            <div className="mt-7">
+              <span className="text-sm font-bold text-[#f2ead9]">
+                {w.format_label}
+              </span>
+              <select
+                value={aspectRatio}
+                onChange={(e) => setAspectRatio(e.target.value)}
+                className="mt-3 h-12 w-full rounded-xl border border-[#3a2f1b]! bg-[#1a1409]! px-3 text-sm text-[#f2ead9] outline-none focus:border-[#f0b429]/60!"
+              >
+                {formatOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
             </div>
 
             {/* cta + credits */}

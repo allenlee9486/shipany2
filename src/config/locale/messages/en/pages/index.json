@@ -89,17 +89,6 @@
               "label": "Square · 1:1"
             }
           ],
-          "duration_label": "4. Video length",
-          "duration_options": [
-            {
-              "value": "9",
-              "label": "9 seconds · 100 credits"
-            },
-            {
-              "value": "5",
-              "label": "5 seconds · 100 credits"
-            }
-          ],
           "credits_cost": 100,
           "credits_label": "credits",
           "sign_in": "Sign in to generate",
@@ -116,7 +105,8 @@
           "upload_failed": "Upload failed, please try again",
           "file_too_large": "Photo must be 10 MB or smaller",
           "footnote": "Original dance audio included. Failed generations return credits to your account.",
-          "template_video": "https://image.airumpelstiltskin.online/example-4.mp4"
+          "template_video": "https://image.airumpelstiltskin.online/example-4.mp4",
+          "duration": "9"
         },
         "examples": {
           "title": "See the Dance",

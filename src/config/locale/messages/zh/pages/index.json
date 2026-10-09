@@ -89,17 +89,6 @@
               "label": "方形 · 1:1"
             }
           ],
-          "duration_label": "4. 视频时长",
-          "duration_options": [
-            {
-              "value": "9",
-              "label": "9 秒 · 100 积分"
-            },
-            {
-              "value": "5",
-              "label": "5 秒 · 100 积分"
-            }
-          ],
           "credits_cost": 100,
           "credits_label": "积分",
           "sign_in": "登录后开始生成",
@@ -116,7 +105,8 @@
           "upload_failed": "上传失败，请重试",
           "file_too_large": "照片不能超过 10 MB",
           "footnote": "已包含原版舞蹈音频。生成失败会自动退还积分。",
-          "template_video": "https://image.airumpelstiltskin.online/example-4.mp4"
+          "template_video": "https://image.airumpelstiltskin.online/example-4.mp4",
+          "duration": "9"
         },
         "examples": {
           "title": "欣赏舞蹈",
