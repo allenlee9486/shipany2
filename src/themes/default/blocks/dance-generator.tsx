@@ -522,9 +522,9 @@ export function DanceGenerator({
               {section.label}
             </p>
           )}
-          <h2 className="font-display mt-3 break-words text-4xl leading-[0.95] tracking-tight text-[#f2ead9] uppercase text-balance sm:text-5xl md:text-6xl">
+          <h1 className="font-display mt-3 break-words text-4xl leading-[0.95] tracking-tight text-[#f2ead9] uppercase text-balance sm:text-5xl md:text-6xl">
             {section.title}
-          </h2>
+          </h1>
           {section.description && (
             <p className="mt-4 max-w-2xl text-base font-medium text-[#a89e8c] text-balance">
               {section.description}
