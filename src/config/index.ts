@@ -7,7 +7,7 @@ export type ConfigMap = Record<string, string>;
 
 export const envConfigs: ConfigMap = {
   app_url: process.env.NEXT_PUBLIC_APP_URL ?? 'https://airumpelstiltskin.online',
-  app_name: process.env.NEXT_PUBLIC_APP_NAME ?? 'ShipAny App',
+  app_name: process.env.NEXT_PUBLIC_APP_NAME ?? 'AI Rumpelstiltskin',
   app_description: process.env.NEXT_PUBLIC_APP_DESCRIPTION ?? '',
   app_logo: process.env.NEXT_PUBLIC_APP_LOGO ?? '/logo.png',
   app_favicon: process.env.NEXT_PUBLIC_APP_FAVICON ?? '/favicon.ico',
