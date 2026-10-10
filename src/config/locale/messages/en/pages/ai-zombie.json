@@ -6,6 +6,7 @@
   "page": {
     "show_sections": [
       "generator",
+      "trend",
       "story",
       "how",
       "audience",
@@ -383,6 +384,57 @@
             "target": "_self",
             "variant": "outline",
             "icon": "CreditCard"
+          }
+        ]
+      },
+      "trend": {
+        "block": "video-showcase",
+        "id": "trend",
+        "label": "Where it came from",
+        "title": "The AI Zombie Story Trend",
+        "description": "In October 2026, a new AI video format took over TikTok and Instagram: two photos become a post-apocalyptic love story. One of you has turned — and the other can’t bring themselves to fight. The gun lowers, the arms open, and the scare turns into a goodbye.",
+        "videos": [
+          {
+            "title": "The Snowfield Goodbye",
+            "description": "The full arc in falling snow: the raise, the pause, and the embrace that ends it.",
+            "video": {
+              "src": "https://image.airumpelstiltskin.online/girlfriend-snow-v2.mp4",
+              "poster": "https://image.airumpelstiltskin.online/zombie-example-1.jpg"
+            }
+          },
+          {
+            "title": "The Standoff",
+            "description": "The close-up beat everyone recognizes — tears, a shaking aim, a decision that never gets easier.",
+            "video": {
+              "src": "https://image.airumpelstiltskin.online/ai-zombie-template-v2.mp4",
+              "poster": "https://image.airumpelstiltskin.online/zombie-example-2.jpg"
+            }
+          },
+          {
+            "title": "The Cabin Finale",
+            "description": "A quiet room, a loaded rifle, and the person you can’t bring yourself to fight.",
+            "video": {
+              "src": "https://image.airumpelstiltskin.online/ai-zombie-template2-v2.mp4",
+              "poster": "https://image.airumpelstiltskin.online/zombie-example-3.jpg"
+            }
+          }
+        ],
+        "items": [
+          {
+            "title": "October 2026",
+            "description": "The format takes over TikTok and Instagram"
+          },
+          {
+            "title": "Two photos",
+            "description": "One survivor, one who turns — the whole cast"
+          },
+          {
+            "title": "15 seconds",
+            "description": "Standoff, recognition, embrace — three acts"
+          },
+          {
+            "title": "9:16 · with sound",
+            "description": "Built for TikTok, Reels and Shorts"
           }
         ]
       }
