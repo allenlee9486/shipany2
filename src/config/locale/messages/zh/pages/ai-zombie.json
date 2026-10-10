@@ -76,7 +76,32 @@
             "点击生成。无需提示词。",
             "得到一支 15 秒、带原声的视频。"
           ],
-          "videos": []
+          "videos": [
+            {
+              "title": "雪中的她",
+              "description": "完整的故事弧线——从落雪中举起的枪，到最后一次相拥。",
+              "video": {
+                "src": "https://image.airumpelstiltskin.online/girlfriend-snow-v2.mp4",
+                "poster": "https://image.airumpelstiltskin.online/zombie-example-1.jpg"
+              }
+            },
+            {
+              "title": "枪口前的幸存者",
+              "description": "开枪前的那一刻：眼泪、颤抖的准星，和一个永远不会变容易的决定。",
+              "video": {
+                "src": "https://image.airumpelstiltskin.online/ai-zombie-template-v2.mp4",
+                "poster": "https://image.airumpelstiltskin.online/zombie-example-2.jpg"
+              }
+            },
+            {
+              "title": "木屋里的告别",
+              "description": "安静的木屋、上了膛的步枪，和那个你狠不下心动手的人。",
+              "video": {
+                "src": "https://image.airumpelstiltskin.online/ai-zombie-template2-v2.mp4",
+                "poster": "https://image.airumpelstiltskin.online/zombie-example-3.jpg"
+              }
+            }
+          ]
         }
       },
       "story": {

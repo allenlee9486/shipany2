@@ -76,7 +76,32 @@
             "Press generate. No prompt needed.",
             "Get a 15-second video with original sound."
           ],
-          "videos": []
+          "videos": [
+            {
+              "title": "The Girlfriend in the Snow",
+              "description": "The full arc — from a raised gun in the falling snow to the last embrace.",
+              "video": {
+                "src": "https://image.airumpelstiltskin.online/girlfriend-snow-v2.mp4",
+                "poster": "https://image.airumpelstiltskin.online/zombie-example-1.jpg"
+              }
+            },
+            {
+              "title": "The Survivor",
+              "description": "The moment before the shot: tears, a shaky aim, and a decision that never gets easier.",
+              "video": {
+                "src": "https://image.airumpelstiltskin.online/ai-zombie-template-v2.mp4",
+                "poster": "https://image.airumpelstiltskin.online/zombie-example-2.jpg"
+              }
+            },
+            {
+              "title": "The Cabin Goodbye",
+              "description": "A quiet cabin, a loaded rifle, and the person you can't bring yourself to fight.",
+              "video": {
+                "src": "https://image.airumpelstiltskin.online/ai-zombie-template2-v2.mp4",
+                "poster": "https://image.airumpelstiltskin.online/zombie-example-3.jpg"
+              }
+            }
+          ]
         }
       },
       "story": {

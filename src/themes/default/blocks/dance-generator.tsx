@@ -878,7 +878,7 @@ export function DanceGenerator({
                     key={exampleIndex}
                     src={currentExample.video?.src}
                     poster={currentExample.video?.poster}
-                    className="aspect-video w-full bg-black object-cover"
+                    className="max-h-[75vh] w-full bg-black object-contain"
                     autoPlay
                     muted
                     loop
