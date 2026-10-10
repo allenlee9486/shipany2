@@ -1,4 +1,4 @@
-import { getUuid } from '@/shared/lib/hash';
+import { md5 } from '@/shared/lib/hash';
 
 import { saveFiles } from '.';
 import {
@@ -241,7 +241,9 @@ export class FalProvider implements AIProvider {
             filesToSave.push({
               url: image.imageUrl,
               contentType: 'image/png',
-              key: `fal/image/${getUuid()}.png`,
+              // deterministic key: the same generated file is never stored
+              // twice when a task is re-queried (webhook retries, polling)
+              key: `fal/image/${md5(image.imageUrl)}.png`,
               index: index,
               type: 'image',
             });
@@ -271,7 +273,9 @@ export class FalProvider implements AIProvider {
             filesToSave.push({
               url: video.videoUrl,
               contentType: 'video/mp4',
-              key: `fal/video/${getUuid()}.mp4`,
+              // deterministic key: the same generated file is never stored
+              // twice when a task is re-queried (webhook retries, polling)
+              key: `fal/video/${md5(video.videoUrl)}.mp4`,
               index: index,
               type: 'video',
             });
