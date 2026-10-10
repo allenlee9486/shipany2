@@ -873,12 +873,12 @@ export function DanceGenerator({
                   </p>
                 </div>
               ) : (
-                <div className="relative overflow-hidden rounded-xl border border-[#3a2f1b]">
+                <div className="relative mx-auto w-fit overflow-hidden rounded-xl border border-[#3a2f1b]">
                   <video
                     key={exampleIndex}
                     src={currentExample.video?.src}
                     poster={currentExample.video?.poster}
-                    className="max-h-[75vh] w-full bg-black object-contain"
+                    className="max-h-[55vh] w-auto max-w-full bg-black"
                     autoPlay
                     muted
                     loop
