@@ -23,8 +23,10 @@ import { useAppContext } from '@/shared/contexts/app';
 import { cn } from '@/shared/lib/utils';
 import { Section } from '@/shared/types/blocks/landing';
 
-const KLING_MODEL =
-  'fal-ai/kling-video/o3/standard/video-to-video/reference';
+// pro tier keeps character consistency noticeably better; to cut cost per
+// video switch to 'fal-ai/kling-video/o3/standard/video-to-video/reference'
+// via the workspace.video_model config key
+const KLING_MODEL_PRO = 'fal-ai/kling-video/o3/pro/video-to-video/reference';
 const DEFAULT_TEMPLATE_VIDEO =
   'https://image.airumpelstiltskin.online/ai%20rumpelstiltskin-1.mp4';
 const POLL_INTERVAL = 10000;
@@ -100,6 +102,7 @@ export function DanceGenerator({
   const exampleVideos: ExampleVideo[] = ex.videos ?? [];
   const costCredits = Number(w.credits_cost) || 100;
   const templateVideo = w.template_video || DEFAULT_TEMPLATE_VIDEO;
+  const videoModel = String(w.video_model || KLING_MODEL_PRO);
   // fixed output length; the model accepts 3-15 seconds
   const duration = String(w.duration || '9');
 
@@ -333,13 +336,16 @@ export function DanceGenerator({
     }
 
     const sceneText = scene.trim();
+    // mirror the model's documented phrasing ("Replace both character with
+    // @Element1 and @Element2") and demand consistency in every shot; when
+    // only one photo is uploaded, replace BOTH template characters with it
+    // so no original person from the template stays visible
     const replacement =
       uploadedPhotoUrls.length > 1
-        ? 'the main dancing character with @Element1 and the second character with @Element2'
-        : 'the main dancing character with @Element1';
+        ? 'Replace both characters with @Element1 and @Element2. Keep their faces, hairstyles and outfits consistent with the uploaded photos in every shot.'
+        : 'Replace both characters with @Element1. Keep the face, hairstyle and outfit consistent with the uploaded photo in every shot.';
     const prompt = [
-      `Replace ${replacement}.`,
-      'Keep their faces and hair consistent with the uploaded photos.',
+      replacement,
       'Keep the same shots, framing, camera movement, dance moves and timing as the reference video.',
       sceneText,
     ]
@@ -360,7 +366,7 @@ export function DanceGenerator({
           mediaType: AIMediaType.VIDEO,
           scene: 'video-to-video',
           provider: 'fal',
-          model: KLING_MODEL,
+          model: videoModel,
           prompt,
           options: {
             image_input: uploadedPhotoUrls,

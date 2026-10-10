@@ -109,7 +109,8 @@
           "duration": "9",
           "generating_estimate": "预计需要 5–15 分钟",
           "generating_hint": "请保持本页面开启、中途不要刷新，完成后视频会自动出现在这里。",
-          "format_hint": "横屏完全跟随模板原始镜头；竖屏与方形会对场景重新构图。"
+          "format_hint": "横屏完全跟随模板原始镜头；竖屏与方形会对场景重新构图。",
+          "video_model": "fal-ai/kling-video/o3/pro/video-to-video/reference"
         },
         "examples": {
           "title": "欣赏舞蹈",
