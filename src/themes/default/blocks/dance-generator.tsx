@@ -358,12 +358,14 @@ export function DanceGenerator({
     // so no original person from the template stays visible
     const replacement =
       uploadedPhotoUrls.length > 1
-        ? 'Replace both characters with @Element1 and @Element2. Keep their faces, hairstyles and outfits consistent with the uploaded photos in every shot.'
+        ? 'Replace both characters with @Element1 and @Element2. Keep each person\u2019s facial identity, hairstyle and outfit consistent with the uploaded photos in every shot, and never swap their identities.'
         : 'Replace both characters with @Element1. Keep the face, hairstyle and outfit consistent with the uploaded photo in every shot.';
     const prompt = [
       replacement,
       promptKeep,
       sceneText,
+      w.prompt_negative ||
+        'Negative: extra people, face drift, identity swap, morphing, flicker, text, watermark.',
     ]
       .filter(Boolean)
       .join(' ');

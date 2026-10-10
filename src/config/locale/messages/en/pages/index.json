@@ -111,7 +111,7 @@
           "generating_hint": "Please keep this page open and skip refreshing — your video will appear here automatically.",
           "format_hint": "Landscape follows the template’s original shots. Portrait and square re-frame the scene.",
           "video_model": "fal-ai/kling-video/o3/pro/video-to-video/reference",
-          "prompt_keep": "Keep the same shots, framing, camera movement, dance moves and timing as the reference video."
+          "prompt_keep": "Follow @Video1 for camera path, blocking, dance moves and timing; preserve the scene composition, framing and lighting."
         },
         "examples": {
           "title": "See the Dance",

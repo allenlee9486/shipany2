@@ -111,7 +111,7 @@
           "generating_hint": "请保持本页面开启、中途不要刷新，完成后视频会自动出现在这里。",
           "format_hint": "横屏完全跟随模板原始镜头；竖屏与方形会对场景重新构图。",
           "video_model": "fal-ai/kling-video/o3/pro/video-to-video/reference",
-          "prompt_keep": "Keep the same shots, framing, camera movement, dance moves and timing as the reference video."
+          "prompt_keep": "Follow @Video1 for camera path, blocking, dance moves and timing; preserve the scene composition, framing and lighting."
         },
         "examples": {
           "title": "欣赏舞蹈",

@@ -66,7 +66,7 @@
           "upload_failed": "上传失败，请重试",
           "file_too_large": "照片不能超过 10 MB",
           "footnote": "已包含原声音频。生成失败会自动退还积分。",
-          "prompt_keep": "Keep the same shots, framing, camera movement, actions and timing as the reference video."
+          "prompt_keep": "Follow @Video1 for camera path, blocking, actions and timing; preserve the scene composition, framing and lighting."
         },
         "examples": {
           "title": "看故事",
