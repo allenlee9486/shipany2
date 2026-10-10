@@ -29,8 +29,14 @@
           "photos_label": "1. 选择照片",
           "photos_hint": "JPG、PNG、WebP · 最大 10 MB",
           "photos": [
-            { "title": "变成僵尸的人", "hint": "主角 · 必填" },
-            { "title": "幸存者", "hint": "第二角色" }
+            {
+              "title": "幸存者",
+              "hint": "主角 · 必填"
+            },
+            {
+              "title": "变成僵尸的人",
+              "hint": "可选"
+            }
           ],
           "change_photo": "更换",
           "swap_label": "交换角色",
@@ -54,7 +60,7 @@
           "progress": "进度",
           "cost_label": "消耗",
           "remaining_label": "剩余",
-          "need_photo": "请至少上传「变成僵尸的人」的照片",
+          "need_photo": "请至少上传「幸存者」的照片",
           "insufficient": "积分不足，请先充值",
           "upload_failed": "上传失败，请重试",
           "file_too_large": "照片不能超过 10 MB",
@@ -205,7 +211,11 @@
         "description": "积分通用全部创作格式——一次购买，按自己的节奏创作。",
         "className": "bg-[#171208]",
         "groups": [
-          { "name": "packs", "title": "积分包", "is_featured": true }
+          {
+            "name": "packs",
+            "title": "积分包",
+            "is_featured": true
+          }
         ],
         "items": [
           {
@@ -226,7 +236,11 @@
             "unit": "单次付清",
             "is_featured": true,
             "tip": "",
-            "button": { "title": "获得 100 积分", "url": "/pricing", "icon": "" },
+            "button": {
+              "title": "获得 100 积分",
+              "url": "/pricing",
+              "icon": ""
+            },
             "product_id": "pack-starter",
             "product_name": "AI Rumpelstiltskin One Little Dance",
             "credits": 100,
@@ -252,7 +266,11 @@
             "unit": "单次付清",
             "is_featured": false,
             "tip": "",
-            "button": { "title": "获得 300 积分", "url": "/pricing", "icon": "" },
+            "button": {
+              "title": "获得 300 积分",
+              "url": "/pricing",
+              "icon": ""
+            },
             "product_id": "pack-trilogy",
             "product_name": "AI Rumpelstiltskin Trilogy Pack",
             "credits": 300,
@@ -278,7 +296,11 @@
             "unit": "/ 月",
             "is_featured": false,
             "tip": "",
-            "button": { "title": "开始包月计划", "url": "/pricing", "icon": "" },
+            "button": {
+              "title": "开始包月计划",
+              "url": "/pricing",
+              "icon": ""
+            },
             "product_id": "pack-monthly",
             "product_name": "AI Rumpelstiltskin Monthly Plan",
             "plan_name": "monthly",
@@ -301,7 +323,7 @@
           },
           {
             "question": "开始需要准备什么？",
-            "answer": "两张照片：一张给变成僵尸的角色，一张给幸存者。光线充足、正脸清晰的照片效果最好。想换谁变僵尸，点「交换角色」即可。"
+            "answer": "两张照片：一张给幸存者，一张给变成僵尸的角色。光线充足、正脸清晰的照片效果最好。想换谁变僵尸，点「交换角色」即可。"
           },
           {
             "question": "需要写提示词吗？",

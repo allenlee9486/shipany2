@@ -29,8 +29,14 @@
           "photos_label": "1. Choose your photos",
           "photos_hint": "JPG, PNG, WebP · up to 10 MB",
           "photos": [
-            { "title": "The one who turns", "hint": "Main character" },
-            { "title": "The survivor", "hint": "Second character" }
+            {
+              "title": "The survivor",
+              "hint": "Main character"
+            },
+            {
+              "title": "The one who turns",
+              "hint": "Optional"
+            }
           ],
           "change_photo": "Change",
           "swap_label": "Swap roles",
@@ -54,7 +60,7 @@
           "progress": "Progress",
           "cost_label": "Cost",
           "remaining_label": "Remaining",
-          "need_photo": "Add at least the photo of the person who turns",
+          "need_photo": "Add at least the survivor's photo",
           "insufficient": "Insufficient credits. Please top up to keep creating.",
           "upload_failed": "Upload failed, please try again",
           "file_too_large": "Photo must be 10 MB or smaller",
@@ -205,7 +211,11 @@
         "description": "Credits work across every format on AI Rumpelstiltskin — pay once and create at your own pace.",
         "className": "bg-[#171208]",
         "groups": [
-          { "name": "packs", "title": "Credit packs", "is_featured": true }
+          {
+            "name": "packs",
+            "title": "Credit packs",
+            "is_featured": true
+          }
         ],
         "items": [
           {
@@ -226,7 +236,11 @@
             "unit": "one time",
             "is_featured": true,
             "tip": "",
-            "button": { "title": "Get 100 credits", "url": "/pricing", "icon": "" },
+            "button": {
+              "title": "Get 100 credits",
+              "url": "/pricing",
+              "icon": ""
+            },
             "product_id": "pack-starter",
             "product_name": "AI Rumpelstiltskin One Little Dance",
             "credits": 100,
@@ -252,7 +266,11 @@
             "unit": "one time",
             "is_featured": false,
             "tip": "",
-            "button": { "title": "Get 300 credits", "url": "/pricing", "icon": "" },
+            "button": {
+              "title": "Get 300 credits",
+              "url": "/pricing",
+              "icon": ""
+            },
             "product_id": "pack-trilogy",
             "product_name": "AI Rumpelstiltskin Trilogy Pack",
             "credits": 300,
@@ -278,7 +296,11 @@
             "unit": "/ month",
             "is_featured": false,
             "tip": "",
-            "button": { "title": "Start monthly plan", "url": "/pricing", "icon": "" },
+            "button": {
+              "title": "Start monthly plan",
+              "url": "/pricing",
+              "icon": ""
+            },
             "product_id": "pack-monthly",
             "product_name": "AI Rumpelstiltskin Monthly Plan",
             "plan_name": "monthly",
@@ -301,7 +323,7 @@
           },
           {
             "question": "What do I need to get started?",
-            "answer": "Two photos: one for the character who turns, one for the survivor. Clear, well-lit faces work best. Press Swap roles if you want to change who turns."
+            "answer": "Two photos: one for the survivor, one for the character who turns. Clear, well-lit faces work best. Press Swap roles if you want to change who turns."
           },
           {
             "question": "Do I need to write a prompt?",
