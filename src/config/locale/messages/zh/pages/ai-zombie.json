@@ -1,0 +1,344 @@
+{
+  "metadata": {
+    "title": "AI 僵尸视频生成器 — 用两张照片生成僵尸故事",
+    "description": "用两张照片生成 15 秒 AI 僵尸故事：一个人变成了僵尸，另一个狠不下心动手。无需提示词。"
+  },
+  "page": {
+    "show_sections": [
+      "generator",
+      "story",
+      "how",
+      "audience",
+      "tips",
+      "concept",
+      "pricing",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "generator": {
+        "block": "dance-generator",
+        "id": "generator",
+        "label": "AI 僵尸工作台",
+        "title": "用两张照片生成 AI 僵尸故事",
+        "description": "其中一个人已经变成了僵尸，另一个却狠不下心动手。上传两张照片，得到一支电影感雨夜风格短片。",
+        "className": "bg-[#171208]",
+        "workspace": {
+          "title": "搭建你的僵尸故事",
+          "subtitle": "15 秒视频 · 100 积分 · 原声音频",
+          "photos_label": "1. 选择照片",
+          "photos_hint": "JPG、PNG、WebP · 最大 10 MB",
+          "photos": [
+            { "title": "变成僵尸的人", "hint": "主角 · 必填" },
+            { "title": "幸存者", "hint": "第二角色" }
+          ],
+          "change_photo": "更换",
+          "swap_label": "交换角色",
+          "consent_label": "我拥有这些照片的使用权，且照片中的每个人都同意出现在 AI 生成内容中。",
+          "photos_note": "每人（或每只宠物）一张单人照，光线充足、正脸清晰——头部+肩部特写效果最佳。",
+          "show_scene": false,
+          "show_format": false,
+          "duration": "15",
+          "video_model": "fal-ai/kling-video/o3/pro/video-to-video/reference",
+          "template_video": "https://image.airumpelstiltskin.online/ai-zombie-template.mp4",
+          "credits_cost": 100,
+          "credits_label": "积分",
+          "sign_in": "登录后开始生成",
+          "generate": "生成我的僵尸故事 · 100 积分",
+          "buy": "获取 100 积分 · $9.99",
+          "generating": "正在生成你的僵尸故事…",
+          "loading": "加载中…",
+          "status_pending": "模型排队中…",
+          "generating_estimate": "预计需要 10–20 分钟",
+          "generating_hint": "请保持本页面开启、中途不要刷新，完成后视频会自动出现在这里。",
+          "progress": "进度",
+          "cost_label": "消耗",
+          "remaining_label": "剩余",
+          "need_photo": "请至少上传「变成僵尸的人」的照片",
+          "insufficient": "积分不足，请先充值",
+          "upload_failed": "上传失败，请重试",
+          "file_too_large": "照片不能超过 10 MB",
+          "footnote": "已包含原声音频。生成失败会自动退还积分。"
+        },
+        "examples": {
+          "title": "看故事",
+          "badge": "示例视频",
+          "your_video_badge": "你的视频",
+          "placeholder": "你的僵尸故事会出现在这里。上传两张照片、点击生成即可——无需写提示词。",
+          "steps": [
+            "上传两张照片：变成僵尸的人 + 幸存者。",
+            "点击生成。无需提示词。",
+            "得到一支 15 秒、带原声的视频。"
+          ],
+          "videos": []
+        }
+      },
+      "story": {
+        "block": "features-step",
+        "id": "story",
+        "label": "故事",
+        "title": "僵尸爱情故事的五个节拍",
+        "items": [
+          {
+            "title": "相遇",
+            "description": "两个人，一个漆黑的夜晚。一切改变之前，最后一个普通瞬间。"
+          },
+          {
+            "title": "认出",
+            "description": "其中一个已经变了——但那眼神分明还认得你。"
+          },
+          {
+            "title": "最后一刻",
+            "description": "抬起的手，长得过分的停顿。谁都不愿先动手。"
+          },
+          {
+            "title": "所剩无几",
+            "description": "记忆一点点褪去，本能接管了你认识的那个人。"
+          },
+          {
+            "title": "记忆",
+            "description": "最后留下的，是你选择记住的那个版本。"
+          }
+        ],
+        "className": "bg-[#171208]"
+      },
+      "how": {
+        "block": "features-step",
+        "id": "how",
+        "label": "怎么玩",
+        "title": "三步完成你的僵尸故事",
+        "items": [
+          {
+            "title": "上传两张照片",
+            "description": "一张给变成僵尸的人（或宠物），一张给幸存者。随时一键交换角色。"
+          },
+          {
+            "title": "点击生成",
+            "description": "无需提示词。场景、雨夜和情绪氛围由我们替你搭建。"
+          },
+          {
+            "title": "观看与分享",
+            "description": "15 秒带原声的短视频——适配 TikTok、Reels 和 Shorts。"
+          }
+        ],
+        "className": "bg-[#171208]"
+      },
+      "audience": {
+        "block": "features",
+        "id": "audience",
+        "label": "适合谁",
+        "title": "为你爱的人而做",
+        "description": "同一种故事格式，无穷无尽的小小心碎——选好你的组合，让雨落下来。",
+        "items": [
+          {
+            "title": "你和伴侣",
+            "description": "大家都在发的版本：一个变了，另一个不肯放手。",
+            "icon": "RiHeartLine"
+          },
+          {
+            "title": "家人",
+            "description": "兄弟姐妹、父母、家庭群——一个他们会反复播放的电影感玩笑。",
+            "icon": "RiGroupLine"
+          },
+          {
+            "title": "最好的朋友",
+            "description": "说出你们平时绝不会亲口说的那句告别，然后当梗发给他。",
+            "icon": "RiUserHeartLine"
+          },
+          {
+            "title": "你和你的宠物",
+            "description": "这次轮到家里的四脚小怪物当主演。",
+            "icon": "RiBearSmileLine"
+          }
+        ]
+      },
+      "tips": {
+        "block": "features",
+        "id": "tips",
+        "label": "上传前必读",
+        "title": "获得最佳效果",
+        "items": [
+          {
+            "title": "正脸清晰",
+            "description": "每人（或每只宠物）一张单人照，眼睛可见，避免重度滤镜。",
+            "icon": "RiAccountCircleLine"
+          },
+          {
+            "title": "特写效果最好",
+            "description": "头部+肩部的近照能让成片里的长相还原度最高。",
+            "icon": "RiCrop2Line"
+          },
+          {
+            "title": "暗可以，糊不行",
+            "description": "夜景照片很搭氛围——但请避免运动模糊和带文字界面的截图。",
+            "icon": "RiMoonFoggyLine"
+          }
+        ]
+      },
+      "concept": {
+        "block": "features",
+        "id": "concept",
+        "label": "趋势",
+        "title": "AI 僵尸故事趋势是什么？",
+        "items": [
+          {
+            "title": "一个反转的爱情故事",
+            "description": "两张照片进去：一个已经变成僵尸，另一个必须决定怎么办——整个格式就是这么简单。",
+            "icon": "RiGhostSmileLine"
+          },
+          {
+            "title": "为什么会火",
+            "description": "它短、有电影感、又足够私人。恐怖的外壳装着真实的情感，所以人们会把它分享给故事里的那个人。",
+            "icon": "RiFireLine"
+          },
+          {
+            "title": "几分钟就能做",
+            "description": "不需要剪辑技巧，也不需要写提示词——场景、音效和节奏都由我们替你把控。",
+            "icon": "RiTimerLine"
+          }
+        ]
+      },
+      "pricing": {
+        "block": "pricing",
+        "id": "pricing",
+        "title": "选择你的方案",
+        "description": "积分通用全部创作格式——一次购买，按自己的节奏创作。",
+        "className": "bg-[#171208]",
+        "groups": [
+          { "name": "packs", "title": "积分包", "is_featured": true }
+        ],
+        "items": [
+          {
+            "title": "一支小舞",
+            "description": "为了那个值得拥有自己故事的瞬间。",
+            "eyebrow": "从这里开始",
+            "label": "",
+            "features": [
+              "100 积分",
+              "1 支视频 · 每条最长 15 秒",
+              "未用积分永不过期",
+              "单次付费，无订阅"
+            ],
+            "interval": "one-time",
+            "amount": 999,
+            "currency": "USD",
+            "price": "$9.99",
+            "unit": "单次付清",
+            "is_featured": true,
+            "tip": "",
+            "button": { "title": "获得 100 积分", "url": "/pricing", "icon": "" },
+            "product_id": "pack-starter",
+            "product_name": "AI Rumpelstiltskin One Little Dance",
+            "credits": 100,
+            "credits_label": "积分",
+            "valid_days": 0,
+            "group": "packs"
+          },
+          {
+            "title": "舞成三部曲",
+            "description": "三个故事，三次抢镜机会。",
+            "eyebrow": "视频包",
+            "label": "省 17%",
+            "features": [
+              "300 积分",
+              "5 支视频 · 每条最长 15 秒",
+              "未用积分永不过期",
+              "单次付费，无订阅"
+            ],
+            "interval": "one-time",
+            "amount": 2499,
+            "currency": "USD",
+            "price": "$24.99",
+            "unit": "单次付清",
+            "is_featured": false,
+            "tip": "",
+            "button": { "title": "获得 300 积分", "url": "/pricing", "icon": "" },
+            "product_id": "pack-trilogy",
+            "product_name": "AI Rumpelstiltskin Trilogy Pack",
+            "credits": 300,
+            "credits_label": "积分",
+            "valid_days": 0,
+            "group": "packs"
+          },
+          {
+            "title": "让故事继续",
+            "description": "每月准时送来一份新的故事素材。",
+            "eyebrow": "月度订阅",
+            "label": "省 33%",
+            "features": [
+              "每月 600 积分",
+              "10 支视频 · 每条最长 15 秒",
+              "未用积分永不过期",
+              "随时取消续订"
+            ],
+            "interval": "month",
+            "amount": 3999,
+            "currency": "USD",
+            "price": "$39.99",
+            "unit": "/ 月",
+            "is_featured": false,
+            "tip": "",
+            "button": { "title": "开始包月计划", "url": "/pricing", "icon": "" },
+            "product_id": "pack-monthly",
+            "product_name": "AI Rumpelstiltskin Monthly Plan",
+            "plan_name": "monthly",
+            "credits": 600,
+            "credits_label": "积分",
+            "valid_days": 0,
+            "group": "packs"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "label": "常见问题",
+        "title": "你需要知道",
+        "description": "还有疑问？联系 support@airumpelstiltskin.pro。",
+        "items": [
+          {
+            "question": "AI 僵尸故事趋势是什么？",
+            "answer": "一种爆火的视频格式：两张照片——一个变成僵尸的人（或宠物）和一位幸存者——被制作成一段电影感的僵尸短片。其中一个已经变了，另一个却狠不下心动手。2026 年末在 TikTok、Reels 和 Shorts 上迅速传播。"
+          },
+          {
+            "question": "开始需要准备什么？",
+            "answer": "两张照片：一张给变成僵尸的角色，一张给幸存者。光线充足、正脸清晰的照片效果最好。想换谁变僵尸，点「交换角色」即可。"
+          },
+          {
+            "question": "需要写提示词吗？",
+            "answer": "不需要。场景、雨夜、音效和节奏都由我们替你搭建——上传照片、点击生成即可。"
+          },
+          {
+            "question": "一支视频多少积分？",
+            "answer": "每支视频消耗 100 积分。未使用的积分永不过期，生成失败会自动退还积分到你的账号。"
+          },
+          {
+            "question": "可以用任何人的照片吗？",
+            "answer": "只能用你拥有使用权的照片，并确保照片中出现的每个人都同意。宠物同理——请确认主人同意。完整规则见《可接受使用政策》。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "tone": "dark",
+        "label": "AI 僵尸",
+        "title": "制作你自己的僵尸故事",
+        "description": "两张照片，一个故事，十五秒你会想留下来的记忆。",
+        "buttons": [
+          {
+            "title": "开始创作",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Zap"
+          },
+          {
+            "title": "查看积分包",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "CreditCard"
+          }
+        ]
+      }
+    }
+  }
+}

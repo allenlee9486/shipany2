@@ -19,6 +19,11 @@
           "icon": "Sparkles"
         },
         {
+          "title": "AI Zombie",
+          "url": "/ai-zombie",
+          "icon": "RiGhostSmileLine"
+        },
+        {
           "title": "The Meme",
           "url": "/#origin",
           "icon": "Box"

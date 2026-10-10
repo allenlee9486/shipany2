@@ -1,0 +1,344 @@
+{
+  "metadata": {
+    "title": "AI Zombie Video Generator — Turn Two Photos Into a Zombie Story",
+    "description": "Turn two photos into a 15-second AI zombie story. One of you has turned, the other can't bring themselves to fight. No prompt needed."
+  },
+  "page": {
+    "show_sections": [
+      "generator",
+      "story",
+      "how",
+      "audience",
+      "tips",
+      "concept",
+      "pricing",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "generator": {
+        "block": "dance-generator",
+        "id": "generator",
+        "label": "AI Zombie Workspace",
+        "title": "Create the AI Zombie Story from Two Photos",
+        "description": "One of you has turned. The other can't bring themselves to fight. Upload two photos and get a short zombie film in the cinematic rainy-night style.",
+        "className": "bg-[#171208]",
+        "workspace": {
+          "title": "Build Your Zombie Story",
+          "subtitle": "15-second video · 100 credits · Original sound",
+          "photos_label": "1. Choose your photos",
+          "photos_hint": "JPG, PNG, WebP · up to 10 MB",
+          "photos": [
+            { "title": "The one who turns", "hint": "Main character" },
+            { "title": "The survivor", "hint": "Second character" }
+          ],
+          "change_photo": "Change",
+          "swap_label": "Swap roles",
+          "consent_label": "I have permission to use these photos, and everyone in them agrees to appear in AI-generated content.",
+          "photos_note": "One person (or pet) per photo, clear and well-lit — a close-up head-and-shoulders shot works best.",
+          "show_scene": false,
+          "show_format": false,
+          "duration": "15",
+          "video_model": "fal-ai/kling-video/o3/pro/video-to-video/reference",
+          "template_video": "https://image.airumpelstiltskin.online/ai-zombie-template.mp4",
+          "credits_cost": 100,
+          "credits_label": "credits",
+          "sign_in": "Sign in to generate",
+          "generate": "Make my zombie story · 100 credits",
+          "buy": "Get 100 credits · $9.99",
+          "generating": "Building your zombie story...",
+          "loading": "Loading...",
+          "status_pending": "Waiting for the model to start...",
+          "generating_estimate": "Usually takes 10–20 minutes",
+          "generating_hint": "Please keep this page open and skip refreshing — your video will appear here automatically.",
+          "progress": "Progress",
+          "cost_label": "Cost",
+          "remaining_label": "Remaining",
+          "need_photo": "Add at least the photo of the person who turns",
+          "insufficient": "Insufficient credits. Please top up to keep creating.",
+          "upload_failed": "Upload failed, please try again",
+          "file_too_large": "Photo must be 10 MB or smaller",
+          "footnote": "Original sound included. Failed generations return credits to your account."
+        },
+        "examples": {
+          "title": "See the Story",
+          "badge": "Example video",
+          "your_video_badge": "Your video",
+          "placeholder": "Your zombie story will appear here. Upload two photos, press generate, and it lands in this player — no prompt needed.",
+          "steps": [
+            "Upload two photos: the one who turns, and the survivor.",
+            "Press generate. No prompt needed.",
+            "Get a 15-second video with original sound."
+          ],
+          "videos": []
+        }
+      },
+      "story": {
+        "block": "features-step",
+        "id": "story",
+        "label": "The Story",
+        "title": "Five Beats of a Zombie Love Story",
+        "items": [
+          {
+            "title": "The Meeting",
+            "description": "Two people. One dark night. The last ordinary moment before everything changes."
+          },
+          {
+            "title": "Recognition",
+            "description": "One of them has turned — but the eyes still say they know you."
+          },
+          {
+            "title": "The Last Moment",
+            "description": "A hand raised. A pause that lasts too long. Neither side wants to move first."
+          },
+          {
+            "title": "What's Left",
+            "description": "Memory slips away as the old instinct takes over the person you knew."
+          },
+          {
+            "title": "The Memory",
+            "description": "What remains is the version of them you choose to keep."
+          }
+        ],
+        "className": "bg-[#171208]"
+      },
+      "how": {
+        "block": "features-step",
+        "id": "how",
+        "label": "How it works",
+        "title": "Three Steps to Your Zombie Story",
+        "items": [
+          {
+            "title": "Upload Two Photos",
+            "description": "One photo for the person (or pet) who turns, one for the survivor. Swap roles at any time with one click."
+          },
+          {
+            "title": "Generate",
+            "description": "No prompt needed. The scene, the rain and the mood are assembled for you."
+          },
+          {
+            "title": "Watch and Share",
+            "description": "A 15-second video with original sound — ready for TikTok, Reels and Shorts."
+          }
+        ],
+        "className": "bg-[#171208]"
+      },
+      "audience": {
+        "block": "features",
+        "id": "audience",
+        "label": "Who it is for",
+        "title": "Made for the People You Love",
+        "description": "One story format, endless small heartbreaks — pick your pair and let the rain start.",
+        "items": [
+          {
+            "title": "You and Your Partner",
+            "description": "The version everyone shares: one of you turns, the other refuses to let go.",
+            "icon": "RiHeartLine"
+          },
+          {
+            "title": "Family",
+            "description": "Siblings, parents, the family group chat — a cinematic inside joke they will replay.",
+            "icon": "RiGroupLine"
+          },
+          {
+            "title": "Best Friends",
+            "description": "Say the goodbye neither of you would ever say out loud, then send it as a meme.",
+            "icon": "RiUserHeartLine"
+          },
+          {
+            "title": "You and Your Pet",
+            "description": "The four-legged monster of the house gets the starring role this time.",
+            "icon": "RiBearSmileLine"
+          }
+        ]
+      },
+      "tips": {
+        "block": "features",
+        "id": "tips",
+        "label": "Before you upload",
+        "title": "Get the Best Result",
+        "items": [
+          {
+            "title": "Clear Faces",
+            "description": "One person (or pet) per photo, eyes visible, no heavy filters.",
+            "icon": "RiAccountCircleLine"
+          },
+          {
+            "title": "Close-up Works Best",
+            "description": "Head-and-shoulders photos keep the strongest likeness in the final video.",
+            "icon": "RiCrop2Line"
+          },
+          {
+            "title": "Dark Is Fine, Blurry Is Not",
+            "description": "Night photos fit the mood — but avoid motion blur and screenshots with text overlays.",
+            "icon": "RiMoonFoggyLine"
+          }
+        ]
+      },
+      "concept": {
+        "block": "features",
+        "id": "concept",
+        "label": "The Trend",
+        "title": "What Is the AI Zombie Story Trend?",
+        "items": [
+          {
+            "title": "A Love Story with One Twist",
+            "description": "Two photos go in. One of you has turned, and the other has to decide what to do about it — that is the whole format.",
+            "icon": "RiGhostSmileLine"
+          },
+          {
+            "title": "Why It Spreads",
+            "description": "It is short, cinematic and personal. The horror format carries real emotion, so people share it with the people it is about.",
+            "icon": "RiFireLine"
+          },
+          {
+            "title": "Made in Minutes",
+            "description": "No editing skills and no prompt writing — the scene, the sound and the pacing are handled for you.",
+            "icon": "RiTimerLine"
+          }
+        ]
+      },
+      "pricing": {
+        "block": "pricing",
+        "id": "pricing",
+        "title": "Choose Your Pack",
+        "description": "Credits work across every format on AI Rumpelstiltskin — pay once and create at your own pace.",
+        "className": "bg-[#171208]",
+        "groups": [
+          { "name": "packs", "title": "Credit packs", "is_featured": true }
+        ],
+        "items": [
+          {
+            "title": "One Little Dance",
+            "description": "For the moment that deserves its own story.",
+            "eyebrow": "Start Here",
+            "label": "",
+            "features": [
+              "100 credits",
+              "1 video · up to 15s each",
+              "Unused credits never expire",
+              "One payment. No subscription."
+            ],
+            "interval": "one-time",
+            "amount": 999,
+            "currency": "USD",
+            "price": "$9.99",
+            "unit": "one time",
+            "is_featured": true,
+            "tip": "",
+            "button": { "title": "Get 100 credits", "url": "/pricing", "icon": "" },
+            "product_id": "pack-starter",
+            "product_name": "AI Rumpelstiltskin One Little Dance",
+            "credits": 100,
+            "credits_label": "credits",
+            "valid_days": 0,
+            "group": "packs"
+          },
+          {
+            "title": "Make It a Trilogy",
+            "description": "Three stories. Three chances to steal the scene.",
+            "eyebrow": "Video Pack",
+            "label": "Save 17%",
+            "features": [
+              "300 credits",
+              "5 videos · up to 15s each",
+              "Unused credits never expire",
+              "One payment. No subscription."
+            ],
+            "interval": "one-time",
+            "amount": 2499,
+            "currency": "USD",
+            "price": "$24.99",
+            "unit": "one time",
+            "is_featured": false,
+            "tip": "",
+            "button": { "title": "Get 300 credits", "url": "/pricing", "icon": "" },
+            "product_id": "pack-trilogy",
+            "product_name": "AI Rumpelstiltskin Trilogy Pack",
+            "credits": 300,
+            "credits_label": "credits",
+            "valid_days": 0,
+            "group": "packs"
+          },
+          {
+            "title": "Keep the Story Going",
+            "description": "A fresh supply of stories, every month.",
+            "eyebrow": "Monthly Subscription",
+            "label": "Save 33%",
+            "features": [
+              "600 credits every month",
+              "10 videos · up to 15s each",
+              "Unused credits never expire",
+              "Cancel renewal anytime"
+            ],
+            "interval": "month",
+            "amount": 3999,
+            "currency": "USD",
+            "price": "$39.99",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "",
+            "button": { "title": "Start monthly plan", "url": "/pricing", "icon": "" },
+            "product_id": "pack-monthly",
+            "product_name": "AI Rumpelstiltskin Monthly Plan",
+            "plan_name": "monthly",
+            "credits": 600,
+            "credits_label": "credits",
+            "valid_days": 0,
+            "group": "packs"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "label": "FAQ",
+        "title": "Good to Know",
+        "description": "Still curious? Reach us at support@airumpelstiltskin.pro.",
+        "items": [
+          {
+            "question": "What is the AI zombie story trend?",
+            "answer": "A viral video format where two photos — a person or pet who turns, and the survivor — are turned into a short cinematic zombie scene. One of them has turned, and the other can't bring themselves to fight. It spread across TikTok, Reels and Shorts in late 2026."
+          },
+          {
+            "question": "What do I need to get started?",
+            "answer": "Two photos: one for the character who turns, one for the survivor. Clear, well-lit faces work best. Press Swap roles if you want to change who turns."
+          },
+          {
+            "question": "Do I need to write a prompt?",
+            "answer": "No. The scene, the rain, the sound and the pacing are assembled for you — just upload photos and press generate."
+          },
+          {
+            "question": "How much does a video cost?",
+            "answer": "One video costs 100 credits. Unused credits never expire, and failed generations are refunded automatically to your account."
+          },
+          {
+            "question": "Can I use photos of anyone?",
+            "answer": "Only photos you have permission to use, with consent from everyone appearing in them. This applies to pets too — make sure the owner is fine with it. See our Acceptable Use Policy for the full rules."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "tone": "dark",
+        "label": "AI Zombie",
+        "title": "Make Your Own Zombie Story",
+        "description": "Two photos. One story. Fifteen seconds you will want to keep.",
+        "buttons": [
+          {
+            "title": "Create Your Story",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Zap"
+          },
+          {
+            "title": "See Credit Packs",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "CreditCard"
+          }
+        ]
+      }
+    }
+  }
+}

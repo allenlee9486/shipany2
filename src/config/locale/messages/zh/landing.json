@@ -19,6 +19,11 @@
           "icon": "Sparkles"
         },
         {
+          "title": "AI 僵尸",
+          "url": "/ai-zombie",
+          "icon": "RiGhostSmileLine"
+        },
+        {
           "title": "梗的来历",
           "url": "/#origin",
           "icon": "Box"

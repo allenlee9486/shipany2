@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
+  ArrowLeftRight,
   ArrowRight,
   Check,
   ChevronLeft,
@@ -105,6 +106,12 @@ export function DanceGenerator({
   const videoModel = String(w.video_model || KLING_MODEL_PRO);
   // fixed output length; the model accepts 3-15 seconds
   const duration = String(w.duration || '9');
+  // optional, config-driven features (used by the ai-zombie landing page)
+  const showScene = w.show_scene !== false;
+  const showFormat = w.show_format !== false;
+  const swapLabel = w.swap_label as string | undefined;
+  const consentLabel = w.consent_label as string | undefined;
+  const emptyPlaceholder = ex.placeholder as string | undefined;
 
   const {
     user,
@@ -119,6 +126,7 @@ export function DanceGenerator({
   const [aspectRatio, setAspectRatio] = useState(
     formatOptions[0]?.value ?? '16:9'
   );
+  const [consented, setConsented] = useState(false);
 
   const [exampleIndex, setExampleIndex] = useState(0);
   const [resultVideoUrl, setResultVideoUrl] = useState<string | null>(null);
@@ -207,6 +215,10 @@ export function DanceGenerator({
       delete next[idx];
       return next;
     });
+  };
+
+  const swapPhotos = () => {
+    setPhotos((prev) => ({ ...prev, 0: prev[1], 1: prev[0] }));
   };
 
   const resetTaskState = useCallback(() => {
@@ -372,8 +384,10 @@ export function DanceGenerator({
             image_input: uploadedPhotoUrls,
             video_input: [templateVideo],
             // 'auto' follows the reference video exactly so the original shots
-            // are preserved; portrait/square ask the model to re-frame the scene
-            aspect_ratio: aspectRatio === '16:9' ? 'auto' : aspectRatio,
+            // are preserved; portrait/square ask the model to re-frame the
+            // scene. When the format selector is hidden, always follow the
+            // template.
+            aspect_ratio: !showFormat || aspectRatio === '16:9' ? 'auto' : aspectRatio,
             duration,
             keep_audio: true,
           },
@@ -491,10 +505,18 @@ export function DanceGenerator({
       <button
         type="button"
         onClick={handleGenerate}
-        disabled={isGenerating || !hasMainPhoto || isUploading}
+        disabled={
+          isGenerating ||
+          !hasMainPhoto ||
+          isUploading ||
+          (!!consentLabel && !consented)
+        }
         className={cn(
           'flex h-12 w-full items-center justify-between rounded-full px-5 text-sm font-bold tracking-wide uppercase transition-colors',
-          isGenerating || !hasMainPhoto || isUploading
+          isGenerating ||
+            !hasMainPhoto ||
+            isUploading ||
+            (!!consentLabel && !consented)
             ? 'cursor-not-allowed bg-[#3a2f1b] text-[#a89e8c]'
             : 'bg-[#f0b429] text-[#1c150a] hover:bg-[#ffc94d]'
         )}
@@ -666,9 +688,20 @@ export function DanceGenerator({
               {w.photos_note && (
                 <p className="mt-2 text-xs text-[#6b6252]">{w.photos_note}</p>
               )}
+
+              {swapLabel && photoSlots.length > 1 && (
+                <button
+                  type="button"
+                  onClick={swapPhotos}
+                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-[#3a2f1b] py-2.5 font-mono text-[11px] tracking-[0.1em] text-[#a89e8c] uppercase transition-colors hover:border-[#f0b429]/60 hover:text-[#f0b429]"
+                >
+                  <ArrowLeftRight className="size-3.5" />
+                  {swapLabel}
+                </button>
+              )}
             </div>
 
-            {/* 2. scene */}
+            {showScene && (
             <div className="mt-7">
               <div className="flex items-baseline justify-between gap-3">
                 <span className="text-sm font-bold text-[#f2ead9]">
@@ -689,8 +722,9 @@ export function DanceGenerator({
                 className="mt-3 min-h-24 w-full resize-none rounded-xl border border-[#3a2f1b]! bg-[#1a1409]! p-4 text-sm text-[#f2ead9] outline-none placeholder:text-[#6b6252] focus:border-[#f0b429]/60!"
               />
             </div>
+            )}
 
-            {/* 3: format */}
+            {showFormat && (
             <div className="mt-7">
               <span className="text-sm font-bold text-[#f2ead9]">
                 {w.format_label}
@@ -712,6 +746,7 @@ export function DanceGenerator({
                 </p>
               )}
             </div>
+            )}
 
             {/* cta + credits */}
             <div className="mt-auto space-y-3 pt-8">
@@ -745,6 +780,20 @@ export function DanceGenerator({
                     </p>
                   )}
                 </div>
+              )}
+
+              {consentLabel && (
+                <label className="flex cursor-pointer items-start gap-2.5 rounded-xl border border-[#3a2f1b] p-3">
+                  <input
+                    type="checkbox"
+                    checked={consented}
+                    onChange={(e) => setConsented(e.target.checked)}
+                    className="mt-0.5 size-4 shrink-0 accent-[#f0b429]"
+                  />
+                  <span className="text-[11px] leading-relaxed text-[#a89e8c]">
+                    {consentLabel}
+                  </span>
+                </label>
               )}
 
               {renderCta()}
@@ -816,6 +865,12 @@ export function DanceGenerator({
                       {w.generating_hint}
                     </p>
                   )}
+                </div>
+              ) : exampleVideos.length === 0 ? (
+                <div className="flex aspect-video w-full items-center justify-center rounded-xl border border-[#3a2f1b] bg-[#1a1409] p-8 text-center">
+                  <p className="font-mono text-xs leading-relaxed text-[#6b6252]">
+                    {emptyPlaceholder}
+                  </p>
                 </div>
               ) : (
                 <div className="relative overflow-hidden rounded-xl border border-[#3a2f1b]">

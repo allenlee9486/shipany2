@@ -18,6 +18,7 @@ const staticPaths: Array<{
   { path: '', priority: 1, changeFrequency: 'daily' },
   { path: 'pricing', priority: 0.9, changeFrequency: 'weekly' },
   { path: 'blog', priority: 0.8, changeFrequency: 'weekly' },
+  { path: 'ai-zombie', priority: 0.9, changeFrequency: 'weekly' },
   { path: 'updates', priority: 0.6, changeFrequency: 'weekly' },
   { path: 'docs', priority: 0.6, changeFrequency: 'monthly' },
   { path: 'acceptable-use', priority: 0.4, changeFrequency: 'monthly' },
