@@ -1,3 +1,4 @@
+import { envConfigs } from '@/config';
 import {
   PaymentEventType,
   SubscriptionCycleType,
@@ -14,6 +15,8 @@ import {
   handleSubscriptionRenewal,
   handleSubscriptionUpdated,
 } from '@/shared/services/payment';
+
+const normalizeUrl = (url?: string) => (url || '').replace(/\/+$/, '');
 
 export async function POST(
   req: Request,
@@ -49,6 +52,15 @@ export async function POST(
       throw new Error('payment session not found');
     }
 
+    // Stripe webhook endpoints are account-wide: if the same Stripe account
+    // is shared with other sites, their events arrive here too. Ignore any
+    // event that carries a different site marker.
+    const sessionSite = session.metadata?.site_url;
+    if (sessionSite && normalizeUrl(sessionSite) !== normalizeUrl(envConfigs.app_url)) {
+      console.log(`ignore payment event from another site: ${sessionSite}`);
+      return Response.json({ message: 'success' });
+    }
+
     // console.log('notify payment session', session);
 
     if (eventType === PaymentEventType.CHECKOUT_SUCCESS) {
@@ -61,7 +73,9 @@ export async function POST(
 
       const order = await findOrderByOrderNo(orderNo);
       if (!order) {
-        throw new Error('order not found');
+        // event from another site without a site marker, or a stale session
+        console.log(`order not found: ${orderNo}, skipping`);
+        return Response.json({ message: 'success' });
       }
 
       await handleCheckoutSuccess({
@@ -169,7 +183,8 @@ export async function POST(
 
         const order = await findOrderByOrderNo(orderNo);
         if (!order) {
-          throw new Error('order not found');
+          console.log(`order not found: ${orderNo}, skipping`);
+          return Response.json({ message: 'success' });
         }
 
         // handleCheckoutSuccess has idempotency check and optimistic lock
@@ -190,7 +205,10 @@ export async function POST(
           subscriptionId: session.subscriptionId,
         });
       if (!existingSubscription) {
-        throw new Error('subscription not found');
+        console.log(
+          `subscription not found: ${session.subscriptionId}, skipping`
+        );
+        return Response.json({ message: 'success' });
       }
 
       await handleSubscriptionUpdated({
@@ -209,7 +227,10 @@ export async function POST(
           subscriptionId: session.subscriptionId,
         });
       if (!existingSubscription) {
-        throw new Error('subscription not found');
+        console.log(
+          `subscription not found: ${session.subscriptionId}, skipping`
+        );
+        return Response.json({ message: 'success' });
       }
 
       await handleSubscriptionCanceled({

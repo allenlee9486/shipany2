@@ -212,6 +212,10 @@ export async function POST(req: Request) {
       type: paymentType,
       metadata: {
         app_name: configs.app_name,
+        // marks which site created the session; the payment webhook is
+        // account-wide and must ignore events from other sites sharing
+        // the same Stripe account
+        site_url: configs.app_url,
         order_no: orderNo,
         user_id: user.id,
         ...(metadata || {}),
