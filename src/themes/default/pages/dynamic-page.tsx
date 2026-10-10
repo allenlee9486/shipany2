@@ -16,13 +16,21 @@ export default async function DynamicPage({
         <h1 className="sr-only">{page.title}</h1>
       )}
       {page?.sections &&
-        Object.keys(page.sections).map(async (sectionKey: string) => {
+        // show_sections defines the visible sections AND their render order
+        (page.show_sections && page.show_sections.length > 0
+          ? page.show_sections
+          : Object.keys(page.sections)
+        ).map(async (sectionKey: string) => {
           const section = page.sections?.[sectionKey];
           if (!section || section.disabled === true) {
             return null;
           }
 
-          if (page.show_sections && !page.show_sections.includes(sectionKey)) {
+          if (
+            page.show_sections &&
+            page.show_sections.length > 0 &&
+            !page.show_sections.includes(sectionKey)
+          ) {
             return null;
           }
 

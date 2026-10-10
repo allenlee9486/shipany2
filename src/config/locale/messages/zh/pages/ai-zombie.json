@@ -106,6 +106,57 @@
           ]
         }
       },
+      "trend": {
+        "block": "video-showcase",
+        "id": "trend",
+        "label": "从哪来的",
+        "title": "AI 僵尸故事趋势",
+        "description": "2026 年 10 月，一种新的 AI 视频格式席卷 TikTok 和 Instagram：两张照片变成一段末世爱情故事——一个已经变成僵尸，另一个却狠不下心动手。举枪的手慢慢放下、双臂张开，恐怖的开场最终变成一场告别。",
+        "videos": [
+          {
+            "title": "雪原上的告别",
+            "description": "完整的三幕：举枪、停顿，和最后那个相拥。",
+            "video": {
+              "src": "https://image.airumpelstiltskin.online/girlfriend-snow-v2.mp4",
+              "poster": "https://image.airumpelstiltskin.online/zombie-example-1.jpg"
+            }
+          },
+          {
+            "title": "对峙的特写",
+            "description": "所有人都认得的那个特写节拍——眼泪、颤抖的准星、永远不会变容易的决定。",
+            "video": {
+              "src": "https://image.airumpelstiltskin.online/ai-zombie-template-v2.mp4",
+              "poster": "https://image.airumpelstiltskin.online/zombie-example-2.jpg"
+            }
+          },
+          {
+            "title": "木屋终章",
+            "description": "安静的房间、上了膛的步枪，和那个你狠不下心动手的人。",
+            "video": {
+              "src": "https://image.airumpelstiltskin.online/ai-zombie-template2-v2.mp4",
+              "poster": "https://image.airumpelstiltskin.online/zombie-example-3.jpg"
+            }
+          }
+        ],
+        "items": [
+          {
+            "title": "2026 年 10 月",
+            "description": "该格式席卷 TikTok 与 Instagram"
+          },
+          {
+            "title": "两张照片",
+            "description": "一个幸存者，一个变成僵尸的人——全部阵容"
+          },
+          {
+            "title": "15 秒",
+            "description": "对峙、认出、相拥——三幕一气呵成"
+          },
+          {
+            "title": "竖屏 · 带声音",
+            "description": "为 TikTok、Reels 和 Shorts 而做"
+          }
+        ]
+      },
       "story": {
         "block": "features-step",
         "id": "story",
@@ -385,57 +436,6 @@
             "target": "_self",
             "variant": "outline",
             "icon": "CreditCard"
-          }
-        ]
-      },
-      "trend": {
-        "block": "video-showcase",
-        "id": "trend",
-        "label": "从哪来的",
-        "title": "AI 僵尸故事趋势",
-        "description": "2026 年 10 月，一种新的 AI 视频格式席卷 TikTok 和 Instagram：两张照片变成一段末世爱情故事——一个已经变成僵尸，另一个却狠不下心动手。举枪的手慢慢放下、双臂张开，恐怖的开场最终变成一场告别。",
-        "videos": [
-          {
-            "title": "雪原上的告别",
-            "description": "完整的三幕：举枪、停顿，和最后那个相拥。",
-            "video": {
-              "src": "https://image.airumpelstiltskin.online/girlfriend-snow-v2.mp4",
-              "poster": "https://image.airumpelstiltskin.online/zombie-example-1.jpg"
-            }
-          },
-          {
-            "title": "对峙的特写",
-            "description": "所有人都认得的那个特写节拍——眼泪、颤抖的准星、永远不会变容易的决定。",
-            "video": {
-              "src": "https://image.airumpelstiltskin.online/ai-zombie-template-v2.mp4",
-              "poster": "https://image.airumpelstiltskin.online/zombie-example-2.jpg"
-            }
-          },
-          {
-            "title": "木屋终章",
-            "description": "安静的房间、上了膛的步枪，和那个你狠不下心动手的人。",
-            "video": {
-              "src": "https://image.airumpelstiltskin.online/ai-zombie-template2-v2.mp4",
-              "poster": "https://image.airumpelstiltskin.online/zombie-example-3.jpg"
-            }
-          }
-        ],
-        "items": [
-          {
-            "title": "2026 年 10 月",
-            "description": "该格式席卷 TikTok 与 Instagram"
-          },
-          {
-            "title": "两张照片",
-            "description": "一个幸存者，一个变成僵尸的人——全部阵容"
-          },
-          {
-            "title": "15 秒",
-            "description": "对峙、认出、相拥——三幕一气呵成"
-          },
-          {
-            "title": "竖屏 · 带声音",
-            "description": "为 TikTok、Reels 和 Shorts 而做"
           }
         ]
       }
