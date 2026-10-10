@@ -583,6 +583,7 @@ export function DanceGenerator({
                         <img
                           src={photo.preview}
                           alt=""
+                          data-clarity-mask="true"
                           className="absolute inset-0 h-full w-full object-cover opacity-30"
                         />
                       )}
@@ -776,6 +777,7 @@ export function DanceGenerator({
                     src={resultVideoUrl}
                     controls
                     playsInline
+                    data-clarity-mask="true"
                     className="max-h-[75vh] w-full rounded-xl border border-[#8a744a]/40 bg-black object-contain"
                   />
                   <button
