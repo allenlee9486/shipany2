@@ -602,17 +602,17 @@
         "description": "把爆火的 Rumpelstiltskin 迷因变成你自己的创意视频概念。",
         "buttons": [
           {
-            "title": "加入等候名单",
-            "url": "mailto:support@airumpelstiltskin.pro?subject=AI%20Rumpelstiltskin%20Waitlist",
+            "title": "开始创作",
+            "url": "#generator",
             "target": "_self",
             "icon": "Zap"
           },
           {
-            "title": "了解更多",
-            "url": "/blog",
+            "title": "查看积分包",
+            "url": "/pricing",
             "target": "_self",
             "variant": "outline",
-            "icon": "BookOpenText"
+            "icon": "CreditCard"
           }
         ],
         "tone": "dark",

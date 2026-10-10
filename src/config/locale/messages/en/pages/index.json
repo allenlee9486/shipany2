@@ -604,17 +604,17 @@
         "description": "Turn the viral Rumpelstiltskin meme idea into your own creative video concept.",
         "buttons": [
           {
-            "title": "Join the Waitlist",
-            "url": "mailto:support@airumpelstiltskin.pro?subject=AI%20Rumpelstiltskin%20Waitlist",
+            "title": "Create Your Story",
+            "url": "#generator",
             "target": "_self",
             "icon": "Zap"
           },
           {
-            "title": "Learn More",
-            "url": "/blog",
+            "title": "See Credit Packs",
+            "url": "/pricing",
             "target": "_self",
             "variant": "outline",
-            "icon": "BookOpenText"
+            "icon": "CreditCard"
           }
         ]
       }
