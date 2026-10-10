@@ -37,6 +37,17 @@ const nextConfig = {
       { source: '/zh/ai-video-generator', destination: '/zh', permanent: true },
       { source: '/zh/ai-image-generator', destination: '/zh', permanent: true },
       { source: '/zh/ai-music-generator', destination: '/zh', permanent: true },
+      // renamed blog post (template placeholder -> real article)
+      {
+        source: '/blog/what-is-xxx',
+        destination: '/blog/what-is-the-rumpelstiltskin-ai-video-meme',
+        permanent: true,
+      },
+      {
+        source: '/zh/blog/what-is-xxx',
+        destination: '/zh/blog/what-is-the-rumpelstiltskin-ai-video-meme',
+        permanent: true,
+      },
     ];
   },
   async headers() {
