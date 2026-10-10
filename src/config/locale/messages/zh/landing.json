@@ -14,7 +14,7 @@
     "nav": {
       "items": [
         {
-          "title": "生成器",
+          "title": "AI Rumpelstiltskin",
           "url": "/#generator",
           "icon": "Sparkles"
         },
@@ -27,16 +27,6 @@
           "title": "梗的来历",
           "url": "/#origin",
           "icon": "Box"
-        },
-        {
-          "title": "怎么玩",
-          "url": "/#workflow",
-          "icon": "BookOpenText"
-        },
-        {
-          "title": "常见问题",
-          "url": "/#faq",
-          "icon": "RiQuestionLine"
         },
         {
           "title": "定价",

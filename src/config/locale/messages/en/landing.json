@@ -14,7 +14,7 @@
     "nav": {
       "items": [
         {
-          "title": "Generator",
+          "title": "AI Rumpelstiltskin",
           "url": "/#generator",
           "icon": "Sparkles"
         },
@@ -27,16 +27,6 @@
           "title": "The Meme",
           "url": "/#origin",
           "icon": "Box"
-        },
-        {
-          "title": "How It Works",
-          "url": "/#workflow",
-          "icon": "BookOpenText"
-        },
-        {
-          "title": "FAQ",
-          "url": "/#faq",
-          "icon": "RiQuestionLine"
         },
         {
           "title": "Pricing",
