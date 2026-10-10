@@ -112,6 +112,10 @@ export function DanceGenerator({
   const swapLabel = w.swap_label as string | undefined;
   const consentLabel = w.consent_label as string | undefined;
   const emptyPlaceholder = ex.placeholder as string | undefined;
+  const promptKeep = String(
+    w.prompt_keep ||
+      'Keep the same shots, framing, camera movement, dance moves and timing as the reference video.'
+  );
 
   const {
     user,
@@ -358,7 +362,7 @@ export function DanceGenerator({
         : 'Replace both characters with @Element1. Keep the face, hairstyle and outfit consistent with the uploaded photo in every shot.';
     const prompt = [
       replacement,
-      'Keep the same shots, framing, camera movement, dance moves and timing as the reference video.',
+      promptKeep,
       sceneText,
     ]
       .filter(Boolean)

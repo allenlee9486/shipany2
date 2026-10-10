@@ -65,7 +65,8 @@
           "insufficient": "积分不足，请先充值",
           "upload_failed": "上传失败，请重试",
           "file_too_large": "照片不能超过 10 MB",
-          "footnote": "已包含原声音频。生成失败会自动退还积分。"
+          "footnote": "已包含原声音频。生成失败会自动退还积分。",
+          "prompt_keep": "Keep the same shots, framing, camera movement, actions and timing as the reference video."
         },
         "examples": {
           "title": "看故事",

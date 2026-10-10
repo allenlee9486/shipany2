@@ -65,7 +65,8 @@
           "insufficient": "Insufficient credits. Please top up to keep creating.",
           "upload_failed": "Upload failed, please try again",
           "file_too_large": "Photo must be 10 MB or smaller",
-          "footnote": "Original sound included. Failed generations return credits to your account."
+          "footnote": "Original sound included. Failed generations return credits to your account.",
+          "prompt_keep": "Keep the same shots, framing, camera movement, actions and timing as the reference video."
         },
         "examples": {
           "title": "See the Story",
