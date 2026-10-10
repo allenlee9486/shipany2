@@ -63,3 +63,5 @@ src/config/db/migrations*
 .source
 
 .chats
+# cloudflare local dev vars (may contain secrets)
+.dev.vars
