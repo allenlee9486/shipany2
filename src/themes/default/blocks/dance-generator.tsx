@@ -125,6 +125,12 @@ export function DanceGenerator({
     w.prompt_keep === undefined
       ? 'Keep the same shots, framing, camera movement, dance moves and timing as the reference video.'
       : String(w.prompt_keep);
+  // an explicit empty string disables the negative line, for pages that want
+  // a minimal prompt (the reference video already carries the scene)
+  const promptNegative =
+    w.prompt_negative === undefined
+      ? 'Negative: extra people, face drift, identity swap, morphing, flicker, text, watermark.'
+      : String(w.prompt_negative);
 
   const {
     user,
@@ -374,13 +380,7 @@ export function DanceGenerator({
           'Replace both characters with @Element1 and @Element2. Keep each person\u2019s facial identity, hairstyle and outfit consistent with the uploaded photos in every shot, and never swap their identities.'
         : w.prompt_replace_single ||
           'Replace both characters with @Element1. Keep the face, hairstyle and outfit consistent with the uploaded photo in every shot.';
-    const prompt = [
-      replacement,
-      promptKeep,
-      sceneText,
-      w.prompt_negative ||
-        'Negative: extra people, face drift, identity swap, morphing, flicker, text, watermark.',
-    ]
+    const prompt = [replacement, promptKeep, sceneText, promptNegative]
       .filter(Boolean)
       .join(' ');
 
