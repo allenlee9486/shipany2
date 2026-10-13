@@ -16,17 +16,20 @@
       "generator": {
         "block": "dance-generator",
         "id": "generator",
-        "label": "Burning Bridges AI Workspace",
+        "label": "Burning Bridges Workspace",
         "title": "Burning Bridges AI Video Generator",
         "description": "Upload one clear photo and our Burning Bridges AI video generator casts you as the host of the chandelier-lit party from the viral trend — no editing, no prompt writing, no film crew.",
         "className": "bg-[#171208]",
         "workspace": {
           "title": "Become the Host",
-          "subtitle": "Burning Bridges AI · up to 15-second video · 100 credits",
+          "subtitle": "Up to 15-second video · 100 credits · silent MP4",
           "photos_label": "1. Choose your photo",
           "photos_hint": "JPG, PNG, WebP · up to 10 MB",
           "photos": [
-            { "title": "The host", "hint": "That's you" }
+            {
+              "title": "The host",
+              "hint": "That's you"
+            }
           ],
           "change_photo": "Change",
           "consent_label": "I own this photo or have permission to use it, and the person in it agrees to appear in AI-generated content.",
@@ -81,7 +84,7 @@
         "items": [
           {
             "title": "One Photo Is Enough",
-            "description": "A single clear photo is all the format needs — the Burning Bridges AI scene puts you at the center of the room.",
+            "description": "A single clear photo is all the format needs — the scene puts you at the center of the room.",
             "icon": "PartyPopper"
           },
           {
@@ -108,7 +111,7 @@
           },
           {
             "title": "Press Generate",
-            "description": "No prompt needed — the Burning Bridges AI scene, lighting and party are already built. Generation usually takes 10–20 minutes."
+            "description": "No prompt needed — the scene, lighting and party are already built. Generation usually takes 10–20 minutes."
           },
           {
             "title": "Download and Add the Sound",
@@ -124,7 +127,11 @@
         "description": "Credits work for every Burning Bridges AI video and every other format on AI Rumpelstiltskin — pay once and create at your own pace.",
         "className": "bg-[#171208]",
         "groups": [
-          { "name": "packs", "title": "Credit packs", "is_featured": true }
+          {
+            "name": "packs",
+            "title": "Credit packs",
+            "is_featured": true
+          }
         ],
         "items": [
           {
@@ -145,7 +152,11 @@
             "unit": "one time",
             "is_featured": true,
             "tip": "",
-            "button": { "title": "Get 100 credits", "url": "/pricing", "icon": "" },
+            "button": {
+              "title": "Get 100 credits",
+              "url": "/pricing",
+              "icon": ""
+            },
             "product_id": "pack-starter",
             "product_name": "AI Rumpelstiltskin One Little Dance",
             "credits": 100,
@@ -171,7 +182,11 @@
             "unit": "one time",
             "is_featured": false,
             "tip": "",
-            "button": { "title": "Get 300 credits", "url": "/pricing", "icon": "" },
+            "button": {
+              "title": "Get 300 credits",
+              "url": "/pricing",
+              "icon": ""
+            },
             "product_id": "pack-trilogy",
             "product_name": "AI Rumpelstiltskin Trilogy Pack",
             "credits": 300,
@@ -197,7 +212,11 @@
             "unit": "/ month",
             "is_featured": false,
             "tip": "",
-            "button": { "title": "Start monthly plan", "url": "/pricing", "icon": "" },
+            "button": {
+              "title": "Start monthly plan",
+              "url": "/pricing",
+              "icon": ""
+            },
             "product_id": "pack-monthly",
             "product_name": "AI Rumpelstiltskin Monthly Plan",
             "plan_name": "monthly",
@@ -243,7 +262,7 @@
       "cta": {
         "id": "cta",
         "tone": "dark",
-        "label": "Burning Bridges AI",
+        "label": "AI Rumpelstiltskin",
         "title": "The Party Needs a Host",
         "description": "One photo. One room. Fifteen seconds of main-character energy.",
         "buttons": [
