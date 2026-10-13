@@ -100,6 +100,10 @@ export function DanceGenerator({
   const formatOptions: { value: string; label: string }[] =
     w.format_options ?? [];
   const steps: string[] = ex.steps ?? [];
+  const features: string[] = s.features ?? [];
+  const playerCaption = String(ex.caption || '');
+  // video panel leads the layout on the left when configured (Burning Bridges)
+  const videoLeft = w.video_left === true;
   const exampleVideos: ExampleVideo[] = ex.videos ?? [];
   const costCredits = Number(w.credits_cost) || 100;
   const templateVideo = w.template_video || DEFAULT_TEMPLATE_VIDEO;
@@ -562,36 +566,63 @@ export function DanceGenerator({
     >
       <div className="container">
         <motion.div
-          className="max-w-3xl"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        >
-          {section.label && (
-            <p className="font-mono text-xs font-bold tracking-[0.22em] text-[#f0b429] uppercase">
-              {section.label}
-            </p>
-          )}
-          <h1 className="font-display mt-3 break-words text-4xl leading-[0.95] tracking-tight text-[#f2ead9] uppercase text-balance sm:text-5xl md:text-6xl">
-            {section.title}
-          </h1>
-          {section.description && (
-            <p className="mt-4 max-w-2xl text-base font-medium text-[#a89e8c] text-balance">
-              {section.description}
-            </p>
-          )}
-        </motion.div>
-
-        <motion.div
-          className="mt-10 grid gap-5 lg:grid-cols-[minmax(0,26rem)_1fr]"
+          className="mt-0 grid gap-5 lg:grid-cols-[minmax(0,26rem)_1fr] lg:gap-y-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          {/* left: generator form */}
-          <div className="flex flex-col rounded-2xl border border-[#3a2f1b] bg-[#211910] p-6 md:p-7">
+          {/* header — spans both columns, or sits in the right column above the
+              form when the video panel leads */}
+          <motion.div
+            className={cn(
+              'max-w-3xl',
+              videoLeft
+                ? 'lg:col-start-2 lg:row-start-1 lg:max-w-none'
+                : 'lg:col-span-2'
+            )}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {section.label && (
+              <p className="font-mono text-xs font-bold tracking-[0.22em] text-[#f0b429] uppercase">
+                {section.label}
+              </p>
+            )}
+            <h1 className="font-display mt-3 break-words text-4xl leading-[0.95] tracking-tight text-[#f2ead9] uppercase text-balance sm:text-5xl md:text-6xl">
+              {section.title}
+            </h1>
+            {section.description && (
+              <p className="mt-4 max-w-2xl text-base font-medium text-[#a89e8c] text-balance">
+                {section.description}
+              </p>
+            )}
+            {features.length > 0 && (
+              <ul className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2">
+                {features.map((feature, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-center gap-2 text-sm font-bold text-[#f2ead9]"
+                  >
+                    <span className="text-[10px] text-[#f0b429]">◆</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </motion.div>
+
+          {/* generator form */}
+          <div
+            className={cn(
+              'flex flex-col rounded-2xl border border-[#3a2f1b] bg-[#211910] p-6 md:p-7',
+              videoLeft
+                ? 'order-3 lg:order-none lg:col-start-2 lg:row-start-2'
+                : 'lg:col-start-1 lg:row-start-2'
+            )}
+          >
             <h3 className="font-display text-2xl tracking-tight text-[#f2ead9] uppercase md:text-3xl">
               {w.title}
             </h3>
@@ -610,7 +641,12 @@ export function DanceGenerator({
                 </span>
               </div>
 
-              <div className="mt-3 grid grid-cols-2 gap-3">
+              <div
+                className={cn(
+                  'mt-3 grid gap-3',
+                  photoSlots.length === 1 ? 'grid-cols-1' : 'grid-cols-2'
+                )}
+              >
                 {photoSlots.map((slot, idx) => {
                   const photo = photos[idx];
                   return (
@@ -654,8 +690,22 @@ export function DanceGenerator({
                         </span>
                       ) : (
                         <span className="relative flex flex-col items-center gap-1.5">
-                          <span className="flex size-9 items-center justify-center rounded-full border border-[#f0b429]/60 bg-[#f0b429]/10">
-                            <Plus className="size-4 text-[#f0b429]" />
+                          <span
+                            className={cn(
+                              'flex items-center justify-center border',
+                              photoSlots.length === 1
+                                ? 'size-10 rounded-lg border-[#f0b429] bg-[#f0b429]'
+                                : 'size-9 rounded-full border-[#f0b429]/60 bg-[#f0b429]/10'
+                            )}
+                          >
+                            <Plus
+                              className={cn(
+                                'size-4',
+                                photoSlots.length === 1
+                                  ? 'text-[#1c150a]'
+                                  : 'text-[#f0b429]'
+                              )}
+                            />
                           </span>
                           <span className="text-xs font-bold text-[#f2ead9]">
                             {slot.title}
@@ -831,8 +881,16 @@ export function DanceGenerator({
             </div>
           </div>
 
-          {/* right: video panel */}
-          <div className="flex flex-col rounded-2xl border border-[#3a2f1b] bg-[#211910] p-6 md:p-7">
+          {/* video panel */}
+          <div
+            className={cn(
+              'flex flex-col rounded-2xl border border-[#3a2f1b] bg-[#211910] p-6 md:p-7',
+              videoLeft
+                ? 'order-2 lg:order-none lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:self-start'
+                : ''
+            )}
+          >
+            {(ex.title || resultVideoUrl) && (
             <div className="flex items-center justify-between gap-3">
               <h3 className="font-display text-2xl tracking-tight text-[#f2ead9] uppercase md:text-3xl">
                 {ex.title}
@@ -843,6 +901,7 @@ export function DanceGenerator({
                   : ex.badge || 'Example video'}
               </span>
             </div>
+            )}
 
             <div className="mt-5">
               {resultVideoUrl ? (
@@ -954,6 +1013,12 @@ export function DanceGenerator({
                   </p>
                 </div>
               )}
+
+            {playerCaption && !resultVideoUrl && !isGenerating && (
+              <p className="mt-4 text-center font-mono text-[11px] leading-relaxed text-[#a89e8c]">
+                {playerCaption}
+              </p>
+            )}
 
             {steps.length > 0 && (
               <ol className="mt-6 space-y-3 border-t border-[#3a2f1b] pt-6">
