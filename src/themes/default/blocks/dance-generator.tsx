@@ -352,14 +352,15 @@ export function DanceGenerator({
     }
 
     const sceneText = scene.trim();
-    // mirror the model's documented phrasing ("Replace both character with
-    // @Element1 and @Element2") and demand consistency in every shot; when
-    // only one photo is uploaded, replace BOTH template characters with it
-    // so no original person from the template stays visible
+    // replacement lines are config-driven so each product page can describe
+    // its own cast (e.g. the zombie story swaps two characters, the Burning
+    // Bridges party swaps a single host)
     const replacement =
       uploadedPhotoUrls.length > 1
-        ? 'Replace both characters with @Element1 and @Element2. Keep each person\u2019s facial identity, hairstyle and outfit consistent with the uploaded photos in every shot, and never swap their identities.'
-        : 'Replace both characters with @Element1. Keep the face, hairstyle and outfit consistent with the uploaded photo in every shot.';
+        ? w.prompt_replace_double ||
+          'Replace both characters with @Element1 and @Element2. Keep each person\u2019s facial identity, hairstyle and outfit consistent with the uploaded photos in every shot, and never swap their identities.'
+        : w.prompt_replace_single ||
+          'Replace both characters with @Element1. Keep the face, hairstyle and outfit consistent with the uploaded photo in every shot.';
     const prompt = [
       replacement,
       promptKeep,

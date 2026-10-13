@@ -1,0 +1,267 @@
+{
+  "metadata": {
+    "title": "Burning Bridges AI 视频生成器 — 做宴会厅的主角 | AI Rumpelstiltskin",
+    "description": "上传一张清晰照片，生成病毒式传播的 Burning Bridges AI 视频——吊灯宴会厅的主角就是你。无需提示词。积分 $9.99 起，永不过期。"
+  },
+  "page": {
+    "show_sections": [
+      "generator",
+      "trend",
+      "how",
+      "pricing",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "generator": {
+        "block": "dance-generator",
+        "id": "generator",
+        "label": "Burning Bridges AI 工作台",
+        "title": "Burning Bridges AI 视频生成器",
+        "description": "上传一张清晰照片，我们的 Burning Bridges AI 视频生成器会把你变成病毒式趋势中那场吊灯宴会的主人——无需剪辑、无需提示词、无需摄制组。",
+        "className": "bg-[#171208]",
+        "workspace": {
+          "title": "成为宴会主角",
+          "subtitle": "Burning Bridges AI · 最长 15 秒视频 · 100 积分",
+          "photos_label": "1. 选择你的照片",
+          "photos_hint": "JPG、PNG、WebP · 最大 10 MB",
+          "photos": [
+            { "title": "宴会主角", "hint": "就是你" }
+          ],
+          "change_photo": "更换",
+          "consent_label": "我拥有这张照片的使用权，且照片中的人同意出现在 AI 生成内容中。",
+          "photos_note": "每张照片一人、正对镜头、光线均匀——头部+肩部特写在宴会场景中呈现效果最好。不支持公众人物照片。",
+          "scene_label": "2. 设定氛围（可选）",
+          "scene_optional": "",
+          "scene_placeholder": "白色西装、手举香槟，带头敬酒……",
+          "show_format": false,
+          "duration": "15",
+          "video_model": "fal-ai/kling-video/o3/pro/video-to-video/reference",
+          "template_video": "https://image.airumpelstiltskin.online/burning-bridges-template.mp4",
+          "prompt_keep": "跟随 @Video1 的运镜、走位与节奏；保留宴会场景、吊灯灯光与构图。",
+          "prompt_replace_single": "把房间中央的主角（宴会主持人）替换为 @Element1。在所有镜头中保持其与上传照片一致的面部、发型和服装。",
+          "credits_cost": 100,
+          "credits_label": "积分",
+          "sign_in": "登录后开始生成",
+          "generate": "生成视频 · 100 积分",
+          "buy": "获取 100 积分 · $9.99",
+          "generating": "正在布置宴会……",
+          "loading": "加载中…",
+          "status_pending": "模型排队中…",
+          "generating_estimate": "预计需要 10–20 分钟",
+          "generating_hint": "请保持本页面开启、中途不要刷新，完成后视频会自动出现在这里。",
+          "progress": "进度",
+          "cost_label": "消耗",
+          "remaining_label": "剩余",
+          "need_photo": "宴会需要主角——请先上传你的照片",
+          "insufficient": "积分不足，请先充值",
+          "upload_failed": "上传失败，请重试",
+          "file_too_large": "照片不能超过 10 MB",
+          "footnote": "成品为无声 MP4——发布时请配上热门的 Burning Bridges 音频。生成失败会自动退还积分。"
+        },
+        "examples": {
+          "title": "看宴会",
+          "badge": "示例视频",
+          "your_video_badge": "你的视频",
+          "placeholder": "你的宴会场景会出现在这里。上传一张清晰照片、点击生成，然后坐上主位——无需提示词。",
+          "steps": [
+            "上传一张清晰的正脸照片。",
+            "点击生成。无需提示词。",
+            "下载无声 MP4，配上热门音频发布。"
+          ],
+          "videos": []
+        }
+      },
+      "trend": {
+        "block": "features",
+        "id": "trend",
+        "label": "趋势",
+        "title": "Burning Bridges AI 趋势是什么？",
+        "description": "Burning Bridges AI 趋势的名字来自一支音乐录影带里的宴会场景：吊灯照亮的长餐桌、晚装宾客、举起的银杯。2026 年 10 月，AI 生成工具开始把房间中央的那个人换成你——一张照片就够了。Burning Bridges AI 视频就是一段无声的电影感短片：宴会照常进行，主角是你；发布时配上热门音频即可。它是粉丝创作的格式——与歌曲的艺人或版权方无任何关联或背书。",
+        "items": [
+          {
+            "title": "一张照片就够",
+            "description": "只需一张清晰照片——Burning Bridges AI 场景会让你站到房间的正中央。",
+            "icon": "PartyPopper"
+          },
+          {
+            "title": "无声导出，声音你来配",
+            "description": "成品是干净的无声 MP4——发布时在 App 内添加官方音频，版权更安全。",
+            "icon": "Music"
+          },
+          {
+            "title": "为信息流而生",
+            "description": "电影感宽幅宴会场景，在 TikTok、Reels 和 Shorts 上一眼入戏。",
+            "icon": "Flame"
+          }
+        ]
+      },
+      "how": {
+        "block": "features-step",
+        "id": "how",
+        "label": "怎么玩",
+        "title": "制作 Burning Bridges AI 视频的三步",
+        "items": [
+          {
+            "title": "上传一张照片",
+            "description": "清晰、正面的头肩特写。一人、不戴墨镜——这就是全部阵容。"
+          },
+          {
+            "title": "点击生成",
+            "description": "无需提示词——Burning Bridges AI 场景、灯光和宴会都已就绪。生成通常需要 10–20 分钟。"
+          },
+          {
+            "title": "下载并配乐",
+            "description": "导出无声 MP4，配上热门的 Burning Bridges 音频发布——这个格式本来就是用这种方式看的。"
+          }
+        ],
+        "className": "bg-[#171208]"
+      },
+      "pricing": {
+        "block": "pricing",
+        "id": "pricing",
+        "title": "选择你的方案",
+        "description": "积分通用 Burning Bridges AI 视频与站内所有格式——一次购买，按自己的节奏创作。",
+        "className": "bg-[#171208]",
+        "groups": [
+          { "name": "packs", "title": "积分包", "is_featured": true }
+        ],
+        "items": [
+          {
+            "title": "一支小舞",
+            "description": "为了那个值得拥有自己场景的瞬间。",
+            "eyebrow": "从这里开始",
+            "label": "",
+            "features": [
+              "100 积分",
+              "1 支视频 · 每条最长 15 秒",
+              "未用积分永不过期",
+              "单次付费，无订阅"
+            ],
+            "interval": "one-time",
+            "amount": 999,
+            "currency": "USD",
+            "price": "$9.99",
+            "unit": "单次付清",
+            "is_featured": true,
+            "tip": "",
+            "button": { "title": "获得 100 积分", "url": "/pricing", "icon": "" },
+            "product_id": "pack-starter",
+            "product_name": "AI Rumpelstiltskin One Little Dance",
+            "credits": 100,
+            "credits_label": "积分",
+            "valid_days": 0,
+            "group": "packs"
+          },
+          {
+            "title": "舞成三部曲",
+            "description": "三个故事，三次抢镜机会。",
+            "eyebrow": "视频包",
+            "label": "省 17%",
+            "features": [
+              "300 积分",
+              "5 支视频 · 每条最长 15 秒",
+              "未用积分永不过期",
+              "单次付费，无订阅"
+            ],
+            "interval": "one-time",
+            "amount": 2499,
+            "currency": "USD",
+            "price": "$24.99",
+            "unit": "单次付清",
+            "is_featured": false,
+            "tip": "",
+            "button": { "title": "获得 300 积分", "url": "/pricing", "icon": "" },
+            "product_id": "pack-trilogy",
+            "product_name": "AI Rumpelstiltskin Trilogy Pack",
+            "credits": 300,
+            "credits_label": "积分",
+            "valid_days": 0,
+            "group": "packs"
+          },
+          {
+            "title": "让故事继续",
+            "description": "每月准时送来一份主角时刻。",
+            "eyebrow": "月度订阅",
+            "label": "省 33%",
+            "features": [
+              "每月 600 积分",
+              "10 支视频 · 每条最长 15 秒",
+              "未用积分永不过期",
+              "随时取消续订"
+            ],
+            "interval": "month",
+            "amount": 3999,
+            "currency": "USD",
+            "price": "$39.99",
+            "unit": "/ 月",
+            "is_featured": false,
+            "tip": "",
+            "button": { "title": "开始包月计划", "url": "/pricing", "icon": "" },
+            "product_id": "pack-monthly",
+            "product_name": "AI Rumpelstiltskin Monthly Plan",
+            "plan_name": "monthly",
+            "credits": 600,
+            "credits_label": "积分",
+            "valid_days": 0,
+            "group": "packs"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "label": "常见问题",
+        "title": "你需要知道",
+        "description": "还有疑问？联系 support@airumpelstiltskin.pro。",
+        "items": [
+          {
+            "question": "Burning Bridges AI 趋势是什么？",
+            "answer": "它是一种粉丝创作的短视频格式，取材于音乐录影带中的宴会场景——吊灯照亮的长餐桌旁，晚装宾客举银杯敬酒。Burning Bridges AI 生成工具会根据你上传的一张照片，把宴会主人换成你。成片无声，发布时配上热门音频即可。"
+          },
+          {
+            "question": "为什么我的视频没有声音？",
+            "answer": "生成器有意导出干净的无声 MP4。在 TikTok、Reels 或 Shorts 的发布界面里添加官方原曲只要一步，还能让你的上传避开音乐版权问题。"
+          },
+          {
+            "question": "Burning Bridges AI 视频多长？",
+            "answer": "我们的生成器最长 15 秒。部分竞品宣传 20 秒版本；我们把长度控制在模型最稳定的上限，让更多生成一次成功。"
+          },
+          {
+            "question": "生成一条要花多少积分？",
+            "answer": "每条视频消耗 100 积分。积分永不过期，生成失败会自动退还到你的账号，积分包 $9.99 起。"
+          },
+          {
+            "question": "应该用什么照片？",
+            "answer": "一人、正对镜头、光线均匀——最好是头肩特写。你必须拥有照片的使用权或已获授权，不支持公众人物照片。"
+          },
+          {
+            "question": "同样的积分能做其他格式吗？",
+            "answer": "可以——积分全站通用。想换成爱情故事？访问 /ai-zombie 试试 AI 僵尸故事生成器；想了解这一切起源的舞蹈格式，见博客的完整指南。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "tone": "dark",
+        "label": "Burning Bridges AI",
+        "title": "宴会等着它的主角",
+        "description": "一张照片，一间宴会厅，十五秒的主角时刻。",
+        "buttons": [
+          {
+            "title": "去做宴会主角",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Zap"
+          },
+          {
+            "title": "查看积分包",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "CreditCard"
+          }
+        ]
+      }
+    }
+  }
+}

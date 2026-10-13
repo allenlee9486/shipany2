@@ -55,4 +55,5 @@ export const localeMessagesPaths = [
   'pages/blog',
   'pages/updates',
   'pages/ai-zombie',
+  'pages/burning-bridges-ai',
 ];

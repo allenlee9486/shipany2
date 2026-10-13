@@ -1,0 +1,267 @@
+{
+  "metadata": {
+    "title": "Burning Bridges AI Video Generator — Host the Party | AI Rumpelstiltskin",
+    "description": "Turn one clear photo into a Burning Bridges AI video — you, hosting the chandelier-lit party from the viral trend. No prompt needed. Credits from $9.99, never expire."
+  },
+  "page": {
+    "show_sections": [
+      "generator",
+      "trend",
+      "how",
+      "pricing",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "generator": {
+        "block": "dance-generator",
+        "id": "generator",
+        "label": "Burning Bridges AI Workspace",
+        "title": "Burning Bridges AI Video Generator",
+        "description": "Upload one clear photo and our Burning Bridges AI video generator casts you as the host of the chandelier-lit party from the viral trend — no editing, no prompt writing, no film crew.",
+        "className": "bg-[#171208]",
+        "workspace": {
+          "title": "Become the Host",
+          "subtitle": "Burning Bridges AI · up to 15-second video · 100 credits",
+          "photos_label": "1. Choose your photo",
+          "photos_hint": "JPG, PNG, WebP · up to 10 MB",
+          "photos": [
+            { "title": "The host", "hint": "That's you" }
+          ],
+          "change_photo": "Change",
+          "consent_label": "I own this photo or have permission to use it, and the person in it agrees to appear in AI-generated content.",
+          "photos_note": "One person per photo, facing the camera, evenly lit — a head-and-shoulders shot reads best in the party scene. Photos of public figures are not supported.",
+          "scene_label": "2. Set the mood (optional)",
+          "scene_optional": "",
+          "scene_placeholder": "White suit, champagne in hand, leading the toast...",
+          "show_format": false,
+          "duration": "15",
+          "video_model": "fal-ai/kling-video/o3/pro/video-to-video/reference",
+          "template_video": "https://image.airumpelstiltskin.online/burning-bridges-template.mp4",
+          "prompt_keep": "Follow @Video1 for camera path, blocking and timing; preserve the party scene, chandelier lighting and framing.",
+          "prompt_replace_single": "Replace the host — the main character at the center of the room — with @Element1. Keep their facial identity, hairstyle and outfit consistent with the uploaded photo in every shot.",
+          "credits_cost": 100,
+          "credits_label": "credits",
+          "sign_in": "Sign in to generate",
+          "generate": "Generate video · 100 credits",
+          "buy": "Get 100 credits · $9.99",
+          "generating": "Setting the table...",
+          "loading": "Loading...",
+          "status_pending": "Waiting for the model to start...",
+          "generating_estimate": "Usually takes 10–20 minutes",
+          "generating_hint": "Please keep this page open and skip refreshing — your video will appear here automatically.",
+          "progress": "Progress",
+          "cost_label": "Cost",
+          "remaining_label": "Remaining",
+          "need_photo": "The party needs a host — add your photo first",
+          "insufficient": "Insufficient credits. Please top up to keep creating.",
+          "upload_failed": "Upload failed, please try again",
+          "file_too_large": "Photo must be 10 MB or smaller",
+          "footnote": "Your video is a silent MP4 — add the trending Burning Bridges audio when you post. Failed generations return credits automatically."
+        },
+        "examples": {
+          "title": "See the Party",
+          "badge": "Example video",
+          "your_video_badge": "Your video",
+          "placeholder": "Your party scene will appear here. Upload one clear photo, press generate, and take the host's seat — no prompt needed.",
+          "steps": [
+            "Upload one clear, front-facing photo.",
+            "Press generate. No prompt needed.",
+            "Download the silent MP4 and add the trending audio."
+          ],
+          "videos": []
+        }
+      },
+      "trend": {
+        "block": "features",
+        "id": "trend",
+        "label": "The Trend",
+        "title": "What Is the Burning Bridges AI Trend?",
+        "description": "The Burning Bridges AI trend takes its name from a music-video party scene: a chandelier-lit private dining room, guests in evening wear, silver cups raised for a toast. In October 2026, AI generators started swapping the person at the center of that room for you — one uploaded photo is enough. A Burning Bridges AI video is a short, silent, cinematic MP4 of the party with you as its host; you add the trending audio when you post. It is a fan-made creative format — not affiliated with, or endorsed by, the song's artists or rights holders.",
+        "items": [
+          {
+            "title": "One Photo Is Enough",
+            "description": "A single clear photo is all the format needs — the Burning Bridges AI scene puts you at the center of the room.",
+            "icon": "PartyPopper"
+          },
+          {
+            "title": "Silent Export, Your Sound",
+            "description": "The finished clip is a clean, silent MP4 — you stay copyright-safe by adding the official audio in your posting app.",
+            "icon": "Music"
+          },
+          {
+            "title": "Made for the Feed",
+            "description": "A cinematic widescreen party scene that reads instantly on TikTok, Reels and Shorts.",
+            "icon": "Flame"
+          }
+        ]
+      },
+      "how": {
+        "block": "features-step",
+        "id": "how",
+        "label": "How it works",
+        "title": "How to Make a Burning Bridges AI Video",
+        "items": [
+          {
+            "title": "Upload One Photo",
+            "description": "A clear, front-facing head-and-shoulders shot. One person, no sunglasses — that's the entire cast."
+          },
+          {
+            "title": "Press Generate",
+            "description": "No prompt needed — the Burning Bridges AI scene, lighting and party are already built. Generation usually takes 10–20 minutes."
+          },
+          {
+            "title": "Download and Add the Sound",
+            "description": "Export a silent MP4, then post it with the trending Burning Bridges audio — that's how the format is meant to be watched."
+          }
+        ],
+        "className": "bg-[#171208]"
+      },
+      "pricing": {
+        "block": "pricing",
+        "id": "pricing",
+        "title": "Choose Your Pack",
+        "description": "Credits work for every Burning Bridges AI video and every other format on AI Rumpelstiltskin — pay once and create at your own pace.",
+        "className": "bg-[#171208]",
+        "groups": [
+          { "name": "packs", "title": "Credit packs", "is_featured": true }
+        ],
+        "items": [
+          {
+            "title": "One Little Dance",
+            "description": "For the moment that deserves its own scene.",
+            "eyebrow": "Start Here",
+            "label": "",
+            "features": [
+              "100 credits",
+              "1 video · up to 15s each",
+              "Unused credits never expire",
+              "One payment. No subscription."
+            ],
+            "interval": "one-time",
+            "amount": 999,
+            "currency": "USD",
+            "price": "$9.99",
+            "unit": "one time",
+            "is_featured": true,
+            "tip": "",
+            "button": { "title": "Get 100 credits", "url": "/pricing", "icon": "" },
+            "product_id": "pack-starter",
+            "product_name": "AI Rumpelstiltskin One Little Dance",
+            "credits": 100,
+            "credits_label": "credits",
+            "valid_days": 0,
+            "group": "packs"
+          },
+          {
+            "title": "Make It a Trilogy",
+            "description": "Three stories. Three chances to steal the scene.",
+            "eyebrow": "Video Pack",
+            "label": "Save 17%",
+            "features": [
+              "300 credits",
+              "5 videos · up to 15s each",
+              "Unused credits never expire",
+              "One payment. No subscription."
+            ],
+            "interval": "one-time",
+            "amount": 2499,
+            "currency": "USD",
+            "price": "$24.99",
+            "unit": "one time",
+            "is_featured": false,
+            "tip": "",
+            "button": { "title": "Get 300 credits", "url": "/pricing", "icon": "" },
+            "product_id": "pack-trilogy",
+            "product_name": "AI Rumpelstiltskin Trilogy Pack",
+            "credits": 300,
+            "credits_label": "credits",
+            "valid_days": 0,
+            "group": "packs"
+          },
+          {
+            "title": "Keep the Story Going",
+            "description": "A fresh supply of main-character moments, every month.",
+            "eyebrow": "Monthly Subscription",
+            "label": "Save 33%",
+            "features": [
+              "600 credits every month",
+              "10 videos · up to 15s each",
+              "Unused credits never expire",
+              "Cancel renewal anytime"
+            ],
+            "interval": "month",
+            "amount": 3999,
+            "currency": "USD",
+            "price": "$39.99",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "",
+            "button": { "title": "Start monthly plan", "url": "/pricing", "icon": "" },
+            "product_id": "pack-monthly",
+            "product_name": "AI Rumpelstiltskin Monthly Plan",
+            "plan_name": "monthly",
+            "credits": 600,
+            "credits_label": "credits",
+            "valid_days": 0,
+            "group": "packs"
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "label": "FAQ",
+        "title": "Good to Know",
+        "description": "Still curious? Reach us at support@airumpelstiltskin.pro.",
+        "items": [
+          {
+            "question": "What is the Burning Bridges AI trend?",
+            "answer": "It is a short, fan-made video format built on a music-video party scene — a chandelier-lit dining room where guests in evening wear raise silver cups for a toast. Burning Bridges AI generators swap the person hosting that room for you, based on a single uploaded photo. The clip is silent, so the trending audio gets added when you post."
+          },
+          {
+            "question": "Why is my video silent?",
+            "answer": "The generator exports a clean, silent MP4 on purpose. Adding the official track yourself in TikTok, Reels or Shorts is one tap in the posting app, and it keeps your upload clear of music-rights issues."
+          },
+          {
+            "question": "How long is a Burning Bridges AI video?",
+            "answer": "Our generator produces up to 15 seconds. Some competing tools advertise 20-second cuts; we cap at the model's most stable length so more generations succeed on the first try."
+          },
+          {
+            "question": "How much does it cost?",
+            "answer": "One video costs 100 credits. Credits never expire, failed generations are refunded automatically to your account, and packs start at $9.99."
+          },
+          {
+            "question": "What photo should I use?",
+            "answer": "One person, facing the camera, evenly lit — head-and-shoulders if possible. You must own the photo or have permission to use it, and photos of public figures are not supported."
+          },
+          {
+            "question": "Can I make other formats with the same credits?",
+            "answer": "Yes — credits are shared across the whole site. Prefer a love story over a party? See the AI Zombie Story generator at /ai-zombie. For the origin of the dance format that started all of this, see the full guide on our blog."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "tone": "dark",
+        "label": "Burning Bridges AI",
+        "title": "The Party Needs a Host",
+        "description": "One photo. One room. Fifteen seconds of main-character energy.",
+        "buttons": [
+          {
+            "title": "Host the Party",
+            "url": "#generator",
+            "target": "_self",
+            "icon": "Zap"
+          },
+          {
+            "title": "See Credit Packs",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "CreditCard"
+          }
+        ]
+      }
+    }
+  }
+}
