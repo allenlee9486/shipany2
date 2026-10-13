@@ -373,7 +373,9 @@ export class FalProvider implements AIProvider {
       if (['fal-ai/kling-video/o1/video-to-video/edit'].includes(model)) {
         input.input_images = options.image_input;
       } else if (
-        model === 'fal-ai/kling-video/o3/standard/video-to-video/reference'
+        // both the standard and the pro reference variants take elements
+        model.includes('kling-video/o3') &&
+        model.includes('reference')
       ) {
         // each uploaded photo becomes a reusable character element that the
         // prompt can reference as @Element1, @Element2, ...
