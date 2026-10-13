@@ -22,7 +22,7 @@
         "className": "bg-[#171208]",
         "workspace": {
           "title": "Become the Host",
-          "subtitle": "Up to 15-second vertical video · 100 credits",
+          "subtitle": "Up to 15 seconds · vertical or landscape · 100 credits",
           "photos_label": "1. Choose your photo",
           "photos_hint": "JPG, PNG, WebP · up to 10 MB",
           "photos": [
@@ -37,10 +37,20 @@
           "scene_label": "2. Set the mood (optional)",
           "scene_optional": "",
           "scene_placeholder": "White suit, champagne in hand, leading the toast...",
-          "show_format": false,
+          "show_format": true,
+          "format_label": "3. Video format",
+          "format_options": [
+            { "value": "9:16", "label": "Portrait · 9:16" },
+            { "value": "16:9", "label": "Landscape · 16:9" }
+          ],
+          "format_hint": "Each format has its own party scene, so the original shots are preserved — vertical for TikTok, Reels and Shorts; landscape for YouTube.",
           "duration": "15",
           "video_model": "fal-ai/kling-video/o3/pro/video-to-video/reference",
           "template_video": "https://image.airumpelstiltskin.online/party-man-v2.mp4",
+          "template_videos": {
+            "9:16": "https://image.airumpelstiltskin.online/party-man-v2.mp4",
+            "16:9": "https://image.airumpelstiltskin.online/party-yellow-v2.mp4"
+          },
           "keep_audio": false,
           "prompt_keep": "Follow @Video1 for camera path, blocking and timing; preserve the party scene, chandelier lighting and framing.",
           "prompt_replace_single": "Replace the host — the main character at the center of the room — with @Element1. Keep their facial identity, hairstyle and outfit consistent with the uploaded photo in every shot.",
@@ -76,7 +86,7 @@
           "videos": [
             {
               "title": "The Chandelier Toast",
-              "description": "The scene your photo steps into — chandelier overhead, silver cups raised, the whole room singing along.",
+              "description": "The 9:16 scene your photo steps into — chandelier overhead, silver cups raised, the whole room singing along.",
               "video": {
                 "src": "https://image.airumpelstiltskin.online/party-man-v2.mp4",
                 "poster": "https://image.airumpelstiltskin.online/party-man-poster.jpg"
@@ -84,7 +94,7 @@
             },
             {
               "title": "The Neon Party",
-              "description": "A second party scene — friends packed in, lights low, the host turning to grin at the camera.",
+              "description": "The 16:9 cut — friends packed in, lights low, the host turning to grin at the camera.",
               "video": {
                 "src": "https://image.airumpelstiltskin.online/party-yellow-v2.mp4",
                 "poster": "https://image.airumpelstiltskin.online/party-yellow-poster.jpg"
@@ -112,7 +122,7 @@
           },
           {
             "title": "Made for the Feed",
-            "description": "A cinematic 9:16 party scene that reads instantly on TikTok, Reels and Shorts.",
+            "description": "Cinematic 9:16 and 16:9 party scenes that read instantly on TikTok, Reels and Shorts.",
             "icon": "Flame"
           }
         ]
@@ -261,7 +271,7 @@
           },
           {
             "question": "How long is a Burning Bridges AI video?",
-            "answer": "Our generator produces up to 15 seconds. Some competing tools advertise 20-second cuts; we cap at the model's most stable length so more generations succeed on the first try."
+            "answer": "Our generator produces up to 15 seconds in either orientation: vertical 9:16 for TikTok, Reels and Shorts, or landscape 16:9 for YouTube. Some competing tools advertise 20-second cuts; we cap at the model's most stable length so more generations succeed on the first try."
           },
           {
             "question": "How much does it cost?",

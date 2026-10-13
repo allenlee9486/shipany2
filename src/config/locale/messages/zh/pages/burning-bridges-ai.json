@@ -22,7 +22,7 @@
         "className": "bg-[#171208]",
         "workspace": {
           "title": "成为宴会主角",
-          "subtitle": "Burning Bridges AI · 最长 15 秒竖版视频 · 100 积分",
+          "subtitle": "Burning Bridges AI · 最长 15 秒 · 竖版或横版 · 100 积分",
           "photos_label": "1. 选择你的照片",
           "photos_hint": "JPG、PNG、WebP · 最大 10 MB",
           "photos": [
@@ -34,10 +34,20 @@
           "scene_label": "2. 设定氛围（可选）",
           "scene_optional": "",
           "scene_placeholder": "白色西装、手举香槟，带头敬酒……",
-          "show_format": false,
+          "show_format": true,
+          "format_label": "3. 视频画幅",
+          "format_options": [
+            { "value": "9:16", "label": "竖版 · 9:16" },
+            { "value": "16:9", "label": "横版 · 16:9" }
+          ],
+          "format_hint": "两种画幅各有自己的宴会场景，完全保留模板原始镜头——竖版适合 TikTok、Reels、Shorts，横版适合 YouTube。",
           "duration": "15",
           "video_model": "fal-ai/kling-video/o3/pro/video-to-video/reference",
           "template_video": "https://image.airumpelstiltskin.online/party-man-v2.mp4",
+          "template_videos": {
+            "9:16": "https://image.airumpelstiltskin.online/party-man-v2.mp4",
+            "16:9": "https://image.airumpelstiltskin.online/party-yellow-v2.mp4"
+          },
           "keep_audio": false,
           "prompt_keep": "跟随 @Video1 的运镜、走位与节奏；保留宴会场景、吊灯灯光与构图。",
           "prompt_replace_single": "把房间中央的主角（宴会主持人）替换为 @Element1。在所有镜头中保持其与上传照片一致的面部、发型和服装。",
@@ -73,7 +83,7 @@
           "videos": [
             {
               "title": "吊灯下的敬酒",
-              "description": "你的照片将走进的场景——吊灯高悬、银杯举起，满屋人一起合唱。",
+              "description": "9:16 竖版场景——你的照片将走进这里：吊灯高悬、银杯举起，满屋人一起合唱。",
               "video": {
                 "src": "https://image.airumpelstiltskin.online/party-man-v2.mp4",
                 "poster": "https://image.airumpelstiltskin.online/party-man-poster.jpg"
@@ -81,7 +91,7 @@
             },
             {
               "title": "霓虹派对",
-              "description": "第二个宴会场景——朋友挤满房间，灯光昏暗，主角转头对着镜头一笑。",
+              "description": "16:9 横版场景——朋友挤满房间，灯光昏暗，主角转头对着镜头一笑。",
               "video": {
                 "src": "https://image.airumpelstiltskin.online/party-yellow-v2.mp4",
                 "poster": "https://image.airumpelstiltskin.online/party-yellow-poster.jpg"
@@ -109,7 +119,7 @@
           },
           {
             "title": "为信息流而生",
-            "description": "电影感 9:16 宴会场景，在 TikTok、Reels 和 Shorts 上一眼入戏。",
+            "description": "电影感 9:16 与 16:9 宴会场景，在 TikTok、Reels 和 Shorts 上一眼入戏。",
             "icon": "Flame"
           }
         ]
@@ -242,7 +252,7 @@
           },
           {
             "question": "Burning Bridges AI 视频多长？",
-            "answer": "我们的生成器最长 15 秒。部分竞品宣传 20 秒版本；我们把长度控制在模型最稳定的上限，让更多生成一次成功。"
+            "answer": "我们的生成器最长 15 秒，可选竖版 9:16（适合 TikTok、Reels、Shorts）或横版 16:9（适合 YouTube）。部分竞品宣传 20 秒版本；我们把长度控制在模型最稳定的上限，让更多生成一次成功。"
           },
           {
             "question": "生成一条要花多少积分？",

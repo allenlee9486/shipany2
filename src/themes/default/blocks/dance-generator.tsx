@@ -103,6 +103,9 @@ export function DanceGenerator({
   const exampleVideos: ExampleVideo[] = ex.videos ?? [];
   const costCredits = Number(w.credits_cost) || 100;
   const templateVideo = w.template_video || DEFAULT_TEMPLATE_VIDEO;
+  // optional per-format templates: each video format can ship its own scene
+  // (e.g. Burning Bridges: 9:16 uses a vertical party, 16:9 a landscape one)
+  const templatesByFormat: Record<string, string> = w.template_videos ?? {};
   const videoModel = String(w.video_model || KLING_MODEL_PRO);
   // fixed output length; the model accepts 3-15 seconds
   const duration = String(w.duration || '9');
@@ -166,6 +169,10 @@ export function DanceGenerator({
     (photo) => photo?.status === 'uploading'
   );
   const currentExample = exampleVideos[exampleIndex] ?? {};
+  // when the selected format has its own scene, that template carries the
+  // orientation, so 'auto' preserves its shots instead of re-framing
+  const perFormatTemplate = templatesByFormat[aspectRatio];
+  const activeTemplate = perFormatTemplate || templateVideo;
 
   const handlePhotoFile = async (idx: number, file: File) => {
     if (!file.type.startsWith('image/')) {
@@ -389,12 +396,15 @@ export function DanceGenerator({
           prompt,
           options: {
             image_input: uploadedPhotoUrls,
-            video_input: [templateVideo],
+            video_input: [activeTemplate],
             // 'auto' follows the reference video exactly so the original shots
             // are preserved; portrait/square ask the model to re-frame the
-            // scene. When the format selector is hidden, always follow the
-            // template.
-            aspect_ratio: !showFormat || aspectRatio === '16:9' ? 'auto' : aspectRatio,
+            // scene. When the format selector is hidden, or the format has its
+            // own template, always follow that template.
+            aspect_ratio:
+              perFormatTemplate || !showFormat || aspectRatio === '16:9'
+                ? 'auto'
+                : aspectRatio,
             duration,
             // keep the reference audio when the template has one; pages that
             // want a clean, un-scored export set keep_audio: false
