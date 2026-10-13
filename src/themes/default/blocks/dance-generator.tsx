@@ -119,10 +119,12 @@ export function DanceGenerator({
   const swapLabel = w.swap_label as string | undefined;
   const consentLabel = w.consent_label as string | undefined;
   const emptyPlaceholder = ex.placeholder as string | undefined;
-  const promptKeep = String(
-    w.prompt_keep ||
-      'Keep the same shots, framing, camera movement, dance moves and timing as the reference video.'
-  );
+  // an explicit empty string disables the keep line, for prompts that already
+  // carry their own "keep everything else unchanged" wording
+  const promptKeep =
+    w.prompt_keep === undefined
+      ? 'Keep the same shots, framing, camera movement, dance moves and timing as the reference video.'
+      : String(w.prompt_keep);
 
   const {
     user,
