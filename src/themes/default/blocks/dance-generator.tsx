@@ -396,7 +396,9 @@ export function DanceGenerator({
             // template.
             aspect_ratio: !showFormat || aspectRatio === '16:9' ? 'auto' : aspectRatio,
             duration,
-            keep_audio: true,
+            // keep the reference audio when the template has one; pages that
+            // want a clean, un-scored export set keep_audio: false
+            keep_audio: w.keep_audio !== false,
           },
         }),
       });

@@ -22,7 +22,7 @@
         "className": "bg-[#171208]",
         "workspace": {
           "title": "成为宴会主角",
-          "subtitle": "Burning Bridges AI · 最长 15 秒视频 · 100 积分",
+          "subtitle": "Burning Bridges AI · 最长 15 秒竖版视频 · 100 积分",
           "photos_label": "1. 选择你的照片",
           "photos_hint": "JPG、PNG、WebP · 最大 10 MB",
           "photos": [
@@ -37,7 +37,8 @@
           "show_format": false,
           "duration": "15",
           "video_model": "fal-ai/kling-video/o3/pro/video-to-video/reference",
-          "template_video": "https://image.airumpelstiltskin.online/burning-bridges-template.mp4",
+          "template_video": "https://image.airumpelstiltskin.online/party-man-v2.mp4",
+          "keep_audio": false,
           "prompt_keep": "跟随 @Video1 的运镜、走位与节奏；保留宴会场景、吊灯灯光与构图。",
           "prompt_replace_single": "把房间中央的主角（宴会主持人）替换为 @Element1。在所有镜头中保持其与上传照片一致的面部、发型和服装。",
           "credits_cost": 100,
@@ -57,7 +58,7 @@
           "insufficient": "积分不足，请先充值",
           "upload_failed": "上传失败，请重试",
           "file_too_large": "照片不能超过 10 MB",
-          "footnote": "成品为无声 MP4——发布时请配上热门的 Burning Bridges 音频。生成失败会自动退还积分。"
+          "footnote": "成品不含授权曲目——发布时请配上热门的 Burning Bridges 音频。生成失败会自动退还积分。"
         },
         "examples": {
           "title": "看宴会",
@@ -67,9 +68,26 @@
           "steps": [
             "上传一张清晰的正脸照片。",
             "点击生成。无需提示词。",
-            "下载无声 MP4，配上热门音频发布。"
+            "下载成片，配上热门音频发布。"
           ],
-          "videos": []
+          "videos": [
+            {
+              "title": "吊灯下的敬酒",
+              "description": "你的照片将走进的场景——吊灯高悬、银杯举起，满屋人一起合唱。",
+              "video": {
+                "src": "https://image.airumpelstiltskin.online/party-man-v2.mp4",
+                "poster": "https://image.airumpelstiltskin.online/party-man-poster.jpg"
+              }
+            },
+            {
+              "title": "霓虹派对",
+              "description": "第二个宴会场景——朋友挤满房间，灯光昏暗，主角转头对着镜头一笑。",
+              "video": {
+                "src": "https://image.airumpelstiltskin.online/party-yellow-v2.mp4",
+                "poster": "https://image.airumpelstiltskin.online/party-yellow-poster.jpg"
+              }
+            }
+          ]
         }
       },
       "trend": {
@@ -77,7 +95,7 @@
         "id": "trend",
         "label": "趋势",
         "title": "Burning Bridges AI 趋势是什么？",
-        "description": "Burning Bridges AI 趋势的名字来自一支音乐录影带里的宴会场景：吊灯照亮的长餐桌、晚装宾客、举起的银杯。2026 年 10 月，AI 生成工具开始把房间中央的那个人换成你——一张照片就够了。Burning Bridges AI 视频就是一段无声的电影感短片：宴会照常进行，主角是你；发布时配上热门音频即可。它是粉丝创作的格式——与歌曲的艺人或版权方无任何关联或背书。",
+        "description": "Burning Bridges AI 趋势的名字来自一支音乐录影带里的宴会场景：吊灯照亮的长餐桌，宾客举起银杯敬酒。2026 年 10 月，AI 生成工具开始把房间中央的那个人换成你——一张照片就够了。Burning Bridges AI 视频就是一段电影感短片：宴会照常进行，主角是你；发布时配上热门音频即可。它是粉丝创作的格式——与歌曲的艺人或版权方无任何关联或背书。",
         "items": [
           {
             "title": "一张照片就够",
@@ -85,13 +103,13 @@
             "icon": "PartyPopper"
           },
           {
-            "title": "无声导出，声音你来配",
-            "description": "成品是干净的无声 MP4——发布时在 App 内添加官方音频，版权更安全。",
+            "title": "干净导出，声音你来配",
+            "description": "成品不含授权曲目——发布时在 App 内添加官方音频，版权更安全。",
             "icon": "Music"
           },
           {
             "title": "为信息流而生",
-            "description": "电影感宽幅宴会场景，在 TikTok、Reels 和 Shorts 上一眼入戏。",
+            "description": "电影感 9:16 宴会场景，在 TikTok、Reels 和 Shorts 上一眼入戏。",
             "icon": "Flame"
           }
         ]
@@ -112,7 +130,7 @@
           },
           {
             "title": "下载并配乐",
-            "description": "导出无声 MP4，配上热门的 Burning Bridges 音频发布——这个格式本来就是用这种方式看的。"
+            "description": "导出成片，配上热门的 Burning Bridges 音频发布——这个格式本来就是用这种方式看的。"
           }
         ],
         "className": "bg-[#171208]"
@@ -216,11 +234,11 @@
         "items": [
           {
             "question": "Burning Bridges AI 趋势是什么？",
-            "answer": "它是一种粉丝创作的短视频格式，取材于音乐录影带中的宴会场景——吊灯照亮的长餐桌旁，晚装宾客举银杯敬酒。Burning Bridges AI 生成工具会根据你上传的一张照片，把宴会主人换成你。成片无声，发布时配上热门音频即可。"
+            "answer": "它是一种粉丝创作的短视频格式，取材于音乐录影带中的宴会场景——吊灯照亮的长餐桌旁，宾客举银杯敬酒。Burning Bridges AI 生成工具会根据你上传的一张照片，把宴会主人换成你。发布时配上热门音频即可，成片本身不含授权曲目。"
           },
           {
-            "question": "为什么我的视频没有声音？",
-            "answer": "生成器有意导出干净的无声 MP4。在 TikTok、Reels 或 Shorts 的发布界面里添加官方原曲只要一步，还能让你的上传避开音乐版权问题。"
+            "question": "为什么音频要自己加？",
+            "answer": "成片不含授权音乐。在 TikTok、Reels 或 Shorts 的发布界面里添加官方原曲只要一步，还能让你的上传避开音乐版权问题。"
           },
           {
             "question": "Burning Bridges AI 视频多长？",
