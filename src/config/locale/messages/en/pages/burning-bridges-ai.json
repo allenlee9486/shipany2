@@ -16,7 +16,7 @@
       "generator": {
         "block": "dance-generator",
         "id": "generator",
-        "label": "Burning Bridges Workspace",
+        "label": "Burning Bridges AI Workspace",
         "title": "Burning Bridges AI Video Generator",
         "description": "Upload one clear photo and our Burning Bridges AI video generator casts you as the host of the chandelier-lit party from the viral trend — no editing, no prompt writing, no film crew.",
         "className": "bg-[#171208]",
