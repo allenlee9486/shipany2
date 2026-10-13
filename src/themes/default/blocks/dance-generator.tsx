@@ -619,7 +619,7 @@ export function DanceGenerator({
             className={cn(
               'flex flex-col rounded-2xl border border-[#3a2f1b] bg-[#211910] p-6 md:p-7',
               videoLeft
-                ? 'order-3 lg:order-none lg:col-start-2 lg:row-start-2'
+                ? 'order-3 lg:order-none lg:col-start-2 lg:row-start-2 lg:self-start'
                 : 'lg:col-start-1 lg:row-start-2'
             )}
           >
