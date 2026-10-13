@@ -24,6 +24,11 @@
           "icon": "RiGhostSmileLine"
         },
         {
+          "title": "Burning Bridges AI",
+          "url": "/burning-bridges-ai",
+          "icon": "PartyPopper"
+        },
+        {
           "title": "梗的来历",
           "url": "/#origin",
           "icon": "Box"
@@ -78,6 +83,16 @@
             {
               "title": "生成器",
               "url": "/#generator",
+              "target": "_self"
+            },
+            {
+              "title": "Burning Bridges AI",
+              "url": "/burning-bridges-ai",
+              "target": "_self"
+            },
+            {
+              "title": "AI 僵尸",
+              "url": "/ai-zombie",
               "target": "_self"
             },
             {

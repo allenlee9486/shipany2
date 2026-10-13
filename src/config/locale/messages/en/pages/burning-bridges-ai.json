@@ -95,7 +95,7 @@
         "id": "trend",
         "label": "The Trend",
         "title": "What Is the Burning Bridges AI Trend?",
-        "description": "The Burning Bridges AI trend takes its name from a music-video party scene: a chandelier-lit private dining room where guests raise silver cups for a toast. In October 2026, AI generators started swapping the person at the center of that room for you — one uploaded photo is enough. A Burning Bridges AI video is a short, cinematic MP4 of the party with you as its host; you add the trending audio when you post. It is a fan-made creative format — not affiliated with, or endorsed by, the song's artists or rights holders.",
+        "description": "The Burning Bridges AI trend takes its name from a music-video party scene: a chandelier-lit private dining room where guests raise silver cups for a toast. In October 2026, AI generators started swapping the person at the center of that room for you — one uploaded photo is enough. The result is a short, cinematic MP4 of the party with you as its host; you add the trending audio when you post. It is a fan-made creative format — not affiliated with, or endorsed by, the song's artists or rights holders.",
         "items": [
           {
             "title": "One Photo Is Enough",
@@ -139,7 +139,7 @@
         "block": "pricing",
         "id": "pricing",
         "title": "Choose Your Pack",
-        "description": "Credits work for every Burning Bridges AI video and every other format on AI Rumpelstiltskin — pay once and create at your own pace.",
+        "description": "Credits work for every format on AI Rumpelstiltskin — pay once and create at your own pace.",
         "className": "bg-[#171208]",
         "groups": [
           {

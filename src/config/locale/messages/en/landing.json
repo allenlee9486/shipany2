@@ -24,6 +24,11 @@
           "icon": "RiGhostSmileLine"
         },
         {
+          "title": "Burning Bridges AI",
+          "url": "/burning-bridges-ai",
+          "icon": "PartyPopper"
+        },
+        {
           "title": "The Meme",
           "url": "/#origin",
           "icon": "Box"
@@ -78,6 +83,16 @@
             {
               "title": "Generator",
               "url": "/#generator",
+              "target": "_self"
+            },
+            {
+              "title": "Burning Bridges AI",
+              "url": "/burning-bridges-ai",
+              "target": "_self"
+            },
+            {
+              "title": "AI Zombie",
+              "url": "/ai-zombie",
               "target": "_self"
             },
             {
