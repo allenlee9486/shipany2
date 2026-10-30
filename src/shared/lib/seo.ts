@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { envConfigs } from '@/config';
-import { defaultLocale } from '@/config/locale';
+import { defaultLocale, locales } from '@/config/locale';
 
 // get metadata for page component
 export function getMetadata(
@@ -88,6 +88,7 @@ export function getMetadata(
         defaultMetadata.keywords,
       alternates: {
         canonical: canonicalUrl,
+        languages: await buildLanguageAlternates(options.canonicalUrl || '/'),
       },
 
       openGraph: {
@@ -153,4 +154,77 @@ async function getCanonicalUrl(canonicalUrl: string, locale: string) {
   }
 
   return canonicalUrl;
+}
+
+// hreflang alternates for a relative path: one entry per supported locale
+// (default locale without prefix), x-default pointing at the default locale
+async function buildLanguageAlternates(path: string) {
+  const languages: Record<string, string> = {};
+  for (const loc of locales) {
+    languages[loc] = await getCanonicalUrl(path, loc);
+  }
+  languages['x-default'] = await getCanonicalUrl(path, defaultLocale);
+  return languages;
+}
+
+// full page-level metadata: per-page OG/twitter (Next.js inherits layout
+// openGraph as-is unless the page defines its own) + hreflang alternates
+export async function buildPageMetadata(options: {
+  locale: string;
+  title: string;
+  description?: string;
+  canonicalPath: string; // relative path, like '/blog/xxx'
+  keywords?: string;
+  imageUrl?: string;
+  ogType?: 'website' | 'article';
+  publishedTime?: string;
+  noIndex?: boolean;
+}) {
+  const { locale } = options;
+  setRequestLocale(locale);
+
+  const path = options.canonicalPath || '/';
+  const canonicalUrl = await getCanonicalUrl(path, locale);
+
+  let imageUrl = options.imageUrl || envConfigs.app_preview_image;
+  if (!imageUrl.startsWith('http')) {
+    imageUrl = `${envConfigs.app_url}${imageUrl}`;
+  }
+
+  const appName = envConfigs.app_name || '';
+  const title = options.title;
+  const description = options.description || '';
+
+  return {
+    title,
+    description,
+    keywords: options.keywords,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: await buildLanguageAlternates(path),
+    },
+    openGraph: {
+      type: options.ogType || ('website' as const),
+      locale: locale,
+      url: canonicalUrl,
+      title,
+      description,
+      siteName: appName,
+      images: [imageUrl.toString()],
+      ...(options.ogType === 'article' && options.publishedTime
+        ? { publishedTime: options.publishedTime }
+        : {}),
+    },
+    twitter: {
+      card: 'summary_large_image' as const,
+      title,
+      description,
+      images: [imageUrl.toString()],
+      site: envConfigs.app_url,
+    },
+    robots: {
+      index: options.noIndex ? false : true,
+      follow: options.noIndex ? false : true,
+    },
+  };
 }

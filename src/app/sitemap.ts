@@ -1,12 +1,11 @@
 import { MetadataRoute } from 'next';
 
-import { envConfigs } from '@/config';
 import { pagesSource, postsSource } from '@/core/docs/source';
+import { envConfigs } from '@/config';
 
-const appUrl = (envConfigs.app_url || 'https://airumpelstiltskin.online').replace(
-  /\/+$/,
-  ''
-);
+const appUrl = (
+  envConfigs.app_url || 'https://airumpelstiltskin.online'
+).replace(/\/+$/, '');
 const locales = ['en', 'zh'];
 
 // static routes relative to the locale root; en is the default (no prefix)
@@ -50,7 +49,10 @@ function withAlternates(
 // fumadocs prefixes the default locale ('/en/...') while the site serves
 // default-locale pages without prefix — normalize to a plain path
 function toPath(url: string): string {
-  return url.replace(/^\/en(?=\/|$)/, '').replace(/^\/zh(?=\/|$)/, '').replace(/^\//, '');
+  return url
+    .replace(/^\/en(?=\/|$)/, '')
+    .replace(/^\/zh(?=\/|$)/, '')
+    .replace(/^\//, '');
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -58,23 +60,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemap: MetadataRoute.Sitemap = [];
   const seen = new Set<string>();
 
-  for (const { path, priority, changeFrequency } of staticPaths) {
+  // every locale variant gets its own <url> entry (per Google's hreflang
+  // sitemap spec), each listing all alternates including itself
+  const pushEntry = (
+    path: string,
+    entry: Pick<
+      MetadataRoute.Sitemap[number],
+      'lastModified' | 'changeFrequency' | 'priority'
+    >
+  ) => {
     seen.add(path);
-    sitemap.push(
-      withAlternates(
-        {
-          url: localeUrl('en', path),
-          lastModified: now,
-          changeFrequency,
-          priority,
-        },
-        path
-      )
-    );
+    for (const locale of locales) {
+      sitemap.push(
+        withAlternates(
+          {
+            url: localeUrl(locale, path),
+            lastModified: entry.lastModified,
+            changeFrequency: entry.changeFrequency,
+            priority: entry.priority,
+          },
+          path
+        )
+      );
+    }
+  };
+
+  for (const { path, priority, changeFrequency } of staticPaths) {
+    pushEntry(path, { lastModified: now, changeFrequency, priority });
   }
 
   // content pages from fumadocs: posts under /blog, legal pages under /
-  // en and zh variants share one entry via hreflang alternates
+  // en and zh variants each get their own entry via hreflang alternates
   const contentPages = [...postsSource.getPages(), ...pagesSource.getPages()];
   for (const page of contentPages) {
     const path = toPath(page.url);
@@ -83,18 +99,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const data = page.data as any;
     const lastModified = data?.created_at ? new Date(data.created_at) : now;
-    seen.add(path);
-    sitemap.push(
-      withAlternates(
-        {
-          url: localeUrl('en', path),
-          lastModified,
-          changeFrequency: 'monthly',
-          priority: 0.6,
-        },
-        path
-      )
-    );
+    pushEntry(path, {
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    });
   }
 
   return sitemap;
